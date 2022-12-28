@@ -163,6 +163,7 @@
 
   b {
     color: black;
+    /* font-size: 15px; */
   }
 
   .heder {
@@ -764,7 +765,7 @@ onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordO
                         style="font-size: 16px; text-align: right;"><b>Final Sales Price:</b></label>
                     </div>
                     <div class="col-md-8" style="padding-left: 4px;">
-                      <span class="currency-code" style="padding: 5px 0 0 0 ; font-size: 16px; color: black;">$</span>
+                      <span class="currency-code" style="padding: 14px 0 0 0 ; font-size: 16px; color: black;">$</span>
                       <input type="text" class="form-control" id="Property_Final_Price" pattern="^[\d,]+$"
 
                       onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordOfCompany3','Property_Addres','Property_City','Property_State','Property_Zip','Property_Seller_Name','Property_Buyer_Name','Property_Final_Price','Property_Closing_Date','isShortSale','Property_Final_Price_Net','isSellingOrListing','Transaction_completein_12months','Pedning_Transaction','Non_pending_Transaction','Closing_Company','Escrow','ClosingCompany_address','ClosingCompany_city','ClosingCompany_State','ClosingCompany_Zip','ClosingCompany_Contact','ClosingCompany_Cell_Phone','ClosingCompany_Email')"
@@ -1126,7 +1127,7 @@ onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordO
                     </div>
                     <div class="col-md-8" style="padding-left: 4px;">
                       <input type="text" class="form-control" id="Broker_CompanyName" name="Broker_CompanyName"
-                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px; height: 70px;"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px; height: 55px;"
                         onclick="triger_on_keypress('SalesButton2','Broker_CompanyName','Broker_address','Broker_City','Broker_State','Broker_Zip','Company_Cell_Phone','Broker_Company_Email','BrokerFirst_Name','Broker_Last_Name','Broker_Cell_Phone','Broker_Email')"
                         placeholder="Company Name" required>
                     </div>
@@ -1252,7 +1253,7 @@ onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordO
               <!-- oninput="this.value = this.value.replace(/[^a-z,^A-Z,' ' ]/, '')" -->
                       <input type="text" 
               class="form-control"
-                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px; height: 55px;"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;"
                         onclick="triger_on_keypress('SalesButton2','Broker_CompanyName','Broker_address','Broker_City','Broker_State','Broker_Zip','Company_Cell_Phone','Broker_Company_Email','BrokerFirst_Name','Broker_Last_Name','Broker_Cell_Phone','Broker_Email')"
                         id="BrokerFirst_Name" name="BrokerFirst_Name" placeholder="Broker First Name" required>
                     </div>
@@ -1268,7 +1269,7 @@ onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordO
                     <div class="col-md-8" style="padding-left: 4px;">
                       <input type="text"  class="form-control"
                             onclick="triger_on_keypress('SalesButton2','Broker_CompanyName','Broker_address','Broker_City','Broker_State','Broker_Zip','Company_Cell_Phone','Broker_Company_Email','BrokerFirst_Name','Broker_Last_Name','Broker_Cell_Phone','Broker_Email')"
-                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;height: 55px;"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;"
                         id="Broker_Last_Name" name="Broker_Last_Name" placeholder="Broker Last name" required>
                     </div>
                   </div>
@@ -1289,7 +1290,7 @@ onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordO
                       
                         <input type="text" pattern="[1-9]{1}[0-9]{9}" class="form-control" id="Broker_Cell_Phone" name="Company_Cell_Phone"
                         onclick="triger_on_keypress('SalesButton2','Broker_CompanyName','Broker_address','Broker_City','Broker_State','Broker_Zip','Company_Cell_Phone','Broker_Company_Email','BrokerFirst_Name','Broker_Last_Name','Broker_Cell_Phone','Broker_Email')"
-                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;height: 55px;"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;"
                         placeholder="Phone number" maxlength="12"  required onkeypress="CheckNumeric(event);">
                     </div>
                   </div>
@@ -1329,7 +1330,7 @@ onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordO
       </section>
 <!--  -->
 
-       <section id="BankingInformation" style="display: none;"  class="pb-5">
+       <section id="BankingInformation"  class="pb-5"  style="display: none;">
         <div class="container col-8 p-1" style="background-color:#003399">
           <h5 class="text-white text-left"
             style="font-size: 16px; font-weight: 600; padding: 0; margin: 15px 0 2px 5px;">BANKING INFORMATION</h5>
@@ -1460,7 +1461,7 @@ onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordO
                     </div>
                     <div class="col-md-8" style="padding-left: 4px;">
                       <input type="text" class="form-control" id="Account_Holder_Name" name="Account_Holder_Name" placeholder="First and Last Name or Company Name"
-                      style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px; height: 70px;"   
+                      style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;height: 55px;"   
                       onclick="triger_on_keypress('SalesButton2','Broker_CompanyName','Broker_address','Broker_City','Broker_State','city2','Bank_Phone_Number','Broker_State2','Bank_address','Broker_Zip2','Company_Cell_Phone','Broker_Company_Email','BrokerFirst_Name','Broker_Last_Name','Broker_Cell_Phone','Broker_Email')"
                               placeholder="First name" required>
                     </div>
@@ -1501,7 +1502,7 @@ onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordO
                     </div>
                     <div class="col-md-8" style="padding-left: 4px;">
                       <input type="text" class="form-control"
-                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px; height: 55px;" id="Routing"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;" id="Routing"
                         placeholder="Routing Number"
                         onclick="triger_on_keypress('SalesButton2','Broker_CompanyName','Broker_address','Broker_City','Broker_State','city2','Bank_Phone_Number','Broker_State2','Bank_address','Broker_Zip2','Company_Cell_Phone','Broker_Company_Email','BrokerFirst_Name','Broker_Last_Name','Broker_Cell_Phone','Broker_Email')"
                         name="Routing" required>
@@ -1516,7 +1517,7 @@ onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordO
                     </div>
                     <div class="col-md-8" style="padding-left: 4px;">
                       <input type="number" class="form-control" id="Account_number" name="Account_number"
-                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px; height: 55px;"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;"
                         onclick="triger_on_keypress('SalesButton2','Broker_CompanyName','Broker_address','Broker_City','Broker_State','city2','Bank_Phone_Number','Broker_State2','Bank_address','Broker_Zip2','Company_Cell_Phone','Broker_Company_Email','BrokerFirst_Name','Broker_Last_Name','Broker_Cell_Phone','Broker_Email')"
                         pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" onclick="validateForm()" 
                         placeholder="Account Number" onkeypress="CheckNumeric(event);" required>
@@ -1573,7 +1574,7 @@ onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordO
                       <input type="text" onkeypress="return (event.charCode > 64 && 
                   event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" class="form-control"
                                           onclick="triger_on_keypress('SalesButton3','Agent_Bank_Name','Account_Holder_Name','Agent_Account_type','Routing','Account_number','isAddressSame')"
-                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;height: 55px;"
                         id="Agent_Statement_City" name="Agent_Statement_City" placeholder="City" required>
                     </div>
                   </div>
