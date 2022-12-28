@@ -964,9 +964,10 @@
                                                     </div>
                                                     <div class="col-md-4">
                                                         <input type="text" onkeypress="CheckNumeric(event);"
+                                                        onchange="Button_Color_Change('amount','email')"
                                                             class="form-control inputs" name="amount" id="amount"
                                                             style=" height: 30px;margin: 20px; margin-left: -50px;">
-                                                        <p id="errorMsg">Value must be in between $4000 to $15000 </p>
+                                                        <p id="errorMsg">Value must be in between $2500 to $15000 </p>
                                                     </div>
                                                     <div class="col-md-3"></div>
                                                 </div>
@@ -992,6 +993,8 @@
                                                     </div>
                                                     <div class="col-md-4">
                                                         <input type="email" class="form-control" style="height: 30px;margin: 20px; margin-left: -10px;"
+
+ onkeypress="Button_Color_Change('amount','email')"
                                                             id="email" name="email" placeholder="E-mail">
                                                     </div>
                                                     <div class="col-md-3"></div>
@@ -1172,6 +1175,35 @@ logout.addEventListener("click",()=>{
         return emailReg.test($email);
     }
 
+
+
+     function Button_Color_Change(...id){
+const checked_coler = id.filter(Element=>{
+          
+            return document.getElementById(Element).style.borderColor=='green' 
+        })
+if(checked_coler.length!=id.length){
+
+   document.getElementById("HomeFormButton").style.backgroundColor='Vivid Sky Blue' 
+
+}
+
+        if( checked_coler.length==id.length){
+
+document.getElementById("HomeFormButton").style.backgroundColor='green'
+        }
+
+       
+   
+
+
+    }
+
+
+
+
+
+
     $(document).ready(function () {
 
 
@@ -1254,9 +1286,11 @@ sessionStorage.setItem("isFirstLogin", true);
             let a = $("#amount").val();
             let b = a.replace(',', '');
             b = b.replace('$', '');
-            if (b >= 4000 && b <= 15000) {
+            if (b >= 2500 && b <= 15000) {
                 $("#errorMsg").hide();
-                $('#amount').css("border", "2px solid green");
+                $('#amount').css("border", "2px solid ");
+                $('#amount').css('border-color', 'green');
+                // $('#amount').css("border", "2px solid green");
             } else {
                 $("#errorMsg").show();
                 $('#amount').css("border", "2px solid red");
@@ -1281,7 +1315,9 @@ sessionStorage.setItem("isFirstLogin", true);
         $("#email").focusout(function () {
             let a = $("#email").val();
             if (validateEmail(a) && a != "") {
-                $('#email').css("border", "2px solid green");
+                // $('#email').css("border", "2px solid green");
+                $('#amount').css("border", "2px solid ");
+                $('#amount').css('border-color', 'green');
             } else {
                 $('#email').css("border", "2px solid red");
             }
@@ -1333,8 +1369,23 @@ sessionStorage.setItem("isFirstLogin", true);
     // }));
 
     $("#HomeFormButton").on('click', (function (e) {
-      
+
+       
+        // console.log("green", $("#amount").css("border-color")=='rgb(0, 128, 0)')
+        // console.log("green", $("#email").css("border-color")=='rgb(0, 128, 0)')
+
+        // let amount_border = $("#amount").css("border-color")=='rgb(0, 128, 0)'
+        // let email_border = $("#email").css("border-color")=='rgb(0, 128, 0)'
+
+
+
+        const idReady  = document.getElementById("HomeFormButton").style.backgroundColor=='green'
+
         
+
+
+        if(idReady){
+
         
      $("#amount").val()&&sessionStorage.setItem("amountRequest",$("#amount").val())
      $("#email").val()&&sessionStorage.setItem("clientemail",$("#email").val())
@@ -1363,6 +1414,14 @@ type: "POST",
 
 });   
 
+
+
+        }
+
+     
+
+      
+        
 
 
 

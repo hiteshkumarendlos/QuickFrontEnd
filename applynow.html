@@ -388,6 +388,7 @@
                   
                     <div class="col-md-4" style="padding-left:4px;">
                       <input type="text" id="totalAmount" onchange="CheckNumeric(event);"  
+                      oninput="this.value = this.value.replace(/[^0-9,'$', ]/, '')"
                       onkeypress="triger_on_keypress('ContactButton20','totalAmount','Agent_First_Name','Agent_Last_Name','email','Agent_Cell_Phone','Agent_Home_address','Agent_City','Agent_State','Agent_Zip')"
                       class="form-control" name="amount"
                          style="padding-top: 6px; font-size: 16px; padding-left: 4px;
