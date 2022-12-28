@@ -1361,7 +1361,7 @@ class="form-control"
                       <label for="Broker_Zip" class="col-form-label" style="font-size: 16px; text-align: right;"><b>Bank Phone Number:</b></label>
                     </div>
                     <div class="col-md-8" style="padding-left: 4px;">
-                      <input type="text" class="form-control" id="Bank_Phone_Number" onkeypress="CheckNumeric(event);" name="Broker_Zip" placeholder="Bank Phone Number"  pattern="[1-9]{1}[0-9]{9}"
+                      <input type="text" class="form-control" id="Bank_Phone_Number" onkeypress="CheckNumeric(event)" name="Broker_Zip" placeholder="Bank Phone Number"  pattern="[1-9]{1}[0-9]{9}"
                       onclick="triger_on_keypress('SalesButton2','Broker_CompanyName','Broker_address','Broker_City','Broker_State','city2','Bank_Phone_Number','Broker_State2','Bank_address','Broker_Zip2','Company_Cell_Phone','Broker_Company_Email','BrokerFirst_Name','Broker_Last_Name','Broker_Cell_Phone','Broker_Email')"
                         style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;height: 55px;" required>
 
@@ -2143,6 +2143,19 @@ function upload_file_NameChange(inputId,filename,box){
      else if(a=="#Broker_Zip"){
       zip = Broker_Zip(a);
      }
+     else if(a=="#Broker_Zip2"){
+      zip = Broker_Zip2(a);
+     }
+     else if (a == "#Bank_Phone_Number") {
+      let b = $(a).val();
+      if (b.length == 12) {
+        $(a).css("border", "2px solid green");
+        phone = 1;
+      } else {
+        $(a).css("border", "2px solid red");
+        phone = 0;
+      }
+    }
     else if (a == "#totalAmount") {
       let c = $(a).val();
       let b = c.replace(',', '');
@@ -2155,6 +2168,26 @@ function upload_file_NameChange(inputId,filename,box){
         $("#errorMsg").show();
         $('#totalAmount').css("border", "2px solid red");
         mony = 0;
+      }
+    }
+    else if (a == "#Company_Cell_Phone") {
+      let b = $(a).val();
+      if (b.length == 12) {
+        $(a).css("border", "2px solid green");
+        phone = 1;
+      } else {
+        $(a).css("border", "2px solid red");
+        phone = 0;
+      }
+    }
+    else if (a == "#Broker_Cell_Phone") {
+      let b = $(a).val();
+      if (b.length == 12) {
+        $(a).css("border", "2px solid green");
+        phone = 1;
+      } else {
+        $(a).css("border", "2px solid red");
+        phone = 0;
       }
     }
 
