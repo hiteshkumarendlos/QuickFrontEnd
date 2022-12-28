@@ -2965,9 +2965,16 @@ $("#SalesButton3").click(()=>{
 
 
   let authToken = localStorage.getItem('authToken')
- 
+
 
     let bankName = $('#Agent_Bank_Name').val();
+    let bankPhone = $('#Bank_Phone_Number').val();
+    let bankAddress = $('#Bank_address').val();
+    let bankCity = $('#city2').val();
+    let bankState = $('#Broker_State2').val();
+    let bankZipcode = $('#Broker_Zip2').val();
+
+
     let accountHolder = $('#Account_Holder_Name').val();
     let accountType = $('#Agent_Account_type').val();
     let routing = $('#Routing').val();
@@ -2990,7 +2997,7 @@ $.ajax({
                     type: "POST",
                     dataType: "json",
                   
-                    data: {appId:localStorage.getItem('appId'),bankName,accountHolder,accountType,routing,accountNumber,statementAddress,city,state,zipCode,isAddressSame},
+                    data: {appId:localStorage.getItem('appId'),bankName, bankPhone,bankAddress,bankCity,bankState,bankZipcode,accountHolder,accountType,routing,accountNumber,statementAddress,city,state,zipCode,isAddressSame},
                     success: function (result) {
 
 
