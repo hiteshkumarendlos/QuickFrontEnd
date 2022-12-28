@@ -1,0 +1,3502 @@
+<!-- Basic Page Needs -->
+<meta charset="utf-8">
+<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+<title>Quick Commission Advance</title>
+
+<meta name="author" content="themesflat.com">
+
+<!-- Mobile Specific Metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- Theme Style -->
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<!-- Favicon and Touch Icons  -->
+<link rel="shortcut icon" href="home/icon/favicon.png">
+<link rel="apple-touch-icon-precomposed" href="home/icon/apple-touch-icon-158-precomposed.png">
+
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!-- sweetalert  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.common.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.min.js"></script>
+</head>
+<style>
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+  .drop-zone {
+    max-width: auto;
+    height: auto;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+    border: 2px solid black;
+    background-color: #ccecff;
+  }
+
+  /* .drop-zone input {
+    display: none;
+  } */
+
+  /* .drop-zone--over {
+    border-style: solid;
+  } */
+
+  .drop-zone__input {
+    opacity: 1;
+    width: 0;
+    display: none;
+
+  }
+
+  .drop-zone__thumb {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #cccccc;
+    background-size: cover;
+    position: relative;
+  }
+
+  .drop-zone__thumb::after {
+    content: attr(data-label);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.75);
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .colSix {
+    text-align: right;
+    padding: 0;
+  }
+
+  .form-container {
+    display: flex;
+
+  }
+
+  .currency-wrap {
+    position: relative;
+  }
+
+  .p-4 {
+    padding-bottom: 500px;
+  }
+
+  .currency-code {
+    position: absolute;
+    left: 20px;
+    top: 6px;
+  }
+
+  .text-currency {
+    padding: 10px 20px;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+  }
+
+  .brd {
+    border: solid;
+    border-color: #003399;
+  }
+
+  .row {
+    padding: 1px 0;
+  }
+
+  label {
+    display: inline-block;
+
+  }
+
+  b {
+    color: black;
+  }
+
+  .heder {
+    background-color: #ccc;
+    padding: 20px 0 1px 5px;
+    margin: 25px -30px;
+
+  }
+
+  .heder h5 {
+    font-size: 16px;
+  }
+
+
+  .ddd {
+    text-align: left;
+    font-size: 16px;
+  }
+
+  .ddd input {
+    height: 80px;
+    font-size: 16px;
+    margin: 20px;
+    border: 2px solid black;
+    background-color: #ccecff;
+  }
+
+  .custom_upload_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+      height: 90px;
+    font-size: 16px;
+    margin: 20px;
+    margin-left: 0px;
+    border: 2px solid black;
+    background-color: #ccecff;
+    border-radius: 4px;
+    max-width: 75%;
+  }
+
+
+  .custom_upload_lable{
+        border: 1px solid black;
+    background-color: #EFEFEF;
+    padding: 2px 5px;
+    border-radius: 3px;
+    color: black;
+  }
+
+  .demoSize {
+    margin-bottom: -10px;
+  }
+
+  .demoSize label {
+    padding-bottom: 10px;
+  }
+
+  #errorMsg {
+    color: red;
+  }
+</style>
+
+
+<body class="page header-fixed no-sidebar site-layout-full-width has-topbar menu-has-search menu-has-cart">
+  <div id="wrapper" class="animsition">
+    <div id="page" class="clearfix">
+      <!-- Header Wrap -->
+      <div id="site-header-wrap" class="absolute">
+        <!-- Top Bar -->
+        <div id="top-bar">
+          <div class="wrap-themesflat-container" style="background-color: #003399;">
+            <div id="top-bar-inner" class="themesflat-container">
+              <div class="top-bar-inner-wrap">
+                <div class="top-bar-content">
+                  <span class="address content"><a href="#">7550 IH-10, San Antonio, Texas
+                      78229</a></span>
+                  <span class="phone content"><a href="#">Phone +1 (877) 520-1529 </a></span>
+                </div><!-- /.top-bar-content -->
+
+                <div class="top-bar-content-right">
+                  <div class="top-bar-socials">
+                    <div class="inner">
+                      <span class="texts">Follow Us:</span>
+                      <span class="icons">
+                        <a href="#" title="Facebook">
+                          <span class="finance-icon-Facebook" aria-hidden="true"></span>
+                        </a>
+                        <a href="#" title="Twitter">
+                          <span class="finance-icon-Twitter" aria-hidden="true"></span>
+                        </a>
+                        <a href="#" title="Linkedin">
+                          <span class="flat-icon-linkedin" aria-hidden="true"></span>
+                        </a>
+                        <a href="#" title="Instagram">
+                          <span class="flat-icon-instagram" aria-hidden="true"></span>
+                        </a>
+                      </span>
+                    </div>
+                  </div><!-- /.top-bar-socials -->
+                </div><!-- .top-bar-content-right -->
+              </div>
+            </div>
+          </div><!-- /.wrap-themesflat-container -->
+        </div><!-- /#top-bar -->
+
+        <!-- Header -->
+
+
+        <header id="site-header">
+          <div class="wrap-themesflat-container">
+            <div id="site-header-inner" class="themesflat-container" style="padding-top:20px ;">
+
+              <div class="wrap-inner">
+                <div id="site-logo" class="clearfix">
+                  <div id="site-logo-inner" style="padding-bottom:40px;">
+
+
+                    <a href="#" rel="import"><img src="home/img/gallery/finalLogo.jpg " width="600" height="50"></a>
+                  </div>
+                </div>
+                <div id="site-logo" class="clearfix">
+                  <!-- <div id="site-logo-inner">home/img/imagebox/logo.jpg.
+                                    <a href="{% url 'home:index' %}" title="Finance" rel="home"
+                                        class="main-logo"><img src="home/img/imagebox/log"
+                                            style="position:fixed; left:275px; top: 42px;" width="1300" height="500"
+                                            alt="Finance" data-retina="home/img/logo@2x.png"
+                                            data-width="184" data-height="40"></a>
+                                </div> -->
+                </div>
+                <!-- /#site-logo -->
+
+                <div class="mobile-button"><span></span></div><!-- //mobile menu button -->
+              </div>
+              <div>
+                <nav id="main-nav" class="main-nav" style="padding-top:56px;">
+                  <ul id="menu-primary-menu" class="menu">
+                    <li class="menu-item"><a href="./index.html">HOME</a>
+
+                    </li>
+
+                    <li class="menu-item menu-item-has-children"><a href="./howitworks.html">HOW IT WORKS</a>
+
+
+                    <li class="menu-item menu-item-has-children"><a class="logoutbutton" href="#">FAQ</a>
+                      <ul class="sub-menu" style="width: 290px;">
+                        <li class="menu-item"><a href="./agentFaq.html">AGENT</a></li>
+                        <li class="menu-item"><a href="./brokerFaq.html">BROKER</a>
+                        </li>
+                        <li class="menu-item"><a href="./whycommissionadvance.html">WHY A
+                            COMMISSION ADVANCE</a></li>
+
+
+                    </li>
+                  </ul>
+
+
+                  </li>
+
+
+
+                  <li class="menu-item menu-item-has-children"><a href="./aboutUs.html"> WHY
+                      US</a>
+
+                  </li>
+
+
+                  <li class="menu-item menu-item-has-children"><a href="./contactUs.html">CONTACT US</a></li>
+
+
+                  <!-- <li class="menu-item menu-item-has-children"><a
+                                        href="{%url 'home:contactUs'%}">WELCOME, {{user.username}}</a></li> -->
+
+                  <li class="nav-item" id="logout-btn">
+                    <div  style="padding-top: 40px;">
+                      <button class="nav-link" type="submit" style="margin-top:0px; border-radius: 5px;">Logout</button>
+                    </div>
+                  </li>
+
+
+                  <li class="menu-item menu-item-has-children btn" id="login-btn">
+                    <a href="../accounts/login.html">LOGIN</a>
+                  </li>
+                  <li class="menu-item menu-item-has-children btn " id="signup-btn">
+                    <a href="../accounts/Register.html"><b>SIGN UP</b></a>
+                  </li>
+
+              </div><!-- /.nav-top-cart-wrapper -->
+            </div>
+          </div><!-- /#site-header-inner -->
+          <!-- /.wrap-themesflat-container -->
+        </header><!-- /#site-header -->
+      </div><!-- #site-header-wrap -->
+
+
+      <section>
+        <div class="container" style="padding-top: 180px;">
+          <h1>Application</h1>
+        </div>
+      </section>
+      <br>
+
+
+
+      <!--Form 1 Basic details-->
+      <section id="ClientInformation"   class="pb-5">
+        <div class="container col-8 p-1" style="background-color:#003399">
+          <h5 class="text-white text-left"
+            style="font-size: 16px; font-weight: 600; padding: 0px; margin: 10px 5px 2px 5px;">CONFIRM AMOUNT REQUESTED
+          </h5>
+        </div>
+        <div class="container cnt col-8 p-4 brd">
+          <div class="g-3 justify-content-center" id="contactForm" >
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="col-md-5 colSix" style="padding-top: 5px;">
+                      <label for="amount" class="col-form-label" style="font-size: 16px; text-align: right;"><b>Amount
+                          Requested:</b></label>
+                    </div>
+                  
+                    <div class="col-md-4" style="padding-left:4px;">
+                      <input type="text" id="totalAmount" onchange="CheckNumeric(event);"  
+                      onkeypress="triger_on_keypress('ContactButton20','totalAmount','Agent_First_Name','Agent_Last_Name','email','Agent_Cell_Phone','Agent_Home_address','Agent_City','Agent_State','Agent_Zip')"
+                      class="form-control" name="amount"
+                         style="padding-top: 6px; font-size: 16px; padding-left: 4px;
+                  color: black;" required>
+                      <p id="errorMsg">Value must be in between $2500 to $15000 </p>
+                    </div>
+                    <div class="col-md-3"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid">
+              <div class="heder">
+                <h5 class="text-left"><b>CLIENT INFORMATION</b></h5>
+              </div>
+            </div>
+            <div class="container">
+
+              <div class="row">
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Agent_First_Name" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>First Name:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="text" class="form-control" 
+                          oninput="this.value = this.value.replace(/[^a-z,^A-Z,'-', ]/, '')"
+                onclick="triger_on_keypress('ContactButton20','totalAmount','Agent_First_Name','Agent_Last_Name','email','Agent_Cell_Phone','Agent_Home_address','Agent_City','Agent_State','Agent_Zip')"
+              
+              id="Agent_First_Name"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;"
+                        name="Agent_First_Name" placeholder="First name" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Agent_Last_Name" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>Last Name:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="text" class="form-control" 
+                      
+                      
+                      onclick="triger_on_keypress('ContactButton20','totalAmount','Agent_First_Name','Agent_Last_Name','email','Agent_Cell_Phone','Agent_Home_address','Agent_City','Agent_State','Agent_Zip')"
+                      
+                      oninput="this.value = this.value.replace(/[^a-z,^A-Z,'-', ]/, '')"id="Agent_Last_Name"
+                                style="padding-bottom: 0; font-size: 16px; color: black; padding-left: 5px;"
+                                name="Agent_Last_Name" placeholder="Last Name" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="email" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>Email:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="email" class="form-control" id="email"
+                        style="padding-bottom: 0; font-size: 16px; color: black; padding-left: 5px;" name="email"
+                        placeholder="Email"
+                        onclick="triger_on_keypress('ContactButton20','totalAmount','Agent_First_Name','Agent_Last_Name','email','Agent_Cell_Phone','Agent_Home_address','Agent_City','Agent_State','Agent_Zip')"
+                        
+                        required>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Agent_Cell_Phone" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>Cell
+                          Phone:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="text" class="form-control" 
+                      
+                      onclick="triger_on_keypress('ContactButton20','totalAmount','Agent_First_Name','Agent_Last_Name','email','Agent_Cell_Phone','Agent_Home_address','Agent_City','Agent_State','Agent_Zip')"
+                      onkeypress="CheckNumeric(event)"
+                        style="padding-bottom: 0; font-size: 16px; color: black; padding-left: 5px;"
+                        id="Agent_Cell_Phone" name="Agent_Cell_Phone" placeholder="Phone Number" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Agent_Home_address" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>Home Address:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="text" class="form-control" 
+                      onclick="triger_on_keypress('ContactButton20','totalAmount','Agent_First_Name','Agent_Last_Name','email','Agent_Cell_Phone','Agent_Home_address','Agent_City','Agent_State','Agent_Zip')"
+
+                      id="Agent_Home_address" name="Agent_Home_address"
+                        style="padding-bottom: 0; font-size: 16px; color: black; padding-left: 5px;"
+                        placeholder="Address" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Agent_City" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>City:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="text" class="form-control" 
+                      onclick="triger_on_keypress('ContactButton20','totalAmount','Agent_First_Name','Agent_Last_Name','email','Agent_Cell_Phone','Agent_Home_address','Agent_City','Agent_State','Agent_Zip')"
+                  id="Agent_City"
+                        style="padding-bottom: 0; font-size: 16px; color: black; padding-left: 5px;" name="Agent_City"
+                        placeholder="City" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Agent_State" class="col-form-label"
+                        style="font-size: 16px; text-align: right; padding-bottom: 0;"><b>State:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+
+                      <select class="form-select" id="Agent_State"
+                        style=" font-size: 16px; padding-bottom: 0; color: black; padding-left: 5px;"
+
+                        onclick="triger_on_keypress('ContactButton20','totalAmount','Agent_First_Name','Agent_Last_Name','email','Agent_Cell_Phone','Agent_Home_address','Agent_City','Agent_State','Agent_Zip')"
+                        name="Agent_State">
+                        <option value="" selected> Choose</option>
+
+                        <option value="Arizona">Arizona</option>
+                        <option value="California">California</option>
+                        <option value="Colorado">Colorado</option>
+                        <option value="Louisiana">Louisiana</option>
+                        <option value="Nevada">Nevada</option>
+                        <option value="Pennsylvania">Pennsylvania</option>
+                        <option value="Texas">Texas</option>
+                        <option value="Utah">Utah</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Agent_Zip" class="col-form-label" style="font-size: 16px; text-align: right;"><b>Zip
+                          Code:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="text" class="form-control" 
+
+                      onclick="triger_on_keypress('ContactButton20','totalAmount','Agent_First_Name','Agent_Last_Name','email','Agent_Cell_Phone','Agent_Home_address','Agent_City','Agent_State','Agent_Zip')"
+                      
+                      onkeypress="CheckNumeric(event);"  id="Agent_Zip"
+                        name="Agent_Zip" placeholder="Zip Code"
+                        style="padding-bottom: 0; font-size: 16px; color: black; padding-left: 5px;" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="text-center mt-3">
+                <button class="btn mt-4 btn-primary continue" id="ContactButton20"
+                  style="background-color:#23a1d3;" >CONTINUE</button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      
+
+
+      <section id="SeleInformation" style="display: none;"  class="pb-5">
+        <div class="container col-8 p-1" style="background-color:#003399">
+          <h5 class="text-white text-left"
+            style="font-size: 16px; font-weight: 600; padding: 0; margin: 15px 0 2px 5px;">SALE INFORMATION</h5>
+        </div>
+        <div class="container cnt col-8 p-4 brd">
+          <div class="g-3 justify-content-center" >
+            <div class="container">
+
+              <div class="row">
+                <div class="col-md-12 demoSize">
+                  <div class="row">
+                    <div class="col-md-5 colSix">
+                      <label for="Agent_First_Name" class="col-form-label"
+                        style="font-size: 16px; text-align: right; padding-top: 10px;"><b>Are you the
+                          Broker of record of your company ?</b></label>
+                    </div>
+                    <div class="col-md-4" style="padding-left: 4px;">
+                      <select id="BrokerRecordOfCompany"
+                      onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordOfCompany3','Property_Addres','Property_City','Property_State','Property_Zip','Property_Seller_Name','Property_Buyer_Name','Property_Final_Price','Property_Closing_Date','isShortSale','Property_Final_Price_Net','isSellingOrListing','Transaction_completein_12months','Pedning_Transaction','Non_pending_Transaction','Closing_Company','Escrow','ClosingCompany_address','ClosingCompany_city','ClosingCompany_State','ClosingCompany_Zip','ClosingCompany_Contact','ClosingCompany_Cell_Phone','ClosingCompany_Email')"
+                        style="font-size: 17px; color: black; padding-left: 5px;"
+                        name="BrokerRecordOfCompany">
+                        <option value="" selected></option>
+                        <option value=true >Yes</option>
+                        <option value=false >No</option>
+                      </select>
+                    </div>
+                    <div class="col-md-3"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 demoSize">
+                  <div class="row">
+                    <div class="col-md-5 colSix">
+                      <label for="Agent_First_Name" class="col-form-label"
+                        style="font-size: 16px; text-align: right; padding-top: 10px;"><b>Do
+                          You Currently
+                          Have Any Open Advances With <br> Other
+                          Commission
+                          Advance Companies?</b></label>
+                    </div>
+                    <div class="col-md-4" style="padding-top: 10px; padding-left: 4px;">
+                      <select id="BrokerRecordOfCompany3"
+                      onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordOfCompany3','Property_Addres','Property_City','Property_State','Property_Zip','Property_Seller_Name','Property_Buyer_Name','Property_Final_Price','Property_Closing_Date','isShortSale','Property_Final_Price_Net','isSellingOrListing','Transaction_completein_12months','Pedning_Transaction','Non_pending_Transaction','Closing_Company','Escrow','ClosingCompany_address','ClosingCompany_city','ClosingCompany_State','ClosingCompany_Zip','ClosingCompany_Contact','ClosingCompany_Cell_Phone','ClosingCompany_Email')"
+                        style="height: 50px;font-size: 17px; color: black; padding-left: 5px;"
+                        name="OpenAdvanceswihOther">
+                        <option value="" selected></option>
+                        <option value=true>Yes</option>
+                        <option value=false>No</option>
+                      </select>
+                    </div>
+                    <div class="col-md-3"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid">
+              <div class="heder">
+                <h5 class="text-left"><b>PROPERTY DETAILS</b></h5>
+              </div>
+            </div>
+
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Property_Addres" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>Address:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="text" class="form-control" name="Property_Addres" 
+                      onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordOfCompany3','Property_Addres','Property_City','Property_State','Property_Zip','Property_Seller_Name','Property_Buyer_Name','Property_Final_Price','Property_Closing_Date','isShortSale','Property_Final_Price_Net','isSellingOrListing','Transaction_completein_12months','Pedning_Transaction','Non_pending_Transaction','Closing_Company','Escrow','ClosingCompany_address','ClosingCompany_city','ClosingCompany_State','ClosingCompany_Zip','ClosingCompany_Contact','ClosingCompany_Cell_Phone','ClosingCompany_Email')"
+                      id="Property_Addres"
+                        style="padding-bottom: 0; font-size: 16px; color: black; padding-left: 5px;"
+                        placeholder="Address" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Property_City" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>City:</b></label>
+                    </div>
+                    <!-- onkeypress="return (event.charCode > 64 && 
+                    event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)"  -->
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="text" class="form-control"
+                     
+                      name="Property_City"
+
+onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordOfCompany3','Property_Addres','Property_City','Property_State','Property_Zip','Property_Seller_Name','Property_Buyer_Name','Property_Final_Price','Property_Closing_Date','isShortSale','Property_Final_Price_Net','isSellingOrListing','Transaction_completein_12months','Pedning_Transaction','Non_pending_Transaction','Closing_Company','Escrow','ClosingCompany_address','ClosingCompany_city','ClosingCompany_State','ClosingCompany_Zip','ClosingCompany_Contact','ClosingCompany_Cell_Phone','ClosingCompany_Email')"
+                                style="padding-bottom: 0; font-size: 16px; color: black; padding-left: 5px;" id="Property_City"
+                                placeholder="City" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Property_State" class="col-form-label"
+                        style="font-size: 16px; text-align: right; padding-bottom: 0;"><b>State:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+
+                      <select class="form-select" id="Property_State" name="Property_State"
+                      onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordOfCompany3','Property_Addres','Property_City','Property_State','Property_Zip','Property_Seller_Name','Property_Buyer_Name','Property_Final_Price','Property_Closing_Date','isShortSale','Property_Final_Price_Net','isSellingOrListing','Transaction_completein_12months','Pedning_Transaction','Non_pending_Transaction','Closing_Company','Escrow','ClosingCompany_address','ClosingCompany_city','ClosingCompany_State','ClosingCompany_Zip','ClosingCompany_Contact','ClosingCompany_Cell_Phone','ClosingCompany_Email')"
+                        style="font-size: 16px; padding-bottom: 0; color: black; padding-left: 5px;" required>
+                        <option value="" selected> Choose</option>
+
+                        <option value="Arizona">Arizona</option>
+                        <option value="California">California</option>
+                        <option value="Colorado">Colorado</option>
+                        <option value="Louisiana">Louisiana</option>
+                        <option value="Nevada">Nevada</option>
+                        <option value="Pennsylvania">Pennsylvania</option>
+                        <option value="Texas">Texas</option>
+                        <option value="Utah">Utah</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Property_Zip" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>Zip
+                          Code:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <!-- <input type="text" class="form-control" onkeypress="HandleZipCodeFormet(event);" id="Property_Zip"
+                        style="padding-bottom: 0; font-size: 16px; color: black; padding-left: 5px;" name="Property_Zip"
+                        placeholder="Zip Code" required> -->
+                        <input type="text" class="form-control" onkeypress="CheckNumeric(event);" id="Property_Zip"
+                        onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordOfCompany3','Property_Addres','Property_City','Property_State','Property_Zip','Property_Seller_Name','Property_Buyer_Name','Property_Final_Price','Property_Closing_Date','isShortSale','Property_Final_Price_Net','isSellingOrListing','Transaction_completein_12months','Pedning_Transaction','Non_pending_Transaction','Closing_Company','Escrow','ClosingCompany_address','ClosingCompany_city','ClosingCompany_State','ClosingCompany_Zip','ClosingCompany_Contact','ClosingCompany_Cell_Phone','ClosingCompany_Email')"
+                        style="padding-bottom: 0; font-size: 16px; color: black; padding-left: 5px;" name="Property_Zip"
+                        placeholder="Zip Code" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Property_Seller_Name" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>Seller name:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="text" class="form-control" id="Property_Seller_Name"  oninput="this.value = this.value.replace(/[^a-z,^A-Z,' ' ]/, '')"
+                      onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordOfCompany3','Property_Addres','Property_City','Property_State','Property_Zip','Property_Seller_Name','Property_Buyer_Name','Property_Final_Price','Property_Closing_Date','isShortSale','Property_Final_Price_Net','isSellingOrListing','Transaction_completein_12months','Pedning_Transaction','Non_pending_Transaction','Closing_Company','Escrow','ClosingCompany_address','ClosingCompany_city','ClosingCompany_State','ClosingCompany_Zip','ClosingCompany_Contact','ClosingCompany_Cell_Phone','ClosingCompany_Email')"
+                      name="name"
+                        style="padding-bottom: 0; font-size: 16px; color: black; padding-left: 5px;" 
+                        placeholder="Seller Name" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Property_Buyer_Name" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>Buyer
+                          name:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="text" class="form-control" id="Property_Buyer_Name" name="Property_Buyer_Name"
+                      onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordOfCompany3','Property_Addres','Property_City','Property_State','Property_Zip','Property_Seller_Name','Property_Buyer_Name','Property_Final_Price','Property_Closing_Date','isShortSale','Property_Final_Price_Net','isSellingOrListing','Transaction_completein_12months','Pedning_Transaction','Non_pending_Transaction','Closing_Company','Escrow','ClosingCompany_address','ClosingCompany_city','ClosingCompany_State','ClosingCompany_Zip','ClosingCompany_Contact','ClosingCompany_Cell_Phone','ClosingCompany_Email')"
+                        style="padding-bottom: 0; font-size: 16px; color: black; padding-left: 5px;"  
+
+oninput="this.value = this.value.replace(/[^a-z,^A-Z,' ' ]/, '')"
+
+                        placeholder="Buyer name" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Property_Final_Price" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>Final Sales Price:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <span class="currency-code" style="padding: 5px 0 0 0 ; font-size: 16px; color: black;">$</span>
+                      <input type="text" class="form-control" id="Property_Final_Price" pattern="^[\d,]+$"
+
+                      onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordOfCompany3','Property_Addres','Property_City','Property_State','Property_Zip','Property_Seller_Name','Property_Buyer_Name','Property_Final_Price','Property_Closing_Date','isShortSale','Property_Final_Price_Net','isSellingOrListing','Transaction_completein_12months','Pedning_Transaction','Non_pending_Transaction','Closing_Company','Escrow','ClosingCompany_address','ClosingCompany_city','ClosingCompany_State','ClosingCompany_Zip','ClosingCompany_Contact','ClosingCompany_Cell_Phone','ClosingCompany_Email')"
+                        style="padding-bottom: 0; font-size: 16px; color: black; padding-left: 23px;"
+                        name="Property_Final_Price" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Property_Closing_Date" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>Closing Date:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="date" class="form-control" onkeydown="return true" 
+                      onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordOfCompany3','Property_Addres','Property_City','Property_State','Property_Zip','Property_Seller_Name','Property_Buyer_Name','Property_Final_Price','Property_Closing_Date','isShortSale','Property_Final_Price_Net','isSellingOrListing','Transaction_completein_12months','Pedning_Transaction','Non_pending_Transaction','Closing_Company','Escrow','ClosingCompany_address','ClosingCompany_city','ClosingCompany_State','ClosingCompany_Zip','ClosingCompany_Contact','ClosingCompany_Cell_Phone','ClosingCompany_Email')"
+                      id="Property_Closing_Date"
+                        style="height: 35px; padding-bottom: 0; font-size: 16px; color: black; padding-left: 5px;"
+                        name="Property_Closing_Date" placeholder="MM/DD/YYYY" data-date-format="YYYY MM DD"  max="9999-12-31" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 demoSize">
+                  <div class="row">
+                    <div class="col-md-5 colSix">
+                      <label for="Agent_First_Name" class="col-form-label"
+                        style="font-size: 16px; text-align: right; padding-top: 10px;"><b>Is
+                          This A Short Sale?:</b></label>
+                    </div>
+                    <div class="col-md-4" style="padding-left: 4px;">
+                      <select id="isShortSale" name="OpenAdvanceswihOther"
+                      onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordOfCompany3','Property_Addres','Property_City','Property_State','Property_Zip','Property_Seller_Name','Property_Buyer_Name','Property_Final_Price','Property_Closing_Date','isShortSale','Property_Final_Price_Net','isSellingOrListing','Transaction_completein_12months','Pedning_Transaction','Non_pending_Transaction','Closing_Company','Escrow','ClosingCompany_address','ClosingCompany_city','ClosingCompany_State','ClosingCompany_Zip','ClosingCompany_Contact','ClosingCompany_Cell_Phone','ClosingCompany_Email')"
+
+                        style="font-size: 16px; padding-bottom: 0; color: black; padding-left: 5px;">
+                        <option value="" selected></option>
+                        <option value=true>Yes</option>
+                        <option value=false>No</option>
+                      </select>
+                    </div>
+                    <div class="col-md-3"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid" >
+              <div class="heder">
+                <h5 class="text-left"><b>AGENT DETAILS</b></h5>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 demoSize">
+                  <div class="row">
+                    <div class="col-md-6 colSix">
+                      <label for="Agent_First_Name" class="col-form-label"
+                        style="font-size: 16px; text-align: right;padding-top: 10px;"><b>Net Commission (After Any
+                          Broker
+                          Split):</b></label>
+                    </div>
+                    <div class="col-md-4" style="padding-left: 4px;">
+                      <span class="currency-code" style="padding: 6px 0 0 0 ; font-size: 16px; color: black;">$</span>
+                      <input type="text" class="form-control" id="Property_Final_Price_Net" 
+                      onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordOfCompany3','Property_Addres','Property_City','Property_State','Property_Zip','Property_Seller_Name','Property_Buyer_Name','Property_Final_Price','Property_Closing_Date','isShortSale','Property_Final_Price_Net','isSellingOrListing','Transaction_completein_12months','Pedning_Transaction','Non_pending_Transaction','Closing_Company','Escrow','ClosingCompany_address','ClosingCompany_city','ClosingCompany_State','ClosingCompany_Zip','ClosingCompany_Contact','ClosingCompany_Cell_Phone','ClosingCompany_Email')"
+
+                        style="padding-left: 13px; font-size: 16px; padding-bottom: 0; color: black; padding-left: 23px;"
+                        name="Property_Final_Price" maxlength="7" required>
+                    </div>
+                    <div class="col-md-3"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 demoSize">
+                  <div class="row">
+                    <div class="col-md-6 colSix">
+                      <label for="Agent_First_Name" class="col-form-label"
+                        style="font-size: 16px; text-align: right;padding-top: 10px;"><b>Are You The Listing Or Selling
+                          Agent?:</b></label>
+                    </div>
+                    <div class="col-md-4" style="padding-left: 4px;">
+                      <select id="isSellingOrListing" name="OpenAdvanceswihOther"
+                      onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordOfCompany3','Property_Addres','Property_City','Property_State','Property_Zip','Property_Seller_Name','Property_Buyer_Name','Property_Final_Price','Property_Closing_Date','isShortSale','Property_Final_Price_Net','isSellingOrListing','Transaction_completein_12months','Pedning_Transaction','Non_pending_Transaction','Closing_Company','Escrow','ClosingCompany_address','ClosingCompany_city','ClosingCompany_State','ClosingCompany_Zip','ClosingCompany_Contact','ClosingCompany_Cell_Phone','ClosingCompany_Email')"
+
+                        style="font-size: 16px; padding-bottom: 0; color: black; padding-left: 4px;">
+                        <option value="" selected ></option>
+                        <option value="islisting">Listing Agent</option>
+                        <option value="isSelling">Selling Agent</option>
+                        <option>Both</option>
+                      </select>
+                    </div>
+                    <div class="col-md-3"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 demoSize">
+                  <div class="row" style="padding-top: 10px;">
+                    <div class="col-md-6 colSix">
+                      <label for="Transaction_completein_12months" class="col-form-label"
+                        style="font-size: 16px; text-align: right; padding-top: 10px;"><b>How Many Transactions Have You
+                          Completed In The Past
+                          12 Months?:</b></label>
+                    </div>
+                    <div class="col-md-4" style="padding-left: 4px;">
+                      <input type="text" class="form-control" id="Transaction_completein_12months"
+                      onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordOfCompany3','Property_Addres','Property_City','Property_State','Property_Zip','Property_Seller_Name','Property_Buyer_Name','Property_Final_Price','Property_Closing_Date','isShortSale','Property_Final_Price_Net','isSellingOrListing','Transaction_completein_12months','Pedning_Transaction','Non_pending_Transaction','Closing_Company','Escrow','ClosingCompany_address','ClosingCompany_city','ClosingCompany_State','ClosingCompany_Zip','ClosingCompany_Contact','ClosingCompany_Cell_Phone','ClosingCompany_Email')"
+
+                        style="font-size: 16px; padding-bottom: 0; color: black; padding-left: 4px;"
+                        name="Transaction_completein_12months" maxlength="4" required>
+                    </div>
+                    <div class="col-md-3"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 demoSize">
+                  <div class="row">
+                    <div class="col-md-6 colSix">
+                      <label for="Pedning_Transaction" class="col-form-label"
+                        style="font-size: 16px; text-align: right; padding-top: 10px;"><b>How Many Pending Transactions
+                          Do
+                          You Currently
+                          Have?:</b></label>
+                    </div>
+                    <div class="col-md-4" style="padding-left: 4px;">
+                      <input type="text" class="form-control" id="Pedning_Transaction" 
+                      onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordOfCompany3','Property_Addres','Property_City','Property_State','Property_Zip','Property_Seller_Name','Property_Buyer_Name','Property_Final_Price','Property_Closing_Date','isShortSale','Property_Final_Price_Net','isSellingOrListing','Transaction_completein_12months','Pedning_Transaction','Non_pending_Transaction','Closing_Company','Escrow','ClosingCompany_address','ClosingCompany_city','ClosingCompany_State','ClosingCompany_Zip','ClosingCompany_Contact','ClosingCompany_Cell_Phone','ClosingCompany_Email')"
+                      name="Pedning_Transaction"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 4px;" maxlength="4" required>
+                    </div>
+                    <div class="col-md-3"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 demoSize">
+                  <div class="row">
+                    <div class="col-md-6 colSix">
+                      <label for="Non_pending_Transaction" class="col-form-label"
+                        style="font-size: 16px; text-align: right; padding-top: 10px;"><b>How Many Non-Pending Listings
+                          Do
+                          You Currently
+                          Have?:</b></label>
+                    </div>
+                    <div class="col-md-4" style="padding-left: 4px;">
+                      <input type="text" class="form-control" id="Non_pending_Transaction"
+                      onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordOfCompany3','Property_Addres','Property_City','Property_State','Property_Zip','Property_Seller_Name','Property_Buyer_Name','Property_Final_Price','Property_Closing_Date','isShortSale','Property_Final_Price_Net','isSellingOrListing','Transaction_completein_12months','Pedning_Transaction','Non_pending_Transaction','Closing_Company','Escrow','ClosingCompany_address','ClosingCompany_city','ClosingCompany_State','ClosingCompany_Zip','ClosingCompany_Contact','ClosingCompany_Cell_Phone','ClosingCompany_Email')"
+                        name="Non_pending_Transaction"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 4px;" maxlength="4" required>
+                    </div>
+                    <div class="col-md-3"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid">
+              <div class="heder">
+                <h5 class="text-left"><b>CLOSING COMPANY DETAILS</b></h5>
+              </div>
+              <p style="text-align: left; font-size: 12px;">Please note: Your sales file must be escrowed with the
+                closing company in order to approve this advance.</p>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Closing_Company" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>Closing Company:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="text" class="form-control" id="Closing_Company" placeholder="Closing Company Name"
+                      onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordOfCompany3','Property_Addres','Property_City','Property_State','Property_Zip','Property_Seller_Name','Property_Buyer_Name','Property_Final_Price','Property_Closing_Date','isShortSale','Property_Final_Price_Net','isSellingOrListing','Transaction_completein_12months','Pedning_Transaction','Non_pending_Transaction','Closing_Company','Escrow','ClosingCompany_address','ClosingCompany_city','ClosingCompany_State','ClosingCompany_Zip','ClosingCompany_Contact','ClosingCompany_Cell_Phone','ClosingCompany_Email')"
+                      name="Closing_Company"
+                        style="padding-bottom: 0; font-size: 16px;color: black; padding-left: 4px;" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Escrow" class="col-form-label" style="font-size: 16px; text-align: right;"><b>Escrow
+                          Number:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="text"  class="form-control" id="Escrow" placeholder="Escrow Number"
+                      onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordOfCompany3','Property_Addres','Property_City','Property_State','Property_Zip','Property_Seller_Name','Property_Buyer_Name','Property_Final_Price','Property_Closing_Date','isShortSale','Property_Final_Price_Net','isSellingOrListing','Transaction_completein_12months','Pedning_Transaction','Non_pending_Transaction','Closing_Company','Escrow','ClosingCompany_address','ClosingCompany_city','ClosingCompany_State','ClosingCompany_Zip','ClosingCompany_Contact','ClosingCompany_Cell_Phone','ClosingCompany_Email')"
+                                style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 4px;" name="Escrow"
+                                required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="ClosingCompany_address" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>Address:</b></label>
+                    </div>
+                    <!-- onkeypress="return (event.charCode > 64 && 
+                    event.charCode < 91) || (event.charCode > 96 && event.charCode < 123);"  -->
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="text" class="form-control" id="ClosingCompany_address" name="ClosingCompany_address"
+
+                    
+
+onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordOfCompany3','Property_Addres','Property_City','Property_State','Property_Zip','Property_Seller_Name','Property_Buyer_Name','Property_Final_Price','Property_Closing_Date','isShortSale','Property_Final_Price_Net','isSellingOrListing','Transaction_completein_12months','Pedning_Transaction','Non_pending_Transaction','Closing_Company','Escrow','ClosingCompany_address','ClosingCompany_city','ClosingCompany_State','ClosingCompany_Zip','ClosingCompany_Contact','ClosingCompany_Cell_Phone','ClosingCompany_Email')"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 4px;"
+                        placeholder="Address" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="ClosingCompany_city" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>City:</b></label>
+                    </div>
+                    <!-- onkeypress="return (event.charCode > 64 && 
+                    event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" -->
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="text" class="form-control"
+
+onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordOfCompany3','Property_Addres','Property_City','Property_State','Property_Zip','Property_Seller_Name','Property_Buyer_Name','Property_Final_Price','Property_Closing_Date','isShortSale','Property_Final_Price_Net','isSellingOrListing','Transaction_completein_12months','Pedning_Transaction','Non_pending_Transaction','Closing_Company','Escrow','ClosingCompany_address','ClosingCompany_city','ClosingCompany_State','ClosingCompany_Zip','ClosingCompany_Contact','ClosingCompany_Cell_Phone','ClosingCompany_Email')"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 4px;"
+                        id="ClosingCompany_city" name="ClosingCompany_city" placeholder="City" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="ClosingCompany_State" class="col-form-label"
+                        style="font-size: 16px; text-align: right; padding-bottom: 0;"><b>State:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+
+                      <select class="form-select" id="ClosingCompany_State"
+                      onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordOfCompany3','Property_Addres','Property_City','Property_State','Property_Zip','Property_Seller_Name','Property_Buyer_Name','Property_Final_Price','Property_Closing_Date','isShortSale','Property_Final_Price_Net','isSellingOrListing','Transaction_completein_12months','Pedning_Transaction','Non_pending_Transaction','Closing_Company','Escrow','ClosingCompany_address','ClosingCompany_city','ClosingCompany_State','ClosingCompany_Zip','ClosingCompany_Contact','ClosingCompany_Cell_Phone','ClosingCompany_Email')"
+                        style="font-size: 16px; padding-bottom: 0; color: black; padding-left: 4px;"
+                        name="ClosingCompany_State" required>
+                        <option value="notSelected" selected> Choose</option>
+
+                        <option value="Arizona">Arizona</option>
+                        <option value="California">California</option>
+                        <option value="Colorado">Colorado</option>
+                        <option value="Louisiana">Louisiana</option>
+                        <option value="Nevada">Nevada</option>
+                        <option value="Pennsylvania">Pennsylvania</option>
+                        <option value="Texas">Texas</option>
+                        <option value="Utah">Utah</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="ClosingCompany_Zip" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>Zip Code:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="text" class="form-control"  onkeypress="CheckNumeric(event);" 
+                      onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordOfCompany3','Property_Addres','Property_City','Property_State','Property_Zip','Property_Seller_Name','Property_Buyer_Name','Property_Final_Price','Property_Closing_Date','isShortSale','Property_Final_Price_Net','isSellingOrListing','Transaction_completein_12months','Pedning_Transaction','Non_pending_Transaction','Closing_Company','Escrow','ClosingCompany_address','ClosingCompany_city','ClosingCompany_State','ClosingCompany_Zip','ClosingCompany_Contact','ClosingCompany_Cell_Phone','ClosingCompany_Email')"
+                      id="ClosingCompany_Zip"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 4px;"
+                        name="ClosingCompany_Zip" placeholder="Zip Code" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="ClosingCompany_Contact" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>Contact Name:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="text" class="form-control" id="ClosingCompany_Contact" name="ClosingCompany_Contact" placeholder="Contact Name"
+                      onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordOfCompany3','Property_Addres','Property_City','Property_State','Property_Zip','Property_Seller_Name','Property_Buyer_Name','Property_Final_Price','Property_Closing_Date','isShortSale','Property_Final_Price_Net','isSellingOrListing','Transaction_completein_12months','Pedning_Transaction','Non_pending_Transaction','Closing_Company','Escrow','ClosingCompany_address','ClosingCompany_city','ClosingCompany_State','ClosingCompany_Zip','ClosingCompany_Contact','ClosingCompany_Cell_Phone','ClosingCompany_Email')"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 4px;" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="ClosingCompany_Cell_Phone" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>Phone:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <!-- <input type="text" class="form-control" 
+                        onkeypress="HandlePhoneFormet(event);"  id="ClosingCompany_Cell_Phone"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 4px;"
+                        name="ClosingCompany_Cell_Phone" required> -->
+                        <input type="text" class="form-control" id="ClosingCompany_Cell_Phone" onkeypress="CheckNumeric(event);" placeholder="Phone Number"
+                        onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordOfCompany3','Property_Addres','Property_City','Property_State','Property_Zip','Property_Seller_Name','Property_Buyer_Name','Property_Final_Price','Property_Closing_Date','isShortSale','Property_Final_Price_Net','isSellingOrListing','Transaction_completein_12months','Pedning_Transaction','Non_pending_Transaction','Closing_Company','Escrow','ClosingCompany_address','ClosingCompany_city','ClosingCompany_State','ClosingCompany_Zip','ClosingCompany_Contact','ClosingCompany_Cell_Phone','ClosingCompany_Email')"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 4px;"
+                        name="ClosingCompany_Cell_Phone" required  maxlength="12">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="ClosingCompany_Email" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>Email:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="email" class="form-control" id="ClosingCompany_Email" name="ClosingCompany_Email" placeholder="Email"
+                      onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordOfCompany3','Property_Addres','Property_City','Property_State','Property_Zip','Property_Seller_Name','Property_Buyer_Name','Property_Final_Price','Property_Closing_Date','isShortSale','Property_Final_Price_Net','isSellingOrListing','Transaction_completein_12months','Pedning_Transaction','Non_pending_Transaction','Closing_Company','Escrow','ClosingCompany_address','ClosingCompany_city','ClosingCompany_State','ClosingCompany_Zip','ClosingCompany_Contact','ClosingCompany_Cell_Phone','ClosingCompany_Email')"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 4px;" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+
+              <div class="text-center mt-3">
+
+                <button class="btn mt-4 btn-primary" id="previous_btn_1" style="background-color:#23a1d3;">PREVIOUS
+                  PAGE</button>
+                <button class="btn mt-4 btn-primary continue" type="submit" style="background-color:#23a1d3;"
+                  id="SalesButton" onkeyup="enableSubmit()">CONTINUE</button>
+              </div>
+
+            </div>
+          </form>
+
+        </div>
+      </section>
+<!--  -->
+
+      <section id="BrokerInformation" class="pb-5" style="display: none;">
+        <div class="container col-8 p-1" style="background-color:#003399">
+          <h5 class="text-white text-left"
+            style="font-size: 16px; font-weight: 600; padding: 0; margin: 15px 0 2px 5px;">BROKER INFORMATION</h5>
+        </div>
+        <div class="container cnt col-8 p-4 brd">
+          <div class="g-3 justify-content-center">
+
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Broker_CompanyName" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>Broker Company Name:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="text" class="form-control" id="Broker_CompanyName" name="Broker_CompanyName"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px; height: 55px;"
+                        onclick="triger_on_keypress('SalesButton2','Broker_CompanyName','Broker_address','Broker_City','Broker_State','Broker_Zip','Company_Cell_Phone','Broker_Company_Email','BrokerFirst_Name','Broker_Last_Name','Broker_Cell_Phone','Broker_Email')"
+                        placeholder="Company Name" required>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="row">
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Broker_address" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>Address:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="text" class="form-control" id="Broker_address" name="Broker_address"
+                      onclick="triger_on_keypress('SalesButton2','Broker_CompanyName','Broker_address','Broker_City','Broker_State','Broker_Zip','Company_Cell_Phone','Broker_Company_Email','BrokerFirst_Name','Broker_Last_Name','Broker_Cell_Phone','Broker_Email')"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;"
+                        placeholder="Address" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Broker_City" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>City:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="text" 
+                      
+                      class="form-control"
+                      onclick="triger_on_keypress('SalesButton2','Broker_CompanyName','Broker_address','Broker_City','Broker_State','Broker_Zip','Company_Cell_Phone','Broker_Company_Email','BrokerFirst_Name','Broker_Last_Name','Broker_Cell_Phone','Broker_Email')"
+                                style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;" id="Broker_City"
+                                name="Broker_City" placeholder="City" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Broker_State" class="col-form-label"
+                        style="font-size: 16px; text-align: right; padding-bottom: 0;"><b>State:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+
+                      <select class="form-select" id="Broker_State"
+                      onclick="triger_on_keypress('SalesButton2','Broker_CompanyName','Broker_address','Broker_City','Broker_State','Broker_Zip','Company_Cell_Phone','Broker_Company_Email','BrokerFirst_Name','Broker_Last_Name','Broker_Cell_Phone','Broker_Email')"
+                        style="padding-bottom: 0; color: black; padding-left: 5px; font-size: 16px;" name="Broker_State"
+                        required>
+                        <option value="notSelected" selected> Choose</option>
+
+                        <option value="Arizona">Arizona</option>
+                        <option value="California">California</option>
+                        <option value="Colorado">Colorado</option>
+                        <option value="Louisiana">Louisiana</option>
+                        <option value="Nevada">Nevada</option>
+                        <option value="Pennsylvania">Pennsylvania</option>
+                        <option value="Texas">Texas</option>
+                        <option value="Utah">Utah</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Broker_Zip" class="col-form-label" style="font-size: 16px; text-align: right;"><b>Zip
+                          Code:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="text" class="form-control" id="Broker_Zip" onkeypress="CheckNumeric(event);" name="Broker_Zip" placeholder="Zip Code"
+                      onclick="triger_on_keypress('SalesButton2','Broker_CompanyName','Broker_address','Broker_City','Broker_State','Broker_Zip','Company_Cell_Phone','Broker_Company_Email','BrokerFirst_Name','Broker_Last_Name','Broker_Cell_Phone','Broker_Email')"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;" required>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Company_Cell_Phone" class="col-form-label"
+                        style="font-size: 16px; text-align: right; margin-top: 10px;"><b> Office Phone:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="text" onkeypress="CheckNumeric(event);"  class="form-control" id="Company_Cell_Phone" name="Company_Cell_Phone" maxlength="12"
+                      onclick="triger_on_keypress('SalesButton2','Broker_CompanyName','Broker_address','Broker_City','Broker_State','Broker_Zip','Company_Cell_Phone','Broker_Company_Email','BrokerFirst_Name','Broker_Last_Name','Broker_Cell_Phone','Broker_Email')"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;  height: 55px;"
+                        placeholder="Phone number" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Broker_Company_Email" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b> Broker Office Email:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="email" class="form-control" id="Broker_Company_Email"
+                      onclick="triger_on_keypress('SalesButton2','Broker_CompanyName','Broker_address','Broker_City','Broker_State','Broker_Zip','Company_Cell_Phone','Broker_Company_Email','BrokerFirst_Name','Broker_Last_Name','Broker_Cell_Phone','Broker_Email')"
+                      name="Broker_Company_Email" placeholder="Email"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px; height: 55px;" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="BrokerFirst_Name" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>Broker First Name:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <!-- <input type="text" onkeypress="return (event.charCode > 64 && 
+              event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" -->
+                      <input type="text" 
+                      oninput="this.value = this.value.replace(/[^a-z,^A-Z,' ' ]/, '')"
+
+              class="form-control"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;"
+                        onclick="triger_on_keypress('SalesButton2','Broker_CompanyName','Broker_address','Broker_City','Broker_State','Broker_Zip','Company_Cell_Phone','Broker_Company_Email','BrokerFirst_Name','Broker_Last_Name','Broker_Cell_Phone','Broker_Email')"
+                        id="BrokerFirst_Name" name="BrokerFirst_Name" placeholder="First name" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Broker_Last_Name" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>Broker Last Name:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="text"   oninput="this.value = this.value.replace(/[^a-z,^A-Z,' ' ]/, '')"
+class="form-control"
+                            onclick="triger_on_keypress('SalesButton2','Broker_CompanyName','Broker_address','Broker_City','Broker_State','Broker_Zip','Company_Cell_Phone','Broker_Company_Email','BrokerFirst_Name','Broker_Last_Name','Broker_Cell_Phone','Broker_Email')"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;"
+                        id="Broker_Last_Name" name="Broker_Last_Name" placeholder="Last name" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Broker_Cell_Phone" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>Broker Cell Phone:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <!-- <input type="text" onkeypress="HandlePhoneFormet(event);"  class="form-control" id="Broker_Cell_Phone" name="Company_Cell_Phone"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;"
+                        placeholder="Phone number" required> -->
+
+                      
+                        <input type="text" pattern="[1-9]{1}[0-9]{9}" class="form-control" id="Broker_Cell_Phone" name="Company_Cell_Phone"
+                        onclick="triger_on_keypress('SalesButton2','Broker_CompanyName','Broker_address','Broker_City','Broker_State','Broker_Zip','Company_Cell_Phone','Broker_Company_Email','BrokerFirst_Name','Broker_Last_Name','Broker_Cell_Phone','Broker_Email')"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;"
+                        placeholder="Phone number" maxlength="12"  required onkeypress="CheckNumeric(event);">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Broker_Email" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>Broker
+                          Email:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="email" class="form-control" id="Broker_Email" name="Broker_Email" placeholder="Email"
+                      onclick="triger_on_keypress('SalesButton2','Broker_CompanyName','Broker_address','Broker_City','Broker_State','Broker_Zip','Company_Cell_Phone','Broker_Company_Email','BrokerFirst_Name','Broker_Last_Name','Broker_Cell_Phone','Broker_Email')"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="container">
+
+              <div class="text-center mt-3">
+
+                <button class="btn mt-4 btn-primary" id="previous_btn_2" style="background-color:#23a1d3;">PREVIOUS
+                  PAGE</button>
+                <button class="btn mt-4 btn-primary continue"  style="background-color:#23a1d3;"
+                  id="SalesButton2" onkeyup="enableSubmit()">CONTINUE</button>
+              </div>
+
+            </div>
+          </form>
+
+        </div>
+      </section>
+<!--  -->
+
+       <section id="BankingInformation" style="display: none;"  class="pb-5">
+        <div class="container col-8 p-1" style="background-color:#003399">
+          <h5 class="text-white text-left"
+            style="font-size: 16px; font-weight: 600; padding: 0; margin: 15px 0 2px 5px;">BANKING INFORMATION</h5>
+        </div>
+        <div class="container cnt col-8 p-4 brd">
+          <div class="g-3 justify-content-center" >
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Agent_Bank_Name" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>Bank Name:</b></label>
+                    </div>
+                        <!-- 
+                          for bank Name
+                          oninput="this.value = this.value.replace(/[^a-z,^A-Z,'-', ]/, '')" -->
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="text" class="form-control" id="Agent_Bank_Name" name="Agent_Bank_Name" 
+                        
+                  
+                      onclick="triger_on_keypress('SalesButton2','Broker_CompanyName','Broker_address','Broker_City','Broker_State','city2','Bank_Phone_Number','Broker_State2','Bank_address','Broker_Zip2','Company_Cell_Phone','Broker_Company_Email','BrokerFirst_Name','Broker_Last_Name','Broker_Cell_Phone','Broker_Email')"
+                         style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;height: 55px;" required placeholder="Bank Name">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Broker_Zip" class="col-form-label" style="font-size: 16px; text-align: right;"><b>Bank Phone Number:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="text" class="form-control" id="Bank_Phone_Number" onkeypress="CheckNumeric(event);" name="Broker_Zip" placeholder="Bank Phone Number"  pattern="[1-9]{1}[0-9]{9}"
+                      onclick="triger_on_keypress('SalesButton2','Broker_CompanyName','Broker_address','Broker_City','Broker_State','city2','Bank_Phone_Number','Broker_State2','Bank_address','Broker_Zip2','Company_Cell_Phone','Broker_Company_Email','BrokerFirst_Name','Broker_Last_Name','Broker_Cell_Phone','Broker_Email')"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;height: 55px;" required>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+ 
+              <div class="row">
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Account_Holder_Name" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>Bank Address:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="text" class="form-control" id="Bank_address" name="Account_Holder_Name" placeholder="Bank Address"
+                      style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;"   
+                      onclick="triger_on_keypress('SalesButton2','Broker_CompanyName','Broker_address','Broker_City','Broker_State','city2','Bank_Phone_Number','Broker_State2','Bank_address','Broker_Zip2','Company_Cell_Phone','Broker_Company_Email','BrokerFirst_Name','Broker_Last_Name','Broker_Cell_Phone','Broker_Email')"
+                           placeholder="First name" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Broker_Zip" class="col-form-label" style="font-size: 16px; text-align: right;"><b>City:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="text" class="form-control" id="city2"  name="Broker_Zip" placeholder="City"
+                      onclick="triger_on_keypress('SalesButton2','Broker_CompanyName','Broker_address','Broker_City','Broker_State','city2','Bank_Phone_Number','Broker_State2','Bank_address','Broker_Zip2','Company_Cell_Phone','Broker_Company_Email','BrokerFirst_Name','Broker_Last_Name','Broker_Cell_Phone','Broker_Email')"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;" 
+                        required>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>  
+              <div class="row">
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Broker_State" class="col-form-label"
+                        style="font-size: 16px; text-align: right; padding-bottom: 0;"><b>State:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+
+                      <select class="form-select" id="Broker_State2"
+                      onclick="triger_on_keypress('SalesButton2','Broker_CompanyName','Broker_address','Broker_City','Broker_State','city2','Bank_Phone_Number','Broker_State2','Bank_address','Broker_Zip2','Company_Cell_Phone','Broker_Company_Email','BrokerFirst_Name','Broker_Last_Name','Broker_Cell_Phone','Broker_Email')"
+                        style="padding-bottom: 0; color: black; padding-left: 5px; font-size: 16px;" name="Broker_State"
+                        required>
+                        <option value="notSelected" selected> Choose</option>
+
+                        <option value="AZ">Arizona</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="NV">Nevada</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="TX">Texas</option>
+                        <option value="UT">Utah</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Broker_Zip" class="col-form-label" style="font-size: 16px; text-align: right;"><b>Zip
+                          Code:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="text" class="form-control" id="Broker_Zip2"
+                       onkeypress="CheckNumeric(event);"
+                      
+                       name="Broker_Zip2" placeholder="Zip Code"
+                      onclick="triger_on_keypress('SalesButton2','Broker_CompanyName','Broker_address','Broker_City','Broker_State','city2','Bank_Phone_Number','Broker_State2','Bank_address','Broker_Zip2','Company_Cell_Phone','Broker_Company_Email','BrokerFirst_Name','Broker_Last_Name','Broker_Cell_Phone','Broker_Email')"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;" required>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Account_Holder_Name" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>Name of Account
+                          Holder:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="text" class="form-control" id="Account_Holder_Name" name="Account_Holder_Name" placeholder="First and Last Name or Company Name"
+                      style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px; height: 55px;"   
+                      onclick="triger_on_keypress('SalesButton2','Broker_CompanyName','Broker_address','Broker_City','Broker_State','city2','Bank_Phone_Number','Broker_State2','Bank_address','Broker_Zip2','Company_Cell_Phone','Broker_Company_Email','BrokerFirst_Name','Broker_Last_Name','Broker_Cell_Phone','Broker_Email')"
+                              placeholder="First name" required>
+                    </div>
+                  </div>
+                </div>
+               
+              </div>
+              <p  style="font-size: 13px; margin-left:-70%;">If a business account, please enter the legal business name.</p>
+              <div class="row">
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Agent_Account_type" class="col-form-label"
+                      style="font-size: 16px; text-align: right; padding-bottom: 0; margin-top: -10px;"><b>Account Type:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <select class="form-select" id="Agent_Account_type" name="Agent_Account_type"
+                      onclick="triger_on_keypress('SalesButton2','Broker_CompanyName','Broker_address','Broker_City','Broker_State','city2','Bank_Phone_Number','Broker_State2','Bank_address','Broker_Zip2','Company_Cell_Phone','Broker_Company_Email','BrokerFirst_Name','Broker_Last_Name','Broker_Cell_Phone','Broker_Email')"
+                                         style="font-size: 16px; padding-bottom: 0; color: black; padding-left: 5px; margin-bottom: 14px;" required>
+                        <option value="" selected> Choose</option>
+  
+                        <option value="Saving">Saving</option>
+                        <option value="Current">Current</option>
+                        <option value="Other">Other</option>
+  
+                      </select>
+                    </div>
+                  </div>
+                </div>
+               
+              </div>
+              <div class="row">
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Routing" class="col-form-label" style="font-size: 16px; text-align: right;"><b>Routing
+                          Number:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="text" class="form-control"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;" id="Routing"
+                        placeholder="Routing Number"
+                        onclick="triger_on_keypress('SalesButton2','Broker_CompanyName','Broker_address','Broker_City','Broker_State','city2','Bank_Phone_Number','Broker_State2','Bank_address','Broker_Zip2','Company_Cell_Phone','Broker_Company_Email','BrokerFirst_Name','Broker_Last_Name','Broker_Cell_Phone','Broker_Email')"
+                        name="Routing" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Account_number" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>Account Number:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="number" class="form-control" id="Account_number" name="Account_number"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;"
+                        onclick="triger_on_keypress('SalesButton2','Broker_CompanyName','Broker_address','Broker_City','Broker_State','city2','Bank_Phone_Number','Broker_State2','Bank_address','Broker_Zip2','Company_Cell_Phone','Broker_Company_Email','BrokerFirst_Name','Broker_Last_Name','Broker_Cell_Phone','Broker_Email')"
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" onclick="validateForm()" 
+                        placeholder="Account Number" onkeypress="CheckNumeric(event);" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="container-fluid" style=" padding-top:10px; margin-top: 30px;width: 100%; background-color: rgb(199, 199, 199); height: 40px; text-align: center;">
+              <h1 class="text-left" style="font-size: 16px ;"><b>STATEMENT ADDRESS</b></h1>
+
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-12" style="padding: 20px 0; ">
+                      <input type="checkbox" value="false" class="form-check-input" style="position: relative;" id="isAddressSame"
+                      onclick="triger_on_keypress('SalesButton3','Agent_Bank_Name','Account_Holder_Name','Agent_Account_type','Routing','Account_number','isAddressSame')"                
+                              name="isAddressSame" required>
+                      <label for="isAddressSame" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>My
+                          home address is the address that appears on account statement.</b></label>
+                      <p style="font-size: 12px;">if not, please provide address on record at the financial institution
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row hide_box_checked">
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Agent_Statement_Address" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>Statement Address:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="text" class="form-control" id="Agent_Statement_Address"
+                        name="Agent_Statement_Address"
+                        onclick="triger_on_keypress('SalesButton3','Agent_Bank_Name','Account_Holder_Name','Agent_Account_type','Routing','Account_number','isAddressSame')"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px; height: 55px;"
+                        placeholder="Address" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Agent_Statement_City" class="col-form-label"
+                        style="font-size: 16px; text-align: right;  margin-top: 10px;"><b>City:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="text" onkeypress="return (event.charCode > 64 && 
+                  event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" class="form-control"
+                                          onclick="triger_on_keypress('SalesButton3','Agent_Bank_Name','Account_Holder_Name','Agent_Account_type','Routing','Account_number','isAddressSame')"
+                        style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;"
+                        id="Agent_Statement_City" name="Agent_Statement_City" placeholder="City" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row  hide_box_checked">
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Agent_Statement_State" class="col-form-label"
+                        style="font-size: 16px; text-align: right; padding-bottom: 0;"><b>State:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <select class="form-select" id="Agent_Statement_State"
+                      onclick="triger_on_keypress('SalesButton3','Agent_Bank_Name','Account_Holder_Name','Agent_Account_type','Routing','Account_number','isAddressSame')"           
+                                   style="font-size: 16px; padding-bottom: 0; color: black; padding-left: 5px;"
+                        name="Agent_Statement_State" required>
+                         <option value="notSelected" selected> Choose</option>
+
+                        <option value="AZ">Arizona</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="NV">Nevada</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="TX">Texas</option>
+                        <option value="UT">Utah</option>
+
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 demoSize">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-3 colSix">
+                      <label for="Agent_Statement_Zip" class="col-form-label"
+                        style="font-size: 16px; text-align: right;"><b>Zip Code:</b></label>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 4px;">
+                      <input type="text" onkeypress="HandleZipCodeFormet(event);" class="form-control" id="Agent_Statement_Zip" name="Agent_Statement_Zip"
+                      onclick="triger_on_keypress('SalesButton3','Agent_Bank_Name','Account_Holder_Name','Agent_Account_type','Routing','Account_number','isAddressSame')"        
+                                      style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;"
+                        placeholder="Zip Code" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="complete_application_div" style=" padding-top:10px; margin-top: 30px;width: 100%; background-color: rgb(199, 199, 199); height: 40px;">
+              <h1 class="text-left" style="font-size: 16px ;"><b>COMPLETE APPLICATION</b></h1>
+            </div>
+            <div class="container themesflat-headings style-1 clearfix text-justify" class="" style=" color: black;">
+              <p class="sub-heading clearfix justify-content"
+                style="color:black;  font-family: Montserrat; font-size: 12px; letter-spacing: -0.2px; line-height: 15px;">
+                By clicking 'Complete Application,' I declare under penalty of perjury that each of the representations
+                and acknowledgments contained in this application were and will remain during the term hereof, true and correct to the best
+                of my information and belief. Furthermore, I acknowledge that any intentional or negligent misrepresentation of the
+                information contained in this application may result in civil liability and/or criminal penalties and liability for monetary damages
+                to Quick Commission Advance, its agents, successors and assigns, and any other person who may suffer any loss due to reliance upon
+                any misrepresentation which I have made in this application. Upon submission of this application, I authorize Quick Commission
+                Advance to contact the referenced
+                closing company and broker for verification purposes. The above statements are true and accurate to the
+                best of my knowledge and belief
+                as an officer of the company. I understand that the foregoing information will be relied upon by Quick
+                Commission Advance. My application
+                be relied upon by any concerned party as permission to share freely any information helpful to Quick
+                Commission Advance for its purposes.
+                The factoring transaction is not a consumer transaction. To assist us with ensuring our lien priority
+                and due diligence, you hereby
+                authorize us to record a UCC-1 Financing Statement in the appropriate state(s), covering your real
+                estate commissions, while this
+                application is pending. If the application is not approved, the lien(s) will be promptly released.
+                <br>
+                <br>
+              </p>
+            </div>
+            <div class="container">
+
+              <div class="text-center mt-3">
+
+                <button class="btn mt-4 btn-primary" id="previous_btn_3" style="background-color:#23a1d3;">PREVIOUS
+                  PAGE</button>
+                <button class="btn mt-4 btn-primary continue"  style="background-color:#23a1d3;"
+                  id="SalesButton3">CONTINUE</button>
+              </div>
+
+            </div>
+        </div>
+
+        </form>
+    </div>
+    </section>
+    <!-- <section id="LastForm"  style="display: none;"  class="pb-5" > -->
+      
+    <section id="LastForm"   class="pb-5"  style="display: none;" >
+      <div class="container col-8 p-1" style="background-color:#003399">
+        <h5 class="text-white text-left" style="font-size: 16px; font-weight: 600; padding: 0; margin: 15px 0 2px 5px;">
+          DO YOU WANT TO SPEED UP YOUR APPLICATION? UPLOAD THE
+          FOLLOWING:</h5>
+      </div>
+      <div class="container cnt col-8 p-4 brd">
+        <div class="g-3 justify-content-center">
+
+          <div class="container ddd">
+            <div class="row">
+             <div class="col-md-6">
+                <div class="row">
+                  <label for="purchase_greement" class="form-label"><b>1. Purchase Agreement (RPA)</b></label>
+                </div>
+                <div  class="row col-md-8 custom_upload_box" id="rpa_box" style="word-break: break-all;">
+                  <label for="purchase_greement" class="custom_upload_lable" >Choose file</label>
+                  <input type="file" class="form-control" onchange="upload_file_NameChange('purchase_greement','purchase_agreement_fileName','rpa_box')" style="display:none;font-size: 12px;" id="purchase_greement" name="purchase_greement" >
+               <span style="color:black;display: none; font-size: 12px;" id="purchase_agreement_fileName" >File name</span>
+
+                </div>
+              </div>
+
+
+              <div class="col-md-6">
+                
+                <div class="row">
+                  <label for="MLS_Production" class="form-label"><b>2. Last 24 Months MLS Production History
+                    </b></label>
+                </div>
+                <div class="row col-md-8 custom_upload_box"  id="mls_box" style="word-break: break-all;">
+                  <label for="MLS_Production" class="custom_upload_lable">Choose file</label>
+                  <input type="file" class="form-control" id="MLS_Production" onchange="upload_file_NameChange('MLS_Production','MLS_Production_fileName','mls_box')" style="display:none;font-size: 12px;"  name="MLS_Production">
+                   <span style="color:black;display: none; font-size: 12px;" id="MLS_Production_fileName" >File name</span>
+                </div>
+              </div>
+            </div>
+            <div class="row pt-5">
+
+
+
+
+              <div class="col-md-6">
+                <div class="row">
+                  <label for="BankStatement" class="form-label"><b>3. Last Month's Bank Statement or Void Check</b></label>
+                </div>
+                <div class="row col-md-8  custom_upload_box" id="bank_box" style="word-break: break-all;">
+                  <label for="BankStatement" class="custom_upload_lable">Choose file</label>
+
+                  <input type="file" style="display:none;font-size: 12px;"  onchange="upload_file_NameChange('BankStatement','BankStatement_fileName','bank_box')"  class="form-control" id="BankStatement"
+                    name="BankStatement" >
+                     <span style="color:black;display: none; font-size: 12px;" id="BankStatement_fileName" >File name</span>
+                </div>
+              </div>
+
+
+              <div class="col-md-6">
+                <div class="row">
+                  <label for="Drivers_License" class="form-label"><b>4. Color Copy of Drivers License</b></label>
+                </div>
+                <div class="row col-md-8  custom_upload_box" id="dl_box" style="word-break: break-all;">
+                  <label for="Drivers_License" class="custom_upload_lable">Choose file</label>
+                  <input type="file" onchange="upload_file_NameChange('Drivers_License','Drivers_License_fileName','dl_box')" style="display:none;font-size: 12px;"   class="form-control" id="Drivers_License" name="Drivers_License" >
+                    <span style="color:black;display: none; font-size: 12px;" id="Drivers_License_fileName" >File name</span>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+            <div class="row pt-5">
+              <div class="col-md-6">
+                <div class="row">
+                  <label for="Escrow_Contact" class="form-label"><b>5. Broker of Record and Escrow Contact
+                      Information</b></label>
+                </div>
+                <div class="row col-md-8 custom_upload_box" id="Escrow_box" style="word-break: break-all;">
+                   <label for="Escrow_Contact" class="custom_upload_lable">Choose file</label>
+                  <input type="file" onchange="upload_file_NameChange('Escrow_Contact','Escrow_Contact_fileName','Escrow_box')" style="display:none;font-size: 12px;"  class="form-control" id="Escrow_Contact" name="Escrow_Contact" >
+                    <span style="color:black;display: none; font-size: 12px;" id="Escrow_Contact_fileName" >File name</span>
+
+                </div>
+              </div>
+
+
+<div class="col-md-6">
+                <div class="row">
+                  <label for="Anything_Else" class="form-label"><b>6. Anything Else You Might Think Would Be
+                      Helpful</b></label>
+                </div>
+                <div class="row col-md-8 custom_upload_box" id="anything_box" style="word-break: break-all;">
+                   <label for="Anything_Else" class="custom_upload_lable">Choose file</label>
+                  <input type="file" class="form-control" id="Anything_Else" onchange="upload_file_NameChange('Anything_Else','Anything_Else_fileName','anything_box')" style="display:none;font-size: 12px;"  name="Anything_Else">
+                   <span style="color:black;display: none; font-size: 12px;" id="Anything_Else_fileName" >File name</span>
+
+                </div>
+              </div>
+            </div>
+            <div class="row">
+
+
+              
+              <div class="col-md-12">
+
+                <div class="row" style="display: flex;">
+                  <div class="col-md-4" style="padding-left: 4px;/* margin: auto; */justify-content: center;">
+                    </div>
+<div class="col-md-4" style="padding-left: 4px;/* margin: auto; */justify-content: center;">
+                    
+                    <p class="text-center"><a target="_blank" href="./privacypolicy.html">Read Privacy Policy</a></p>
+                  </div><div class="col-md-4" style="padding-left: 4px;/* margin: auto; */justify-content: center;">
+                    
+                    
+                  </div><div class="col-md-4"></div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-4 colSix">
+                    <label for="BrokerRecordOfCompany6" class="col-form-label"
+                      style="font-size: 16px; text-align: right; padding-bottom: 0;"><b>I
+                        agree to the Privacy Policy:</b></label>
+                  </div>
+
+
+
+
+
+                  <div class="col-md-4" style="padding-left: 4px;">
+                    <select id="BrokerRecordOfCompany6"
+                      style="font-size: 16px; padding-bottom: 0; color: black; padding-left: 5px;" class=""
+                      name="OpenAdvanceswihOther">
+                      <option value="Yes" selected></option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
+                    <!-- <p class="text-center"><a target="_blank" href="./privacypolicy.html">Read Privacy Policy</a></p> -->
+                  </div>
+
+                  <div class="col-md-4"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="container">
+            <div class="text-center mt-3">
+              <button class="btn mt-4 btn-primary text-center" id="completeFormSubmit"
+                style="background-color:rgb(76, 236, 76);"><b>Complete Application
+                </b></button>
+
+            </div>
+
+          </div>
+        </form>
+
+      </div>
+    </section>
+
+
+    <br><br>
+    <br><br>
+    <br><br>
+    <!-- Footer -->
+    <footer style="background-color:#003399;">
+      <div id="footer-widgets" class="themesflat-container title-style-1">
+        <div class="themesflat-row gutter-30">
+          <div class="span_1_of_2 col ">
+            <div class="widget widget_text padding-left-7" style="padding-top: 15px;">
+              <div class="textwidget">
+                <p class="margin-bottom-22">
+                  <img src="home/img/finalFooterLogo.jpg" width="500" height="50" alt="Finance"
+                    data-retina="home/img/logo-footer@2x.png" data-width="226" data-height="50">
+                </p>
+                <p>Providing financial options to Realtors
+                </p>
+              </div>
+            </div><!-- /.widget_text -->
+
+            <div class="widget widget_information padding-left-7">
+              <ul>
+                <li class="address clearfix">
+                  <div class="inner">
+                    <i class=" finance-icon-map"></i>
+                    <span class="text">7550 IH-10, San Antonio, Texas 78229</span>
+                  </div>
+                </li>
+                <li class="email clearfix">
+                  <div class="inner">
+                    <i class="finance-icon-Email02"></i>
+                    <span class="text "><a href="mailto:info@quickcommissionadvance.com"
+                        style="color:#b1b1b1;text-transform: lowercase; ">info@quickcommissionadvance.com</a></span>
+                  </div>
+                </li>
+                <li class="phone clearfix">
+                  <div class="inner">
+                    <i class=" finance-icon-Phone"></i>
+                    <span class="text"> +1 (877) 520-1529 / +1 (877) 520-1838 (Fax) / 8:00 AM - 6:00 PM</span>
+                  </div>
+                </li>
+              </ul>
+            </div><!-- /.widget_information -->
+          </div><!-- /.span_1_of_4 -->
+
+
+
+          <div class="span_1_of_2 col" style="padding-top: 44px;">
+            <div class="widget widget_tag_cloud margin-top-6 padding-left-9">
+              <h2 class="widget-title margin-bottom-43" style="padding-top: 25px;"><span>Popular
+                  Tags</span></h2>
+              <div class="tagcloud">
+                <a href="">ADVANCE</a>
+                <a href="">COMMISSION</a>
+                <a href="">REALTOR</a>
+                <a href="">BROKER</a>
+                <a href="">CASH</a>
+                <a href="">FINANCES</a>
+                <a href="">INCOME</a>
+                <a href="">PLAN</a>
+                <a href="">COMMISSION ADVANCE</a>
+                <a href="">CASH ADVANCE</a>
+                <a href="">STABALIZE INCOME</a>
+              </div>
+            </div><!-- /.widget_tag_cloud -->
+          </div><!-- /.span_1_of_4 -->
+
+
+        </div><!-- /.themesflat-row -->
+      </div><!-- /#footer-widgets -->
+    </footer><!-- /#footer -->
+
+    <!-- Bottom -->
+    <div id="bottom" class="clearfix style-1">
+      <div id="bottom-bar-inner" class="themesflat-container">
+        <div class="bottom-bar-inner-wrap">
+          <div class="bottom-bar-content">
+            <div id="copyright" class="padding-left-0">
+              &copy; COPYRIGHT QUICK COMMISSION ADVANCE LLC, DESIGN BY CONNOR, CHASE, & <a
+                href="https://endlos.tech/">@ENDLOS.</a>
+
+            </div><!-- /#copyright -->
+          </div><!-- /.bottom-bar-content -->
+
+          <div class="bottom-bar-menu">
+            <ul class="bottom-nav">
+              <li class="menu-item"><a href="./aboutUs.html">WHY US</a></li>
+              <li class="menu-item"><a href="./applynow.html">APPLY NOW</a></li>
+              <li class="menu-item"><a href="./agentFaq.html">FAQ</a></li>
+              <li class="menu-item"><a href="./contactUs.html">Contacts</a></li>
+            </ul>
+          </div><!-- /.bottom-bar-menu -->
+        </div>
+      </div>
+    </div><!-- /#bottom -->
+  </div><!-- /#page -->
+  </div><!-- /#wrapper -->
+
+  <!-- Bottom -->
+
+  </div><!-- /#page -->
+  </div><!-- /#wrapper -->
+</body>
+
+</html>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
+<script>
+  document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
+    const dropZoneElement = inputElement.closest(".drop-zone");
+
+    dropZoneElement.addEventListener("click", (e) => {
+      inputElement.click();
+    });
+
+    inputElement.addEventListener("change", (e) => {
+      if (inputElement.files.length) {
+        updateThumbnail(dropZoneElement, inputElement.files[0]);
+      }
+    });
+
+    dropZoneElement.addEventListener("dragover", (e) => {
+      e.preventDefault();
+      dropZoneElement.classList.add("drop-zone--over");
+    });
+
+    ["dragleave", "dragend"].forEach((type) => {
+      dropZoneElement.addEventListener(type, (e) => {
+        dropZoneElement.classList.remove("drop-zone--over");
+      });
+    });
+
+    dropZoneElement.addEventListener("drop", (e) => {
+      e.preventDefault();
+
+      if (e.dataTransfer.files.length) {
+        inputElement.files = e.dataTransfer.files;
+        updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
+      }
+
+      dropZoneElement.classList.remove("drop-zone--over");
+    });
+  });
+
+  /**
+   * Updates the thumbnail on a drop zone element.
+   *
+   * @param {HTMLElement} dropZoneElement
+   * @param {File} file
+   */
+  function updateThumbnail(dropZoneElement, file) {
+    let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
+
+    // First time - remove the prompt
+    if (dropZoneElement.querySelector(".drop-zone__prompt")) {
+      dropZoneElement.querySelector(".drop-zone__prompt").remove();
+    }
+
+    // First time - there is no thumbnail element, so lets create it
+    if (!thumbnailElement) {
+      thumbnailElement = document.createElement("div");
+      thumbnailElement.classList.add("drop-zone__thumb");
+      dropZoneElement.appendChild(thumbnailElement);
+    }
+
+    thumbnailElement.dataset.label = file.name;
+
+    // Show thumbnail for image files
+    if (file.type.startsWith("image/")) {
+      const reader = new FileReader();
+
+      reader.readAsDataURL(file);
+      reader.onload = () => {
+        thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
+      };
+    } else {
+      thumbnailElement.style.backgroundImage = null;
+    }
+  }
+
+
+
+function upload_file_NameChange(inputId,filename,box){
+
+ document.getElementById(filename).textContent=document.getElementById(inputId).files[0].name
+  document.getElementById(filename).style.display="block"
+  document.getElementById(box).style.borderColor="green"
+
+}
+
+</script>
+<script>
+  let fname = 0;
+  let lname = 0;
+  let email = 0;
+  let phone = 0;
+  let address = 0;
+  let city = 0;
+  let state = 0;
+  let zip = 0;
+  let mony = 0;
+
+ 
+
+  function CheckNumeric(e) {
+
+    console.log(e.keyCode)
+
+
+    // console.log(e.keyCode)
+
+
+
+    if (window.event) // IE
+    {
+      if ((e.keyCode < 48 || e.keyCode > 57) & e.keyCode != 8 & e.keyCode != 36 & e.keyCode != 45) {
+        event.returnValue = false;
+        return false;
+      }
+    }
+    else { // Fire Fox
+      if ((e.which <= 48 || e.which > 57) & e.which != 8 & e.which != 36 & e.which != 45) {
+        e.preventDefault();
+        return false;
+      }
+    }
+  }
+  function validateEmail($email) {
+    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+    return emailReg.test($email);
+  }
+  function alerts(events) {
+    let a = $(events).val();
+    let b = 0;
+    if (a == "") {
+      $(events).css("border", "2px solid red");
+      b = 0;
+    } else {
+      $(events).css("border", "2px solid green");
+      b = 1;
+    }
+    return b;
+  }
+ 
+  function Agent_Zips(event) {
+    let a = $(event).val();
+    let b = 0;
+    if (a.length == 5 || a.length == 10) {
+      $(event).css("border", "2px solid green");
+      b = 1;
+    }
+    else {
+      $(event).css("border", "2px solid red");
+      b = 0;
+    }
+    return b;
+  }
+
+  function Agent_emails(event) {
+    let a = $(event).val();
+    let b = 0;
+    if (validateEmail(a) && a != "") {
+      $(event).css("border", "2px solid green");
+      b = 1;
+    }
+    else {
+      $(event).css("border", "2px solid red");
+    }
+    return b;
+  }
+  function alertAll(events) {
+    let a = "#" + events;
+    if (a == "#Agent_First_Name") {
+      fname = alerts(a);
+
+    } else if (a == "#Agent_Last_Name") {
+      lname = alerts(a);
+    } else if (a == "#email") {
+      email = Agent_emails(a);
+    } else if (a == "#Agent_Cell_Phone") {
+      let b = $(a).val();
+      if (b.length == 12) {
+        $(a).css("border", "2px solid green");
+        phone = 1;
+      } else {
+        $(a).css("border", "2px solid red");
+        phone = 0;
+      }
+    } else if (a == "#Agent_Home_address") {
+      address = alerts(a);
+    } else if (a == "#Agent_City") {
+      city = alerts(a);
+    } else if (a == "#Agent_Zip") {
+      zip = Agent_Zips(a);
+      
+    }
+     else if(a=="#ClosingCompany_Zip"){
+      zip = ClosingCompany_Zip(a);
+     }
+     else if(a=="#Property_Zip"){
+      zip = Property_Zip(a);
+     }
+     else if(a=="#Agent_Statement_Zip"){
+      zip = Agent_Statement_Zip(a);
+     }
+     else if(a=="#Broker_Zip"){
+      zip = Broker_Zip(a);
+     }
+    else if (a == "#totalAmount") {
+      let c = $(a).val();
+      let b = c.replace(',', '');
+      b = b.replace('$', '');
+      if (b >= 2500 && b <= 15000) {
+        $("#errorMsg").hide();
+        $('#totalAmount').css("border", "2px solid green");
+        mony = 1;
+      } else {
+        $("#errorMsg").show();
+        $('#totalAmount').css("border", "2px solid red");
+        mony = 0;
+      }
+    }
+
+  }
+
+
+
+
+  function HandleZipCodeFormet (event){
+let a = event.target.value
+      if (a.length == 5) {
+        c = [a.slice(0, 5), "-", a.slice(5)].join('');
+    event.target.value=c ;
+      }
+      if (a.length == 10) {
+        c = a.slice(0, -1);
+        event.target.value=c ;
+      }
+
+  }
+
+
+    function HandlePhoneFormet (event){
+
+     let a = event.target.value
+
+      if (a.length == 3 || a.length == 7) {
+        c = a + "-";
+ event.target.value=c ;
+      }
+      if (a.length == 12) {
+        c = a.slice(0, -1);
+         event.target.value=c ;
+      }
+
+
+    };
+
+
+    function ClosingCompany_Zip(event) {
+    let a = $(event).val();
+    let b = 0;
+    if (a.length == 5 || a.length == 10) {
+      $(event).css("border", "2px solid green");
+      b = 1;
+    }
+    else {
+      $(event).css("border", "2px solid red");
+      b = 0;
+    }
+    return b;
+  }
+  function  Agent_Statement_Zip(event) {
+    let a = $(event).val();
+    let b = 0;
+    if (a.length == 5 || a.length == 10) {
+      $(event).css("border", "2px solid green");
+      b = 1;
+    }
+    else {
+      $(event).css("border", "2px solid red");
+      b = 0;
+    }
+    return b;
+  }
+  function Property_Zip(event) {
+    let a = $(event).val();
+    let b = 0;
+    if (a.length == 5 || a.length == 10) {
+      $(event).css("border", "2px solid green");
+      b = 1;
+    }
+    else {
+      $(event).css("border", "2px solid red");
+      b = 0;
+    }
+    return b;
+  }  function Broker_Zip(event) {
+    let a = $(event).val();
+    let b = 0;
+    if (a.length == 5 || a.length == 10) {
+      $(event).css("border", "2px solid green");
+      b = 1;
+    }
+    else {
+      $(event).css("border", "2px solid red");
+      b = 0;
+    }
+    return b;
+  }
+
+  $(document).ready(function () {
+
+    sessionStorage.getItem("firstName")&&$('#Agent_First_Name').val(sessionStorage.getItem("firstName"))
+sessionStorage.getItem("lastName")&&$('#Agent_Last_Name').val(sessionStorage.getItem("lastName"))
+sessionStorage.getItem("userEmail")&&$('#email').val(sessionStorage.getItem("userEmail"))
+
+
+    $('#errorMsg').hide();
+    // $('#SeleInformation > .brd').hide();
+    // $('#BrokerInformation > .brd').hide();
+    // $('#BankingInformation > .brd').hide();
+    // $('#LastForm > .brd').hide();
+
+    $('input').focus(function () {
+      let z = $(this).attr("id");
+      $(this).css("border", "2px solid #00abc9");
+    });
+
+    $("input[type=file]").change(function () {
+      let z = $(this).val();
+      if (z == "") {
+        $(this).css("border", "2px solid red");
+      } else {
+        $(this).css("border", "2px solid green");
+      }
+    });
+
+    $("#Agent_State").change(function () {
+      state = alerts("#Agent_State");
+      if (lname == 1 && fname == 1 && email == 1 && phone == 1 && address == 1 && city == 1 && state == 1 && zip == 1 && mony == 1) {
+        $('#ContactButton').css("background-color", "rgb(76, 236, 76)");
+      } else {
+        $('#ContactButton').css("background-color", "#23a1d3");
+      }
+    });
+    $("select").change(function () {
+      let z = $(this).attr("id");
+      let a = "#" + z;
+      alerts(a);
+    });
+    $('input').focusout(function () {
+      let z = $(this).attr("id");
+      alertAll(z);
+      if (lname == 1 && fname == 1 && email == 1 && phone == 1 && address == 1 && city == 1 && state == 1 && zip == 1 && mony == 1) {
+        $('#ContactButton').css("background-color", "rgb(76, 236, 76)");
+
+      } else {
+        $('#ContactButton').css("background-color", "#23a1d3");
+      }
+    });
+
+    $('#Agent_Cell_Phone').keypress(function () {
+      let a = $("#Agent_Cell_Phone").val();
+      if (a.length == 3 || a.length == 7) {
+        c = a + "-";
+        $("#Agent_Cell_Phone").val(c);
+      }
+      if (a.length == 12) {
+        c = a.slice(0, -1);
+        $("#Agent_Cell_Phone").val(c);
+      }
+    });
+
+    $('#Agent_Zip').keypress(function () {
+      let a = $("#Agent_Zip").val();
+      if (a.length == 5) {
+        c = [a.slice(0, 5), "-", a.slice(5)].join('');
+        $("#Agent_Zip").val(c);
+      }
+      if (a.length == 10) {
+        c = a.slice(0, -1);
+        $("#Agent_Zip").val(c);
+      }
+    });
+
+    $('#totalAmount').keyup(function () {
+      let a = $("#totalAmount").val();
+      let c = a.replace("$", "");
+      c = c.replace(",", "");
+      var num_parts = c.toString().split(".");
+      num_parts[0] = num_parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      c = num_parts.join(".");
+      $("#totalAmount").val("$" + c);
+      let b = a.replace(',', '');
+      b = b.replace('$', '');
+      if (b >= 4000 && b <= 15000) {
+        $("#errorMsg").hide();
+        $('#totalAmount').css("border", "2px solid green");
+      }
+    });
+
+ // sepration '-' form lower form
+ $('#ClosingCompany_Cell_Phone').keypress(function () {
+      let a = $("#ClosingCompany_Cell_Phone").val();
+      if (a.length == 3 || a.length == 7) {
+        c = a + "-";
+        $("#ClosingCompany_Cell_Phone").val(c);
+      }
+      if (a.length == 12) {
+        c = a.slice(0, -1);
+        $("#ClosingCompany_Cell_Phone").val(c);
+      }
+    });
+
+    $('#Property_Zip').keypress(function () {
+      let a = $("#Property_Zip").val();
+      if (a.length == 5) {
+        c = [a.slice(0, 5), "-", a.slice(5)].join('');
+        $("#Property_Zip").val(c);
+      }
+      if (a.length === 10) {
+        c = a.slice(0, -1);
+        $("#Property_Zip").val(c);
+      }
+    });
+    $('#ClosingCompany_Zip').keypress(function () {
+      let a = $("#ClosingCompany_Zip").val();
+      if (a.length == 5) {
+        c = [a.slice(0, 5), "-", a.slice(5)].join('');
+        $("#ClosingCompany_Zip").val(c);
+      }
+      if (a.length == 10) {
+        c = a.slice(0, -1);
+        $("#ClosingCompany_Zip").val(c);
+      }
+    });
+    $('#Broker_Zip').keypress(function () {
+      let a = $("#Broker_Zip").val();
+      if (a.length == 5) {
+        c = [a.slice(0, 5), "-", a.slice(5)].join('');
+        $("#Broker_Zip").val(c);
+      }
+      if (a.length == 10) {
+        c = a.slice(0, -1);
+        $("#Broker_Zip").val(c);
+      }
+    });
+    $('#Company_Cell_Phone').keypress(function () {
+      let a = $("#Company_Cell_Phone").val();
+      if (a.length == 3 || a.length == 7) {
+        c = a + "-";
+        $("#Company_Cell_Phone").val(c);
+      }
+      if (a.length == 12) {
+        c = a.slice(0, -1);
+        $("#Company_Cell_Phone").val(c);
+      }
+    });
+    $('#Broker_Cell_Phone').keypress(function () {
+      let a = $("#Broker_Cell_Phone").val();
+      if (a.length == 3 || a.length == 7) {
+        c = a + "-";
+        $("#Broker_Cell_Phone").val(c);
+      }
+      if (a.length == 12) {
+        c = a.slice(0, -1);
+        $("#Broker_Cell_Phone").val(c);
+      }
+    });
+    $('#Agent_Statement_Zip').keypress(function () {
+      let a = $("#Agent_Statement_Zip").val();
+      if (a.length == 5) {
+        c = [a.slice(0, 5), "-", a.slice(5)].join('');
+        $("#Agent_Statement_Zip").val(c);
+      }
+      if (a.length == 10) {
+        c = a.slice(0, -1);
+        $("#Agent_Statement_Zip").val(c);
+      }
+    });
+
+// ----------------
+
+
+$('#isAddressSame').click(()=>{
+
+console.log('you clicked',$('#isAddressSame').val())
+
+// console.log($('#textbox2').val($(this).is(':checked')))
+
+
+if($('#isAddressSame').val()=="false"){
+
+  $('#isAddressSame').val("true")  
+
+  $(".hide_box_checked").css('display',"none")
+}
+else{
+  $('#isAddressSame').val("false")
+    $(".hide_box_checked").css('display',"block")
+
+}
+
+
+
+
+})
+
+    // previous page button hadnling 
+
+    $("#previous_btn_1").click(()=>{
+
+$("#totalAmount").focus()
+
+})
+
+    $("#previous_btn_2").click(()=>{
+$("#BrokerRecordOfCompany").focus()
+
+})
+    $("#previous_btn_3").click(()=>{
+$("#Broker_CompanyName").focus()
+})
+
+
+// if($('#totalAmount').val()&& $('#Agent_First_Name').val()&& $('#Agent_Last_Name').val()&&$('#email').val()&& $('#Agent_Cell_Phone').val()&&$('#Agent_Home_address').val()&&$('#Agent_City').val()&&$('#Agent_State').val()&& $('#Agent_Zip').val()){
+
+// console.log('all fields are fieldll')
+
+// }
+
+
+
+// client form submit
+$("#ContactButton20").click(function(){
+
+  // $("#ContactButton20").css("background-color","green")
+  
+  // console.log($("#ContactButton20").css("background-color"))
+  // console.log($("#ContactButton20").css("background-color")=="rgb(35, 161, 211)") //blue
+  // console.log($("#ContactButton20").css("background-color")=="rgb((0, 128, 0))") //green
+
+
+
+  // if()
+
+
+
+
+ 
+
+
+  
+  console.log('you clicked on the button')
+
+   let amount = $('#totalAmount').val();
+   let authToken= localStorage.getItem("authToken")
+   
+   let firstName = $('#Agent_First_Name').val();
+   let lastName = $('#Agent_Last_Name').val();
+   let email = $('#email').val();
+   let phone = $('#Agent_Cell_Phone').val();
+   let address = $('#Agent_Home_address').val();
+   let city = $('#Agent_City').val();
+   let state = $('#Agent_State').val();
+   let zipcode = $('#Agent_Zip').val();
+
+
+
+
+
+      if(!localStorage.getItem("appId")){
+
+
+  $.ajax({
+    url: "http://143.198.155.212/api/application/register",
+    headers: { "authToken": authToken },
+                    type: "POST",
+                    dataType: "json",
+                    data: { "amount":amount },
+                    success: function (result) {
+                        localStorage.setItem("appId",result.data.appId);
+
+
+    $.ajax({
+    url: "http://143.198.155.212/api/client/register",
+    headers: { "authToken": authToken },
+                    type: "POST",
+                    dataType: "json",
+                    // data: { "firstName":firstName,"lastName":lastName,email:"email", phone,},
+                    data: {appId:localStorage.getItem("appId"), firstName,lastName,email,phone,HomeAddress:address,city,state,zipcode},
+                    success: function (result) {
+                        // localStorage.setItem("appId",result.data.appId);
+
+
+
+$("#ContactButton20").css("background-color","Green");
+document.getElementById('SeleInformation').style.display = 'block'
+
+
+  
+
+
+
+
+
+ $.ajax({
+    url: "http://143.198.155.212/api/application/edit",
+    headers: { "authToken": authToken },
+                    type: "POST",
+                    dataType: "json",
+                    // data: { "firstName":firstName,"lastName":lastName,email:"email", phone,},
+                    data: {id:localStorage.getItem('appId'),isClientCompleted:true},
+                    success: function (result) {
+   }
+                });   
+
+
+
+
+                                          
+
+                    }
+                });   
+
+
+
+
+
+
+
+},
+            error: function (error) {
+              console.log(error.responseJSON.message);
+
+              swal({
+                title: error.responseJSON.error
+                  ? error.responseJSON.error
+                  : error.responseJSON.message,
+                icon: "error",
+              });
+            },
+                })
+
+
+
+      }
+
+
+
+      else{
+
+
+                   
+    $.ajax({
+    url: "http://143.198.155.212/api/client/register",
+    headers: { "authToken": authToken },
+                    type: "POST",
+                    dataType: "json",
+                    // data: { "firstName":firstName,"lastName":lastName,email:"email", phone,},
+                    data: {appId:localStorage.getItem("appId"), firstName,lastName,email,phone,HomeAddress:address,city,state,zipcode},
+                    success: function (result) {
+                      
+document.getElementById('SeleInformation').style.display = 'block'
+
+  
+$("#ContactButton20").css("background-color","Green");
+
+
+
+
+ $.ajax({
+    url: "http://143.198.155.212/api/application/edit",
+    headers: { "authToken": authToken },
+                    type: "POST",
+                    dataType: "json",
+                    // data: { "firstName":firstName,"lastName":lastName,email:"email", phone,},
+                    data: {id:localStorage.getItem('appId'),isClientCompleted:true},
+                    success: function (result) {
+   }
+                });   
+
+
+
+
+                                          
+              }
+                    
+                });   
+
+
+
+
+              }
+
+      
+
+                     
+             
+})
+
+
+// Sales  Form submit 
+$("#SalesButton").click(()=>{
+
+
+  let authToken = localStorage.getItem('authToken')
+ 
+
+    let isBroker = $('#BrokerRecordOfCompany').val();
+    let isTakenAdvance = $('#BrokerRecordOfCompany3').val();
+
+
+
+    
+ $.ajax({
+    url: "http://143.198.155.212/api/saleconform/register",
+    headers: { "authToken": authToken },
+                    type: "POST",
+                    dataType: "json",
+                  
+                    data: {appId:localStorage.getItem('appId'),isBroker,isTakenAdvance},
+                    success: function (result) {
+
+
+   }
+                });  
+                
+                //property detailas api call 
+
+    let PropertyAddress = $('#Property_Addres').val();
+    let Propertycity = $('#Property_City').val();
+    let Propertystate = $('#Property_State').val();
+    let Propertyzip = $('#Property_Zip').val();
+    let PropertysalerName = $('#Property_Seller_Name').val();
+    let PropertybuyerName = $('#Property_Buyer_Name').val();
+    let PropertyfinalSalesPrice = $('#Property_Final_Price').val();
+    let PropertyclosingDate = $('#Property_Closing_Date').val();
+    let isShortSale = $('#isShortSale').val();
+
+
+
+ 
+
+ $.ajax({
+    url: "http://143.198.155.212/api/property/register",
+    headers: { "authToken": authToken },
+                    type: "POST",
+                    dataType: "json",
+                  
+                    data: {appId:localStorage.getItem('appId'),address:PropertyAddress,state:Propertystate,sellerName:PropertysalerName,finalSalesPrice:PropertyfinalSalesPrice,city:Propertycity,zipcode:Propertyzip,buyerName:PropertybuyerName,ClosingDate:PropertyclosingDate,isShortSale},
+                    success: function (result) {
+
+
+   }
+                });   
+
+    
+
+                // Agent detials   
+                
+                
+
+
+
+
+  let netCommission = $('#Property_Final_Price_Net').val();
+  
+  let typeOfAgentOutput=()=>{
+    let isSellingOrListing = $('#isSellingOrListing').val();
+    
+    
+    if(isSellingOrListing=="islisting"){
+      return {
+        
+        isListing:true,
+        isSelling:false
+        
+      }
+    }
+    
+    
+    if(isSellingOrListing=="isSelling")
+    return {
+      
+      isListing:false,
+      isSelling:true
+      
+    }
+  }
+  
+  let typeOfAgent=typeOfAgentOutput()
+  let totalTransactions = $('#Transaction_completein_12months').val();
+  let pendingTransactions = $('#Pedning_Transaction').val();
+  let nonPendingListing = $('#Non_pending_Transaction').val();
+
+
+  console.log('all the details are ',netCommission,typeOfAgent,totalTransactions,pendingTransactions,nonPendingListing)
+
+ 
+
+ $.ajax({
+    url: "http://143.198.155.212/api/agent/register",
+    headers: { "authToken": authToken },
+                    type: "POST",
+                    dataType: "json",
+                  
+                    data: {appId:localStorage.getItem('appId'),netCommission,typeOfAgent,totalTransactions,pendingTransactions,nonPendingListing},
+                    success: function (result) {
+
+
+   }
+                });   
+
+
+
+
+
+                // Closing company detials   
+                
+                
+
+
+
+
+  let closingCompanyName = $('#Closing_Company').val();
+  let address = $("#ClosingCompany_address").val();
+  let EscrowNumber = $('#Escrow').val();
+  let city = $("#ClosingCompany_city" ).val();
+  let state = $('#ClosingCompany_State').val();
+  let zipCode = $('#ClosingCompany_Zip').val();
+  let contactName = $('#ClosingCompany_Contact').val();
+  let phone = $('#ClosingCompany_Cell_Phone').val();
+  let email = $('#ClosingCompany_Email').val();
+
+
+
+ 
+
+ $.ajax({
+    url: "http://143.198.155.212/api/closingcompany/register",
+    headers: { "authToken": authToken },
+                    type: "POST",
+                    dataType: "json",
+                  
+                    data: {appId:localStorage.getItem('appId'),closingCompanyName,address,EscrowNumber,city,state,zipCode,contactName,phone,email},
+                    success: function (result) {
+
+
+
+
+
+$.ajax({
+    url: "http://143.198.155.212/api/application/edit",
+    headers: { "authToken": authToken },
+                    type: "POST",
+                    dataType: "json",
+                   
+                    data: {id:localStorage.getItem('appId'),isSaleCompleted:true,},
+                    success: function (result) {
+                      $("#SalesButton").css("background-color","Green");
+
+                      document.getElementById('BrokerInformation').style.display="block"
+                  
+   }
+                });   
+
+
+
+
+
+
+
+
+   }
+                });   
+
+
+
+  
+  
+})
+
+
+//Broker Form Submit
+$("#SalesButton2").click(()=>{
+
+
+  let authToken = localStorage.getItem('authToken')
+ 
+
+    let borkerCompanyName = $('#Broker_CompanyName').val();
+    let address = $('#Broker_address').val();
+    let city = $('#Broker_City').val();
+    let state = $('#Broker_State').val();
+    let zipcode = $('#Broker_Zip').val();
+    let phone = $('#Company_Cell_Phone').val();
+    let email = $('#Broker_Company_Email').val();
+
+    let bemail = $('#Broker_Email').val();
+    let bcellPhone = $('#Broker_Cell_Phone').val();
+    let bFirstName = $('#BrokerFirst_Name').val();
+    let bLastName = $('#Broker_Last_Name').val();
+ 
+
+
+
+$.ajax({
+    url: "http://143.198.155.212/api/broker/register",
+    headers: { "authToken": authToken },
+                    type: "POST",
+                    dataType: "json",
+                  
+                    data: {appId:localStorage.getItem('appId'),borkerCompanyName,address,city,state,zipcode,phone,email,bemail,bcellPhone,bFirstName,bLastName},
+                    success: function (result) {
+
+
+
+
+
+$.ajax({
+    url: "http://143.198.155.212/api/application/edit",
+    headers: { "authToken": authToken },
+                    type: "POST",
+                    dataType: "json",
+                   
+                    data: {id:localStorage.getItem('appId'),isBrokerCompleted:true,},
+                    success: function (result) {
+
+ document.getElementById('BankingInformation').style.display="block"
+ $("#SalesButton2").css("background-color","Green");
+                  
+
+   }
+                });   
+
+
+
+
+
+
+
+
+   }
+                });   
+
+
+
+  
+  
+})
+
+
+
+//Banking  Form Submit
+$("#SalesButton3").click(()=>{
+
+
+  let authToken = localStorage.getItem('authToken')
+ 
+
+    let bankName = $('#Agent_Bank_Name').val();
+    let accountHolder = $('#Account_Holder_Name').val();
+    let accountType = $('#Agent_Account_type').val();
+    let routing = $('#Routing').val();
+    let accountNumber = $('#Account_number').val();
+
+
+    let statementAddress = $('#Agent_Statement_Address').val();
+    let city = $('#Agent_Statement_City').val();
+    let state = $('#Agent_Statement_State').val();
+    let zipCode = $('#Agent_Statement_Zip').val();
+  let isAddressSame = document.getElementById('isAddressSame').checked;
+
+  
+
+
+
+$.ajax({
+    url: "http://143.198.155.212/api/banking/register",
+    headers: { "authToken": authToken },
+                    type: "POST",
+                    dataType: "json",
+                  
+                    data: {appId:localStorage.getItem('appId'),bankName,accountHolder,accountType,routing,accountNumber,statementAddress,city,state,zipCode,isAddressSame},
+                    success: function (result) {
+
+
+
+
+
+$.ajax({
+    url: "http://143.198.155.212/api/application/edit",
+    headers: { "authToken": authToken },
+                    type: "POST",
+                    dataType: "json",
+                   
+                    data: {id:localStorage.getItem('appId'),isBankingCompleted:true,},
+                    success: function (result) {
+
+
+                      document.querySelector('#LastForm').style.display="block"
+                       $("#SalesButton3").css("background-color","Green");
+
+}
+                });   
+
+
+
+
+
+
+
+
+   }
+                });   
+
+
+
+  
+  
+})
+
+//Upload Document  Form Submit
+$("#completeFormSubmit").click(()=>{
+
+
+  let authToken = localStorage.getItem('authToken')
+ 
+
+    let isAgreeTerms = $('#BrokerRecordOfCompany6').val()
+    let purchase_greement = $('#purchase_greement').prop('files')[0]
+    let MLS_Production = $('#MLS_Production').prop('files')[0]
+    let BankStatement = $('#BankStatement').prop('files')[0]
+    let Drivers_License = $('#Drivers_License').prop('files')[0]
+    let Escrow_Contact = $('#Escrow_Contact').prop('files')[0]
+    let Anything_Else = $('#Anything_Else').prop('files')[0]
+
+    console.log({purchase_greement,MLS_Production} )
+
+  
+
+
+
+
+
+
+
+ let formdata = new FormData();
+
+ formdata.append("appId",localStorage.getItem("appId"))
+ formdata.append("files",purchase_greement)
+ formdata.append("files",MLS_Production)
+ formdata.append("files",BankStatement)
+ formdata.append("files",Drivers_License)
+ formdata.append("files",Escrow_Contact)
+ formdata.append("files",Anything_Else)
+
+
+
+//  formdata.append()
+
+
+
+  //   let accountHolder = $('#Account_Holder_Name').val();
+  //   let accountType = $('#Agent_Account_type').val();
+  //   let routing = $('#Routing').val();
+  //   let accountNumber = $('#Account_number').val();
+
+
+  //   let statementAddress = $('#Agent_Statement_Address').val();
+  //   let city = $('#Agent_Statement_City').val();
+  //   let state = $('#Agent_Statement_State').val();
+  //   let zipCode = $('#Agent_Statement_Zip').val();
+  // let isAddressSame = document.getElementById('isAddressSame').checked;
+
+  
+
+
+
+$.ajax({
+    // url: "http://143.198.155.212/api/documentupload/register",
+    url: "http://143.198.155.212/api/file/register",
+processData: false,
+  mimeType: "multipart/form-data",
+  contentType: false,
+headers: { "authToken": authToken },
+type: "POST",
+data: formdata,
+success: function (result) {
+
+
+
+
+
+$.ajax({
+    url: "http://143.198.155.212/api/application/edit",
+    headers: { "authToken": authToken },
+                    type: "POST",
+                    dataType: "json",
+                   
+                    data: {id:localStorage.getItem('appId'),isDocumentUploaded:true,isCompleted:{iscomplete:true,date:Date.now()},isAgreeTerms},
+                    success: function (result) {
+
+
+               localStorage.removeItem('appId')
+                window.location.href = "./thankyou.html";
+
+}
+                });   
+
+
+
+
+
+
+
+
+   }
+                });   
+
+
+
+  
+  
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  });
+
+    // if(!localStorage.getItem('authToken')===true){
+    //      window.location.href = "./../index.html";
+    //   }
+
+
+</script>
+
+<script>
+  // comma for value sepration
+  document.getElementById('Property_Final_Price').addEventListener('input', event =>
+    event.target.value = (parseInt(event.target.value.replace(/[^\d]+/gi, '')) || "").toLocaleString('en-US')
+  );
+
+  // document.getElementById('Property_Final_Price_Net').addEventListener('input', event =>
+
+  //   event.target.value = (parseInt(event.target.value.replace(/[^\d]+/gi, '')) || "").toLocaleString('en-US')
+  // );
+
+
+  document.getElementById('Property_Final_Price_Net').addEventListener('input', event =>
+  {
+  
+    event.target.value = (parseInt(event.target.value.replace(/[^\d]+/gi, '')) || "").toLocaleString('en-US');
+    console.log(event.target.value==0)
+}
+
+
+    
+  );
+
+
+  // 
+  // 
+  document.getElementById('Transaction_completein_12months').addEventListener('input', event =>{
+
+  
+    event.target.value==0?'':event.target.value =(parseInt(event.target.value.replace(/[^0-9]+/g, '')) || "").toLocaleString('en-US')
+
+    // event.target.value = (parseInt(event.target.value.replace(/[^\d]+/gi, '')) || "").toLocaleString('en-US')
+  }
+  );
+  document.getElementById('Pedning_Transaction').addEventListener('input', event =>{
+
+    event.target.value==0?'':event.target.value =(parseInt(event.target.value.replace(/[^0-9]+/g, '')) || "").toLocaleString('en-US')
+
+    // event.target.value = (parseInt(event.target.value.replace(/[^\d]+/gi, '')) || "").toLocaleString('en-US')
+  }
+  );
+  document.getElementById('Non_pending_Transaction').addEventListener('input', event =>{
+
+
+ event.target.value==0?'':event.target.value =(parseInt(event.target.value.replace(/[^0-9]+/g, '')) || "").toLocaleString('en-US')
+
+    // event.target.value = (parseInt(event.target.value.replace(/[^\d]+/gi, '')) || "").toLocaleString('en-US')
+  }
+  );
+
+
+
+  
+  function enableSubmit() {
+    let inputs = document.querySelectorAll('.form-control');
+    let btn = document.querySelectorAll('.continue');
+    let isValid = true;
+
+    for (var i = 0; i < inputs.length; i++) {
+      let changedInput = inputs[i];
+      if (changedInput.value.trim() === "" || changedInput.value === null) {
+        isValid = false;
+        break;
+      }
+      // btn.href='./thankyou.html'
+    }
+    btn.disabled = !isValid;
+    // btn.href='./thankyou.html'
+
+  }
+
+
+  // for third form opening
+
+  // let btn_second = document.getElementById('SalesButton');
+  // let visible_section2 = document.getElementById('BrokerInformation');
+  // btn_second.addEventListener('click', function (e) {
+  //   visible_section2.style.display = 'block'
+  //   e.preventDefault()
+  // })
+
+
+  //for fourth form opening
+  // let btn_third = document.getElementById('SalesButton2');
+  // let visible_section3 = document.getElementById('BankingInformation');
+
+  // btn_third.addEventListener('click', function (e) {
+  //   visible_section3.style.display = 'block'
+  //   e.preventDefault()
+  // })
+  //for last form opening
+
+  // let btn_last = document.getElementById('SalesButton3');
+  // let visible_section4 = document.getElementById('LastForm');
+
+  // btn_last.addEventListener('click', function (e) {
+  //   visible_section4.style.display = 'block'
+  //   e.preventDefault()
+  // })
+
+
+
+  window.onscroll = function () { myFunction() };
+
+  var header = document.getElementById("header");
+  var sticky = header.offsetTop;
+
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+</script>
+
+<script>
+  function validateEmail($email) {
+    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+    return emailReg.test($email);
+  }
+
+  $(document).ready(function () {
+$("#logout-btn").click(()=>{
+  localStorage.clear();
+    sessionStorage.clear();
+  window.location.href = "./index.html";
+})
+
+    
+    let authtoken = localStorage.getItem("authToken");
+    if (authtoken != null) {
+      $("#login-btn").hide();
+      $("#signup-btn").hide();
+      $("#logout-btn").show();
+    } else {
+      $("#logout-btn").hide();
+      $("#login-btn").show();
+      $("#signup-btn").show();
+    }
+
+
+
+    if (!localStorage.getItem('authToken') == true) {
+
+      window.location.href = "./accounts/login.html";
+
+    }
+
+    // $("#loginForm").on('submit', (function (e) {
+    //   e.preventDefault();
+    //   let email = $('#email').val();
+    //   let password = $('#password').val();
+    //   if (!(validateEmail(email) && email != "")) {
+    //     $('#email').css("border", "2px solid red");
+    //   } else if (password == "") {
+    //     $('#password').css("border", "2px solid red");
+    //   } else {
+    //     $.ajax({
+    //       url: "http://143.198.155.212/api/user/login",
+    //       type: "POST",
+    //       dataType: "json",
+    //       data: { "email": email, "password": password },
+    //       success: function (data) {
+    //         // console.warn(data);
+    //         // alert(data);
+    //         localStorage.setItem("authToken", data.authtoken);
+    //         location.reload('./index.html');
+
+    //       }
+    //     });
+    //   }
+    // }));
+  });
+
+// continue btn green
+function continue_color_change(id){
+  document.getElementById(id).style.backgroundColor="green"
+
+  console.log("for changing color ", document.getElementById(id).style.backgroundColor)
+  console.log("for changing color ", document.getElementById(id).style.backgroundColor="green")
+  // document.getElementById(id).style.display="block"
+}
+function check_border_color(id){
+document.getElementById(id).style.border="green"
+}
+function triger_on_keypress(buttonId,...id){
+
+
+  console.log({buttonId,id})
+//  const all= id.map(Element=>{
+// document.getElementById(id).value.length>0
+//   })
+
+  // console.log({all:all.length})
+  // console.log({id:id.length})
+  // console.log({id})
+  // console.log({buttonId})
+
+  // const newone = id.map(Element=>{
+
+  //   console.log(document.getElementById(Element).value)
+  //   console.log(document.getElementById(Element).value.length>0)
+  //   return document.getElementById(Element).value.length>0  &&document.getElementById(Element).value
+  // })
+  const newone = id.filter(Element=>{
+    // return document.getElementById(Element).value.length>0  && document.getElementById(Element).style.borderColor ==="green"
+    return document.getElementById(Element).value.length>0
+  })
+
+
+  // const newone2 = id.filter(Element=>{
+
+  //   console.log(Element,"color", document.getElementById(Element).style.borderColor=="green")
+   
+  //   // return document.getElementById(Element).value.length>0  && document.getElementById(Element).style.borderColor =="green"
+  //   returndocument.getElementById(Element).style.borderColor=="green"
+  // })
+
+console.log(newone)
+console.log(newone.length)
+console.log(id.length)
+  newone.length==id.length && continue_color_change(buttonId) 
+  
+
+//   console.log("newonw",newone.length)
+//   // if(all.length==id.length){
+//   //   continue_color_change(buttonId)
+//   // }
+// // alert('working')
+}
+
+
+
+
+
+</script>
+
+<script>
+
+
+$(document).ready(function(){
+
+
+  if (sessionStorage.getItem("amountRequest") || sessionStorage.getItem("clientemail")){
+
+
+
+
+
+sessionStorage.getItem("clientemail")&&$('#email').val(sessionStorage.getItem("clientemail") )
+sessionStorage.getItem("amountRequest") && $('#totalAmount').val(sessionStorage.getItem("amountRequest") )
+  }
+ 
+
+
+
+
+ // if all input fields are "" then change color 
+//  $("#Property_Addres").change(function () {
+//       let z = $(this).val();
+//       if (z == "") {
+//         $(this).css("border", "2px solid red");
+//       } else {
+//         $(this).css("border", "2px solid green");
+//       }
+//     });
+
+
+    $("input[type=text]").change(function () {
+      let z = $(this).val();
+      if (z == "") {
+        $(this).css("border", "2px solid red");
+      } else {
+        $(this).css("border", "2px solid green");
+      }
+    });
+
+
+      $("input[type=email]").change(function () {
+      let z = $(this).val();
+      // alert(z)
+      console.log("Z")
+      if (z == "") {
+        $(this).css("border", "2px solid red");
+      } else {
+        $(this).css("border", "2px solid green");
+      }
+    });
+
+    $("input[type=number]").change(function () {
+      let z = $(this).val();
+      // alert(z)
+      console.log("Z")
+      if (z == "") {
+        $(this).css("border", "2px solid red");
+      } else {
+        $(this).css("border", "2px solid green");
+      }
+    });
+
+    $("input[type=date]").change(function () {
+      let z = $(this).val();
+      // alert(z)
+      console.log("Z")
+      if (z == "") {
+        $(this).css("border", "2px solid red");
+      } else {
+        $(this).css("border", "2px solid green");
+      }
+    });
+
+
+});
+//     function validate(text) {
+//   let reg = /[A-Za-z -]/; // valid alphabet with space
+//   return reg.test(text);
+// }
+
+// ----------
+// function Agent_Zips(event) {
+//     let a = $(event).val();
+//     let b = 0;
+//     if (a.length == 5 || a.length == 10) {
+//       $(event).css("border", "2px solid green");
+//       b = 1;
+//     }
+//     else {
+//       $(event).css("border", "2px solid red");
+//       b = 0;
+//     }
+//     return b;
+//   }
+//  let m =0
+//  $("#Broker_Email").change(function () {
+//       let z = $(this).val();
+//       if (z === "") {
+//         $(this).css("border", "2px solid red");
+//       } else {
+//         $(this).css("border", "2px solid green");
+//       }
+//     });
+    //   $("#Broker_Email").change(function () {
+    //   let z = $(this).val();
+    //   if (z == "") {
+    //     $(this).css("border", "2px solid red");
+    //   } else {
+    //     $(this).css("border", "2px solid green");
+    //   }
+    // });
+
+  
+
+
+    // if(input[type=email]=== ""){
+    //   input[type=email].style = "red"
+    // }
+    // else{
+    //   input[type=email].style = "green"
+    // }
+    // let address3 = 0;
+    // if (input[type=email]==="") {
+        
+    //     $('#Broker_Email').css("border", "2px solid green");
+    //     address3 = 1;
+    //   } else {
+        
+    //     $('#Broker_Email').css("border", "2px solid red");
+    //     address3 = 0;
+    //   }
+//sweet alert
+
+
+//showLoading();
+
+
+   
+</script>
+
+
+
+
+<!-- Javascript -->
+<script src="home/js/jquery.min.js"></script>
+<script src="home/js/plugins.js"></script>
+<script src="home/js/bootstrap.min.js"></script>
+<script src="home/js/animsition.js"></script>
+<script src="home/js/countto.js"></script>
+<script src="home/js/owl.carousel.min.js"></script>
+<script src="home/js/magnific.popup.min.js"></script>
+<script src="home/js/equalize.min.js"></script>
+<script src="home/js/typed.js"></script>
+<script src="home/js/vegas.js"></script>
+<script src="home/js/shortcodes.js"></script>
+<script src="home/js/main.js"></script>
+
+<!-- Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ2z7aoo8okwvyHbaxfKwUi-sblBj5QYk"></script>
+<script src="home/js/gmap3.min.js"></script>
+
+<!-- Revolution Slider -->
+<script src="home/rev-slider/js/jquery.themepunch.tools.min.js"></script>
+<script src="home/rev-slider/js/jquery.themepunch.revolution.min.js"></script>
+<script src="home/js/rev-slider.js"></script>
+<!-- Load Extensions only on Local File Systems ! The following part can be removed on Server for On Demand Loading -->
+<script src="home/rev-slider/js/extensions/revolution.extension.actions.min.js"></script>
+<script src="home/rev-slider/js/extensions/revolution.extension.carousel.min.js"></script>
+<script src="home/rev-slider/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script src="home/rev-slider/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="home/rev-slider/js/extensions/revolution.extension.migration.min.js"></script>
+<script src="home/rev-slider/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="home/rev-slider/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="home/rev-slider/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="home/rev-slider/js/extensions/revolution.extension.video.min.js"></script>

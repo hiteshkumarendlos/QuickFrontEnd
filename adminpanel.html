@@ -1,0 +1,1444 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>QUICK COMMISSION ADVANCE LLC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      content="Premium Multipurpose Admin & Dashboard Template"
+      name="description"
+    />
+    <meta content="Themesbrand" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="../home/assets/images/marker.png" />
+
+    <!-- DataTables -->
+    <link
+      href="../home/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="../home/assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Responsive datatable examples -->
+    <link
+      href="../home/assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- preloader css -->
+    <link
+      rel="stylesheet"
+      href="../home/assets/css/preloader.min.css"
+      type="text/css"
+    />
+
+    <!-- Bootstrap Css -->
+    <link
+      href="../home/assets/css/bootstrap.min.css"
+      id="bootstrap-style"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Icons Css -->
+    <link
+      href="../home/assets/css/icons.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- App Css-->
+    <link
+      href="../home/assets/css/app.min.css"
+      id="app-style"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- excel jquery  -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/TableExport/5.2.0/js/tableexport.min.js"
+      integrity="sha512-XmZS54be9JGMZjf+zk61JZaLZyjTRgs41JLSmx5QlIP5F+sSGIyzD2eJyxD4K6kGGr7AsVhaitzZ2WTfzpsQzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- my custom changes -->
+
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"
+      integrity="sha512-nhY06wKras39lb9lRO76J4397CH1XpRSLfLJSftTeo3+q2vP7PaebILH9TqH+GRpnOhfAGjuYMVmVTOZJ+682w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script> -->
+  </head>
+
+  <body>
+    <!-- <body data-layout="horizontal"> -->
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+      <header id="page-topbar">
+        <div class="navbar-header">
+          <div class="d-flex">
+            <!-- LOGO -->
+            <div class="navbar-brand-box">
+              <a href="index.html" class="logo logo-dark text-center">
+                <span class="logo-sm">
+                  <img src="../home/assets/images/QCA.jpg" alt="" height="24" />
+                </span>
+                <span class="logo-lg" style="padding: 20px">
+                  <img src="../home/assets/images/QCA.jpg" alt="" height="44" />
+                </span>
+              </a>
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-sm px-3 font-size-16 header-item"
+              id="vertical-menu-btn"
+            >
+              <i class="fa fa-fw fa-bars"></i>
+            </button>
+
+            <!-- App Search-->
+            <form class="app-search d-none d-lg-block">
+              <div class="position-relative">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Search..."
+                />
+                <button class="btn btn-primary" type="button">
+                  <i class="bx bx-search-alt align-middle"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div class="d-flex">
+            <div class="dropdown d-inline-block d-lg-none ms-2">
+              <button
+                type="button"
+                class="btn header-item"
+                id="page-header-search-dropdown"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i data-feather="search" class="icon-lg"></i>
+              </button>
+              <div
+                class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                aria-labelledby="page-header-search-dropdown"
+              >
+                <form class="p-3">
+                  <div class="form-group m-0">
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Search ..."
+                        aria-label="Search Result"
+                      />
+
+                      <button class="btn btn-primary" type="submit">
+                        <i class="mdi mdi-magnify"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div class="dropdown d-inline-block">
+              <button
+                type="button"
+                class="btn header-item bg-soft-light border-start border-end"
+                id="page-header-user-dropdown"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <img
+                  class="rounded-circle header-profile-user"
+                  src="../home/assets/images/users/avatar-1.jpg"
+                  alt="Header Avatar"
+                />
+                <span class="d-none d-xl-inline-block ms-1 fw-medium"
+                  >Shawn L.
+                  <!-- <select style="opacity: 1;">
+                                <option value="volvo">Logout</option>
+                                <option value="volvo">Dashbord</option>
+                              </select> -->
+                </span>
+                <i
+                  class="mdi mdi-chevron-down d-none d-xl-inline-block"
+                  style="margin-right: -10px"
+                ></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- ========== Left Sidebar Start ========== -->
+      <div class="vertical-menu">
+        <div data-simplebar class="h-100">
+          <!--- Sidemenu -->
+          <div id="sidebar-menu">
+            <!-- Left Menu Start -->
+            <ul class="metismenu list-unstyled" id="side-menu">
+              <li class="menu-title" data-key="t-menu">Menu</li>
+
+              <li>
+                <a href="../index.html">
+                  <i data-feather="home"></i>
+                  <span data-key="t-dashboard">Dashboard</span>
+                </a>
+              </li>
+              <!-- <li>
+                <a href="../accounts/Adminlogin.html">
+                  <i data-feather="home"></i>
+                  <span data-key="t-dashboard" id="logout-btn">Logout</span>
+                </a>
+              </li> -->
+              <li>
+                <a>
+                  <i data-feather="home"></i>
+                  <span data-key="t-dashboard" id="logout-btn">Logout</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- Sidebar -->
+        </div>
+      </div>
+      <!-- Left Sidebar End -->
+
+      <!-- ============================================================== -->
+      <!-- Start right Content here -->
+      <!-- ============================================================== -->
+      <div class="main-content">
+        <div class="page-content">
+          <div class="container-fluid">
+            <!-- start page title -->
+            <div class="row">
+              <div class="col-12">
+                <div
+                  class="page-title-box d-sm-flex align-items-center justify-content-between"
+                >
+                  <h4 class="mb-sm-0 font-size-18">DataTables</h4>
+
+                  <div class="page-title-right">
+                    <ol class="breadcrumb m-0">
+                      <li class="breadcrumb-item"><a href="#">Tables</a></li>
+                      <li class="breadcrumb-item active">DataTables</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- end page title -->
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <!-- 
+                  <div class="card-header">
+                    <button id="export_to_excel">Excel</button>
+                  </div> -->
+
+                  <div class="card-body">
+                    <button id="export-btn" class="my_butttons">Excel</button>
+                    <button id="refresh-btn" class="my_butttons">
+                      Refresh
+                    </button>
+                    <div class="table-responsive">
+                      <!-- <table
+                        id="datatable-buttons"
+                        class="table table-bordered my-table"
+                      > -->
+                      <!-- <table
+                        id="my-table"
+                        class="table table-bordered my-table thead-dark"
+                      > -->
+                      <!-- <table id="my-table" class="table-striped my-table"> -->
+
+                      <table id="my-table" class="table table-bordered">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th class="Application_Cells">
+                              Unique Number Auto Generated
+                            </th>
+                            <th class="Application_Cells">
+                              Application Inititaltion Date
+                            </th>
+                            <th class="Application_Cells">
+                              Application Inititaltion Time
+                            </th>
+                            <th class="Application_Cells">
+                              Application Completion Date
+                            </th>
+                            <th class="Application_Cells">
+                              Application Completion Time
+                            </th>
+
+                            <th class="Agent_Cells">Agent First Name</th>
+                            <th class="Agent_Cells">Agent Last Name</th>
+                            <th class="Agent_Cells">Agent Email</th>
+                            <th class="Agent_Cells">Agent Cell Phone</th>
+                            <th class="Agent_Cells">Agent Home Address</th>
+                            <th class="Agent_Cells">Agent City</th>
+                            <th class="Agent_Cells">Agent State</th>
+                            <th class="Agent_Cells">Agent ZIP Code</th>
+
+                            <th class="Property_Cells">Property Address</th>
+                            <th class="Property_Cells">Property City</th>
+                            <th class="Property_Cells">Property State</th>
+                            <th class="Property_Cells">Property ZIP</th>
+                            <th class="Property_Cells">Property Seller Name</th>
+                            <th class="Property_Cells">Property Buyer Name</th>
+                            <th class="Property_Cells">
+                              Property Final Sales Price
+                            </th>
+                            <th class="Property_Cells">
+                              Property Closing Date
+                            </th>
+                            <th class="Property_Cells">Property Short Sale</th>
+
+                            <th class="banking_cells">Agent Bank Name</th>
+                            <th class="banking_cells">Agent Bank Address</th>
+                            <th class="banking_cells">Agent Bank City</th>
+                            <th class="banking_cells">Agent Bank State</th>
+                            <th class="banking_cells">Agent Bank ZIP</th>
+                            <th class="banking_cells">
+                              Agent Bank Account Type
+                            </th>
+                            <th class="banking_cells">
+                              Agent Bank Routing Number
+                            </th>
+                            <th class="banking_cells">
+                              Agent Bank Account Number
+                            </th>
+                            <th class="banking_cells">
+                              Agent Bank Statement Address Same As Home
+                            </th>
+                            <th class="banking_cells">
+                              Agent Bank Statement Alternative Address
+                            </th>
+                            <th class="banking_cells">
+                              Agent Bank Statement Alternative City
+                            </th>
+                            <th class="banking_cells">
+                              Agent Bank Statement Alternative State
+                            </th>
+                            <th class="banking_cells">
+                              Agent Bank Statement Alternative ZIP
+                            </th>
+
+                            <th class="Broker_cells">
+                              Broker Contact First Name
+                            </th>
+                            <th class="Broker_cells">
+                              Broker Contact Last Name
+                            </th>
+                            <th class="Broker_cells">Broker Email</th>
+                            <th class="Broker_cells">Broker Cell Phone</th>
+                            <th class="Broker_cells">Broker Office Name</th>
+                            <th class="Broker_cells">Broker Office Email</th>
+                            <th class="Broker_cells">Broker Office Phone</th>
+                            <th class="Broker_cells">
+                              Broker Business Address
+                            </th>
+                            <th class="Broker_cells">Broker City</th>
+                            <th class="Broker_cells">Broker State</th>
+                            <th class="Broker_cells">Broker ZIP Code</th>
+
+                            <th class="Closing_Compnay_cells">
+                              Closing Company Name
+                            </th>
+                            <th class="Closing_Compnay_cells">Escrow Number</th>
+                            <th class="Closing_Compnay_cells">
+                              Closing Contact Name
+                            </th>
+                            <!-- <th>Closing Contact First Name</th> -->
+                            <!-- <th>Closing Contact Last Name</th> -->
+                            <th class="Closing_Compnay_cells">Closing Email</th>
+                            <th class="Closing_Compnay_cells">Closing Phone</th>
+                            <th class="Closing_Compnay_cells">
+                              Closing Address
+                            </th>
+                            <th class="Closing_Compnay_cells">Closing City</th>
+                            <th class="Closing_Compnay_cells">Closing State</th>
+                            <th class="Closing_Compnay_cells">
+                              Closing ZIP Code
+                            </th>
+
+                            <th class="files_cell">Purchase Agreement</th>
+                            <!-- <th>Download</th> -->
+                            <th class="files_cell">
+                              Purchase Agreement File Type
+                            </th>
+                            <th class="files_cell">Broker of Record</th>
+                            <th class="files_cell">
+                              Broker of Record File Type
+                            </th>
+                            <!-- <th>Title Contact Information</th>
+                            <th>Title Contact Information File Type</th> -->
+                            <th class="files_cell">
+                              Client Last Month's Bank Statement or Void Check
+                            </th>
+                            <th class="files_cell">
+                              Client Last Month's Bank Statement or Void Check
+                              File Type
+                            </th>
+                            <th class="files_cell">Client Drivers License</th>
+                            <th class="files_cell">
+                              Client Drivers License File Type
+                            </th>
+
+                            <th class="files_cell">
+                              Client Last 24 Months MLS Production History
+                            </th>
+                            <th class="files_cell">
+                              Client Last 24 Months MLS Production History File
+                              Type
+                            </th>
+                            <th class="files_cell">
+                              Client Anything Else You Might Think Would Be
+                              Helpful
+                            </th>
+                            <th class="files_cell">
+                              Client Anything Else You Might Think Would Be
+                              Helpful File Type
+                            </th>
+
+                            <th
+                              style="
+                                background-color: #ff0066 !important;
+                                color: #0000cc;
+                              "
+                            >
+                              Client agrees to the Privacy Policy
+                            </th>
+                            <th class="conformation_cell">
+                              Are You The Broker of Record For Your Company?
+                            </th>
+                            <th class="conformation_cell">
+                              Agent Lisiting Or Selling
+                            </th>
+                            <th class="conformation_cell">
+                              Agent Number of Transactions 12 Months
+                            </th>
+                            <th class="conformation_cell">
+                              Agent Non-Pending Listings
+                            </th>
+                            <th class="conformation_cell">
+                              Do you have any open advances with other
+                              commission advance companies
+                            </th>
+
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody id="tbody"></tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <!-- end cardaa -->
+              </div>
+              <!-- end col -->
+            </div>
+            <!-- end row -->
+          </div>
+          <!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
+
+        <footer class="footer">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-6">
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                © Minia.
+              </div>
+              <div class="col-sm-6">
+                <div class="text-sm-end d-none d-sm-block">
+                  Design & Develop by
+                  <a href="#!" class="text-decoration-underline">Themesbrand</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <!-- end main content-->
+    </div>
+
+    <!-- END layout-wrapper -->
+
+    <!-- Right bar overlay-->
+    <!-- <div class="rightbar-overlay"></div> -->
+
+    <!-- JAVASCRIPT -->
+    <script src="../home/assets/libs/jquery/jquery.min.js"></script>
+    <script src="../home/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../home/assets/libs/metismenu/metisMenu.min.js"></script>
+    <script src="../home/assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="../home/assets/libs/node-waves/waves.min.js"></script>
+    <script src="../home/assets/libs/feather-icons/feather.min.js"></script>
+    <!-- pace js -->
+    <script src="../home/assets/libs/pace-js/pace.min.js"></script>
+
+    <!-- Required datatable js -->
+    <script src="../home/assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../home/assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <!-- Buttons examples -->
+    <script src="../home/assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../home/assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="../home/assets/libs/jszip/jszip.min.js"></script>
+    <script src="../home/assets/libs/pdfmake/build/pdfmake.min.js"></script>
+    <script src="../home/assets/libs/pdfmake/build/vfs_fonts.js"></script>
+    <script src="../home/assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="../home/assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="../home/assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+
+    <!-- Responsive examples -->
+    <script src="../home/assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../home/assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+
+    <!-- Datatable init js -->
+    <script src="../home/assets/js/pages/datatables.init.js"></script>
+
+    <script src="../home/assets/js/app.js"></script>
+
+    <script src="//cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
+    <script>
+      function convertImage2(data) {
+        let blobUrl = window.URL.createObjectURL(blob);
+        let a = document.createElement("a");
+        a.download = url.replace(/^.*[\\\/]/, "");
+        a.href = blobUrl;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+
+        alert(data);
+      }
+
+      function download_file(file, text) {
+        console.log({ file, text });
+        // alert("clicked");
+        //creating an invisible element
+        // var element = document.createElement("a");
+        // element.setAttribute(
+        //   "href",
+        //   "data:text/plain;charset=utf-8, " + encodeURIComponent(text)
+        // );
+        // element.setAttribute("download", file);
+
+        // // Above code is equivalent to
+        // // <a href="path of file" download="file name">
+
+        // document.body.appendChild(element);
+
+        // //onClick property
+        // element.click();
+
+        // document.body.removeChild(element);
+      }
+
+      $(document).ready(function () {
+        $("#export-btn").on("click", function (e) {
+          // alert("clieck");
+          e.preventDefault();
+          ResultsToTable();
+        });
+        $("#refresh-btn").on("click", function (e) {
+          e.preventDefault();
+          location.reload(true);
+        });
+
+        function ResultsToTable() {
+          $("#my-table").table2excel({
+            exclude: ".noExl",
+            name: "Results",
+          });
+        }
+
+        $("#logout-btn").click(() => {
+          localStorage.clear();
+          sessionStorage.clear();
+          window.location.href = "../index.html";
+        });
+
+        let start = 1000;
+
+        const newvalue = (value) => {
+          start = start + 1;
+          return value + 1;
+        };
+
+        const convertUniqueApp = (date) => {
+          const newon = date.split("-");
+          newon[0] = newon[0].slice(2, 4);
+          return newon.join("");
+        };
+
+        const convertDateFormet = (date) => {
+          let month = date.slice(0, 10).split("-")[1];
+          let day = date.slice(0, 10).split("-")[2];
+          let year = date.slice(0, 10).split("-")[0].slice(2, 4);
+
+          return `${month}/${day}/${year}`;
+        };
+
+        function getTime(string) {
+          if (
+            string.split("T")[1].split(".")[0].slice(0, 5).split(":")[0] == 0
+          ) {
+            return `1:${
+              string.split("T")[1].split(".")[0].slice(0, 5).split(":")[1]
+            } AM`;
+          } else if (
+            string.split("T")[1].split(".")[0].slice(0, 5).split(":")[0] > 12
+          ) {
+            return `${
+              string.split("T")[1].split(".")[0].slice(0, 5).split(":")[0] - 12
+            }:${
+              string.split("T")[1].split(".")[0].slice(0, 5).split(":")[1]
+            } PM`;
+          } else {
+            return `${
+              string.split("T")[1].split(".")[0].slice(0, 5).split(":")[0]
+            }:${
+              string.split("T")[1].split(".")[0].slice(0, 5).split(":")[1]
+            } AM`;
+          }
+        }
+
+        $.ajax({
+          url: "http://143.198.155.212/api/application/all",
+          headers: { authToken: localStorage.getItem("authToken") },
+          type: "POST",
+          dataType: "json",
+          success: function (result) {
+            console.log("all application data is :", result.data);
+            let output = result.data;
+
+            let mapout = output.map((element) => {
+              $("#tbody").append(`<tr><td style="min-width:160px !important">${
+                element.ApplicationDetails.customAppId &&
+                element.ApplicationDetails.customAppId
+              }</td><td>${element.ApplicationDetails.isCreated
+                .slice(0, 10)
+                .split("-")
+                .join("/")}</td>
+
+                      <td>${
+                        element.ApplicationDetails &&
+                        element.ApplicationDetails.isCreated
+                          ? getTime(element.ApplicationDetails.isCreated)
+                          : ""
+                      }</td>
+                                                  <td>${
+                                                    element.ApplicationDetails
+                                                      .isCompleted.date
+                                                      ? element.ApplicationDetails.isCompleted.date
+                                                          .slice(0, 10)
+                                                          .split("-")
+                                                          .join("/")
+                                                      : "Not Completed"
+                                                  }</td>
+
+                                                  <td>${
+                                                    element.ApplicationDetails
+                                                      .isCompleted.date
+                                                      ? getTime(
+                                                          element
+                                                            .ApplicationDetails
+                                                            .isCompleted.date
+                                                        )
+                                                      : "Not Completed"
+                                                  }</td>
+
+
+
+
+                                                    <td>${
+                                                      element.client &&
+                                                      element.client.firstName
+                                                    }</td>
+
+
+                                                    <td>${
+                                                      element.client &&
+                                                      element.client.lastName
+                                                    }</td>
+                                            <td>${
+                                              element.client &&
+                                              element.client.email
+                                                ? element.client.email
+                                                : ""
+                                            }</td>
+                                            <td style="min-width: 115px !important;">${
+                                              element.client &&
+                                              element.client.phone
+                                                ? element.client.phone
+                                                : ""
+                                            }</td>
+                                            <td>${
+                                              element.client &&
+                                              element.client.HomeAddress
+                                                ? element.client.HomeAddress
+                                                : ""
+                                            }</td>
+
+                                              <td>${
+                                                element.client &&
+                                                element.client.city
+                                                  ? element.client.city
+                                                  : ""
+                                              }</td>
+                                              <td>${
+                                                element.client &&
+                                                element.client.state
+                                                  ? element.client.state
+                                                  : ""
+                                              }</td>
+                                      <td  style="min-width: 115px !important;">${
+                                        element.client && element.client.zipcode
+                                          ? element.client.zipcode
+                                          : ""
+                                      }</td>
+
+
+        <td>${
+          element.PropertyDetails && element.PropertyDetails.address
+            ? element.PropertyDetails.address
+            : ""
+        }</td>
+                                      <td>${
+                                        element.PropertyDetails &&
+                                        element.PropertyDetails.city
+                                          ? element.PropertyDetails.city
+                                          : ""
+                                      }</td>
+                                      <td>${
+                                        element.PropertyDetails &&
+                                        element.PropertyDetails.state
+                                          ? element.PropertyDetails.state
+                                          : ""
+                                      }</td>
+                                      <td  style="min-width: 115px !important;">${
+                                        element.PropertyDetails &&
+                                        element.PropertyDetails.zipcode
+                                          ? element.PropertyDetails.zipcode
+                                          : ""
+                                      }</td>
+                                      <td>${
+                                        element.PropertyDetails &&
+                                        element.PropertyDetails.sellerName
+                                          ? element.PropertyDetails.sellerName
+                                          : ""
+                                      }</td>
+                                      <td>${
+                                        element.PropertyDetails &&
+                                        element.PropertyDetails.buyerName
+                                          ? element.PropertyDetails.buyerName
+                                          : ""
+                                      }</td>
+
+                                        <td>${
+                                          element.PropertyDetails &&
+                                          element.PropertyDetails
+                                            .finalSalesPrice
+                                            ? element.PropertyDetails
+                                                .finalSalesPrice
+                                            : ""
+                                        }</td>
+                                      <td style="min-width: 98px !important;">${
+                                        element.PropertyDetails &&
+                                        element.PropertyDetails.ClosingDate
+                                          ? element.PropertyDetails.ClosingDate.slice(
+                                              0,
+                                              10
+                                            )
+                                          : ""
+                                      }</td>
+                                      <td>${
+                                        element.PropertyDetails &&
+                                        element.PropertyDetails.isShortSale ==
+                                          true
+                                          ? "Yes"
+                                          : "NO"
+                                      }</td>
+
+        <td>${
+          element.BankingDetails && element.BankingDetails.bankName
+            ? element.BankingDetails.bankName
+            : ""
+        }</td>
+
+
+        <td>${
+          element.BankingDetails
+            ? element.BankingDetails.isAddressSame == true
+              ? element.client.HomeAddress
+              : element.BankingDetails.statementAddress
+            : ""
+        }</td>
+       <td>${
+         element.BankingDetails
+           ? element.BankingDetails.isAddressSame == true
+             ? element.client.city
+             : element.BankingDetails.city
+           : ""
+       }</td>
+                                      <td>${
+                                        element.BankingDetails
+                                          ? element.BankingDetails
+                                              .isAddressSame == true
+                                            ? element.client.state
+                                            : element.BankingDetails.state
+                                          : ""
+                                      }</td>
+                                      <td>${
+                                        element.BankingDetails
+                                          ? element.BankingDetails
+                                              .isAddressSame == true
+                                            ? element.client.zipcode
+                                            : element.BankingDetails.zipCode
+                                          : ""
+                                      }</td>
+
+         <td>${
+           element.BankingDetails && element.BankingDetails.accountType
+             ? element.BankingDetails.accountType
+             : ""
+         }</td>
+                                      <td>${
+                                        element.BankingDetails &&
+                                        element.BankingDetails.routing
+                                          ? element.BankingDetails.routing
+                                          : ""
+                                      }</td>
+                                      <td>${
+                                        element.BankingDetails &&
+                                        element.BankingDetails.accountNumber
+                                          ? element.BankingDetails.accountNumber
+                                          : ""
+                                      }</td>
+
+                                      <td>${
+                                        element.BankingDetails &&
+                                        element.BankingDetails.isAddressSame ==
+                                          true
+                                          ? "Yes"
+                                          : "No"
+                                      }</td>
+
+
+                                       <td>${
+                                         element.BankingDetails
+                                           ? element.BankingDetails
+                                               .isAddressSame == true
+                                             ? element.client.HomeAddress
+                                             : element.BankingDetails
+                                                 .statementAddress
+                                           : ""
+                                       }</td>
+                                       <td>${
+                                         element.BankingDetails
+                                           ? element.BankingDetails
+                                               .isAddressSame == true
+                                             ? element.client.city
+                                             : element.BankingDetails.city
+                                           : ""
+                                       }</td>
+                                       <td>${
+                                         element.BankingDetails
+                                           ? element.BankingDetails
+                                               .isAddressSame == true
+                                             ? element.client.state
+                                             : element.BankingDetails.state
+                                           : ""
+                                       }</td>
+                                       <td>${
+                                         element.BankingDetails
+                                           ? element.BankingDetails
+                                               .isAddressSame == true
+                                             ? element.client.zipcode
+                                             : element.BankingDetails.zipCode
+                                           : ""
+                                       }</td>
+
+
+
+                 <td>${
+                   element.BrokerDetails && element.BrokerDetails.bFirstName
+                     ? element.BrokerDetails.bFirstName
+                     : ""
+                 }</td>
+                                      <td>${
+                                        element.BrokerDetails &&
+                                        element.BrokerDetails.bLastName
+                                          ? element.BrokerDetails.bLastName
+                                          : ""
+                                      }</td>
+       <td>${
+         element.BrokerDetails && element.BrokerDetails.bemail
+           ? element.BrokerDetails.bemail
+           : ""
+       }</td>
+
+                                      <td  style="min-width: 115px !important;">${
+                                        element.BrokerDetails &&
+                                        element.BrokerDetails.bcellPhone
+                                          ? element.BrokerDetails.bcellPhone
+                                          : ""
+                                      }</td>
+
+        <td  style="min-width: 115px !important;">${
+          element.BrokerDetails && element.BrokerDetails.borkerCompanyName
+            ? element.BrokerDetails.borkerCompanyName
+            : ""
+        }</td>
+
+        <td>${
+          element.BrokerDetails && element.BrokerDetails.email
+            ? element.BrokerDetails.email
+            : ""
+        }</td>
+
+        <td  style="min-width: 115px !important;">${
+          element.BrokerDetails && element.BrokerDetails.phone
+            ? element.BrokerDetails.phone
+            : ""
+        }</td>
+
+                                      <td>${
+                                        element.BrokerDetails &&
+                                        element.BrokerDetails.address
+                                          ? element.BrokerDetails.address
+                                          : ""
+                                      }</td>
+
+
+        <td>${
+          element.BrokerDetails && element.BrokerDetails.city
+            ? element.BrokerDetails.city
+            : ""
+        }</td>
+                                      <td>${
+                                        element.BrokerDetails &&
+                                        element.BrokerDetails.state
+                                          ? element.BrokerDetails.state
+                                          : ""
+                                      }</td>
+                                      <td  style="min-width: 115px !important;">${
+                                        element.BrokerDetails &&
+                                        element.BrokerDetails.zipcode
+                                          ? element.BrokerDetails.zipcode
+                                          : ""
+                                      }</td>
+
+
+<td  style="min-width: 115px !important;">${
+                element.ClosingCompanyDetails &&
+                element.ClosingCompanyDetails.closingCompanyName
+                  ? element.ClosingCompanyDetails.closingCompanyName
+                  : ""
+              }</td>
+
+              <td  style="min-width: 115px !important;">${
+                element.ClosingCompanyDetails &&
+                element.ClosingCompanyDetails.EscrowNumber
+                  ? element.ClosingCompanyDetails.EscrowNumber
+                  : ""
+              } escrow number</td>
+<td  style="min-width: 115px !important;">${
+                element.ClosingCompanyDetails &&
+                element.ClosingCompanyDetails.contactName
+                  ? element.ClosingCompanyDetails.contactName
+                  : ""
+              }</td>
+<td  style="min-width: 115px !important;">${
+                element.ClosingCompanyDetails &&
+                element.ClosingCompanyDetails.email
+                  ? element.ClosingCompanyDetails.email
+                  : ""
+              }</td>
+<td  style="min-width: 115px !important;">${
+                element.ClosingCompanyDetails &&
+                element.ClosingCompanyDetails.phone
+                  ? element.ClosingCompanyDetails.phone
+                  : ""
+              }</td>
+<td  style="min-width: 115px !important;">${
+                element.ClosingCompanyDetails &&
+                element.ClosingCompanyDetails.address
+                  ? element.ClosingCompanyDetails.address
+                  : ""
+              }</td>
+<td  style="min-width: 115px !important;">${
+                element.ClosingCompanyDetails &&
+                element.ClosingCompanyDetails.city
+                  ? element.ClosingCompanyDetails.city
+                  : ""
+              }</td>
+<td  style="min-width: 115px !important;">${
+                element.ClosingCompanyDetails &&
+                element.ClosingCompanyDetails.state
+                  ? element.ClosingCompanyDetails.state
+                  : ""
+              }</td>
+<td  style="min-width: 115px !important;">${
+                element.ClosingCompanyDetails &&
+                element.ClosingCompanyDetails.zipCode
+                  ? element.ClosingCompanyDetails.zipCode
+                  : ""
+              }</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                      <td style="min-width: 380px !important;">
+
+                  <a  target="_blank" href="http://143.198.155.212/images/${
+                    element.Documents && element.Documents.purchaseAgrement
+                  }" download >${
+                element.ApplicationDetails &&
+                element.ApplicationDetails.customAppId
+              } Purchase Agreement ${
+                element.client && element.client.firstName
+              } ${
+                element.client && element.client.lastName
+              } ${element.ApplicationDetails.isCreated
+                .slice(0, 10)
+                .split("-")
+                .join("/")}.${
+                element.Documents &&
+                element.Documents.purchaseAgrement.split(".")[
+                  element.Documents &&
+                    element.Documents.purchaseAgrement.split(".").length - 1
+                ]
+              } </a>
+
+                                        </td>
+
+
+
+                                     
+
+                                                <td style="min-width: 380px !important;">
+
+                 .${
+                   element.Documents &&
+                   element.Documents.purchaseAgrement.split(".")[
+                     element.Documents &&
+                       element.Documents.purchaseAgrement.split(".").length - 1
+                   ]
+                 }
+
+                                        </td>
+                                      <td style="min-width: 380px !important;">
+
+                  <a  target="_blank" href="http://143.198.155.212/images/${
+                    element.Documents && element.Documents.brokerOfRecord
+                  }" download >${
+                element.ApplicationDetails &&
+                element.ApplicationDetails.customAppId
+              } Broker of Record ${
+                element.client && element.client.firstName
+              } ${
+                element.client && element.client.lastName
+              } ${element.ApplicationDetails.isCreated
+                .slice(0, 10)
+                .split("-")
+                .join("/")}.${
+                element.Documents &&
+                element.Documents.brokerOfRecord.split(".")[
+                  element.Documents &&
+                    element.Documents.brokerOfRecord.split(".").length - 1
+                ]
+              } </a>
+
+                                        </td>
+
+
+
+        <td style="min-width: 380px !important;">
+      .${
+        element.Documents &&
+        element.Documents.brokerOfRecord.split(".")[
+          element.Documents &&
+            element.Documents.brokerOfRecord.split(".").length - 1
+        ]
+      }
+                                        </td>
+
+
+                                      <td style="min-width: 380px !important;">
+
+                  <a  target="_blank" href="http://143.198.155.212/images/${
+                    element.Documents && element.Documents.lmStatemntOrVoidCheck
+                  }" download >${
+                element.ApplicationDetails &&
+                element.ApplicationDetails.customAppId
+              } Client Last Month's Bank Statement or Void Check ${
+                element.client && element.client.firstName
+              } ${
+                element.client && element.client.lastName
+              } ${element.ApplicationDetails.isCreated
+                .slice(0, 10)
+                .split("-")
+                .join("/")}.${
+                element.Documents &&
+                element.Documents.lmStatemntOrVoidCheck.split(".")[
+                  element.Documents &&
+                    element.Documents.lmStatemntOrVoidCheck.split(".").length -
+                      1
+                ]
+              }</a>
+
+                                        </td>
+
+
+
+        <td style="min-width: 380px !important;">
+
+                .${
+                  element.Documents &&
+                  element.Documents.lmStatemntOrVoidCheck.split(".")[
+                    element.Documents &&
+                      element.Documents.lmStatemntOrVoidCheck.split(".")
+                        .length - 1
+                  ]
+                }
+
+                                        </td>
+
+
+                                      <td style="min-width: 380px !important;">
+
+                  <a  target="_blank" href="http://143.198.155.212/images/${
+                    element.Documents && element.Documents.dLicence
+                  }" download >${
+                element.ApplicationDetails &&
+                element.ApplicationDetails.customAppId
+              } Client Drivers License ${
+                element.client && element.client.firstName
+              } ${
+                element.client && element.client.lastName
+              } ${element.ApplicationDetails.isCreated
+                .slice(0, 10)
+                .split("-")
+                .join("/")}.${
+                element.Documents &&
+                element.Documents.dLicence.split(".")[
+                  element.Documents &&
+                    element.Documents.dLicence.split(".").length - 1
+                ]
+              }</a>
+
+                                        </td>
+
+
+
+
+         <td style="min-width: 380px !important;">
+
+         .${
+           element.Documents &&
+           element.Documents.dLicence.split(".")[
+             element.Documents &&
+               element.Documents.dLicence.split(".").length - 1
+           ]
+         }
+
+                                        </td>
+
+
+
+
+                                      <td style="min-width: 380px !important;">
+
+                  <a  target="_blank" href="http://143.198.155.212/images/${
+                    element.Documents && element.Documents.pHistory
+                  }" download >${
+                element.ApplicationDetails &&
+                element.ApplicationDetails.customAppId
+              } Client Last 24 Months MLS Production History ${
+                element.client && element.client.firstName
+              } ${
+                element.client && element.client.lastName
+              } ${element.ApplicationDetails.isCreated
+                .slice(0, 10)
+                .split("-")
+                .join("/")}.${
+                element.Documents &&
+                element.Documents.pHistory &&
+                element.Documents.pHistory.split(".")[
+                  element.Documents &&
+                    element.Documents.pHistory.split(".").length - 1
+                ]
+              }
+                   </a>
+
+                                        </td>
+
+
+
+        <td style="min-width: 380px !important;">
+
+                .${
+                  element.Documents &&
+                  element.Documents.pHistory &&
+                  element.Documents.pHistory.split(".")[
+                    element.Documents &&
+                      element.Documents.pHistory.split(".").length - 1
+                  ]
+                }
+               </td>
+
+
+                                      <td style="min-width: 380px !important;">
+
+                  <a  target="_blank" href="http://143.198.155.212/images/${
+                    element.Documents &&
+                    element.Documents.another &&
+                    element.Documents.another
+                  }" download >${
+                element.ApplicationDetails &&
+                element.ApplicationDetails.customAppId
+              } ATEYTWBH ${element.client && element.client.firstName} ${
+                element.client && element.client.lastName
+              } ${element.ApplicationDetails.isCreated
+                .slice(0, 10)
+                .split("-")
+                .join("/")}.${
+                element.Documents &&
+                element.Documents.another &&
+                element.Documents.another.split(".")[
+                  element.Documents &&
+                    element.Documents.another.split(".").length - 1
+                ]
+              } </a>
+
+                                        </td>
+
+                                      <td style="min-width: 380px !important;">
+
+           
+               .${
+                 element.Documents &&
+                 element.Documents.another &&
+                 element.Documents.another.split(".")[
+                   element.Documents &&
+                     element.Documents.another.split(".").length - 1
+                 ]
+               }
+
+                                        </td>
+                                      <td style="min-width: 150px !important;">
+
+           
+               ${
+                 element.ApplicationDetails &&
+                 element.ApplicationDetails.isAgreeTerms &&
+                 element.ApplicationDetails.isAgreeTerms
+               }
+
+
+                                        </td>
+
+                                      <td style="min-width: 150px !important;">
+
+           
+               ${
+                 element.isSalesConformation &&
+                 element.isSalesConformation.isBroker &&
+                 element.isSalesConformation.isBroker
+                   ? "Yes"
+                   : "No"
+               }
+
+
+                                        </td>
+                                      <td style="min-width: 150px !important;">
+
+           
+               ${
+                 element.AgentDetails &&
+                 element.AgentDetails.isBroker &&
+                 element.isSalesConformation.isBroker
+                   ? "Yes"
+                   : "No"
+               }
+
+
+                                        </td>
+                                
+                                      <td style="min-width: 150px !important;">
+
+           
+               ${
+                 element.AgentDetails &&
+                 element.AgentDetails.totalTransactions &&
+                 element.AgentDetails.totalTransactions
+               }
+
+
+                                        </td>
+
+                                              <td style="min-width: 150px !important;">
+
+           
+               ${
+                 element.AgentDetails &&
+                 element.AgentDetails.nonPendingListing &&
+                 element.AgentDetails.nonPendingListing
+               }
+
+
+                                        </td>
+
+                                       
+                                              <td style="min-width: 150px !important;">
+
+           
+               ${
+                 element.isSalesConformation &&
+                 element.isSalesConformation.isTakenAdvance &&
+                 element.isSalesConformation.isTakenAdvance
+               }
+
+
+                                        </td>
+
+                                          </tr>`);
+            });
+          },
+        });
+
+        // console.log($.fn.dataTable(".my-table"));
+
+        console.log($.fn.DataTable(".my-table"));
+        // console.log(
+        //   $.fn
+        //     .DataTable(".my-table")
+        //     .row.add([
+        //       counter + ".1",
+        //       counter + ".2",
+        //       counter + ".3",
+        //       counter + ".4",
+        //       counter + ".5",
+        //     ])
+        //     .draw(false)
+        // );
+
+        $.fn
+          .DataTable(".my-table")
+          .row.add([".1", ".2", ".3", ".4", ".5"])
+          .draw(false);
+
+        // $.fn
+        //   .dataTable(".my-table")
+        //   .append(
+        //     "<tbody><tr><td>asdsa34id</td><td> asdsa34id </td><td>asdsa34id </td><td> asdsa34id</td><td>asdsa34id</td><td>asdsa34id</td><td>asdsa34id</td></tr></tbody>"
+        //   );
+
+        // console.log();
+
+        setInterval(function () {
+          // $.fn.DataTable(".my-table").ajax.reload();
+          // $.fn.dataTable
+          //   .isDataTable(".my-table")
+          //   .append(
+          //     "<tbody><tr><td>asdsa34id</td><td> asdsa34id </td><td>asdsa34id </td><td> asdsa34id</td><td>asdsa34id</td><td>asdsa34id</td><td>asdsa34id</td></tr></tbody>"
+          //   );
+          // console.log($.fn.dataTable.isDataTable(".my-table"));
+          // console.log("reload is done");
+        }, 3000);
+      });
+    </script>
+  </body>
+</html>
+
+<style>
+  .my_butttons {
+    color: #fff;
+    background-color: #74788d;
+    border-color: #74788d;
+    border: 2px solid white;
+    border-radius: 4px;
+    margin-block: 20px;
+  }
+
+  /* table css  */
+
+  .Application_Cells {
+    background-color: #00ffff !important;
+    color: #0000cc;
+  }
+  .Agent_Cells {
+    background-color: #ffffcc !important;
+    color: #0000cc;
+  }
+  .Property_Cells {
+    background-color: #ffcc99 !important;
+    color: #0000cc;
+  }
+
+  .banking_cells {
+    background-color: #99ffcc !important;
+    color: #0000cc;
+  }
+  .Broker_cells {
+    background-color: #ff99ff !important;
+    color: #0000cc;
+  }
+  .Closing_Compnay_cells {
+    background-color: #9966ff !important;
+    color: #0000cc;
+  }
+
+  .files_cell {
+    background-color: #66ff33 !important;
+    color: #0000cc;
+  }
+  .conformation_cell {
+    background-color: #ffffcc !important;
+    color: #0000cc;
+  }
+</style>
