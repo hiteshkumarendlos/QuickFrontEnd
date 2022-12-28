@@ -727,8 +727,9 @@ onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordO
                       <label for="Property_Seller_Name" class="col-form-label"
                         style="font-size: 16px; text-align: right;"><b>Seller Name:</b></label>
                     </div>
+                    <!-- oninput="this.value = this.value.replace(/[^a-z,^A-Z,' ' ]/, '')" -->
                     <div class="col-md-8" style="padding-left: 4px;">
-                      <input type="text" class="form-control" id="Property_Seller_Name"  oninput="this.value = this.value.replace(/[^a-z,^A-Z,' ' ]/, '')"
+                      <input type="text" class="form-control" id="Property_Seller_Name"   pattern="[A-Za-z\W+]{1,25}"
                       onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordOfCompany3','Property_Addres','Property_City','Property_State','Property_Zip','Property_Seller_Name','Property_Buyer_Name','Property_Final_Price','Property_Closing_Date','isShortSale','Property_Final_Price_Net','isSellingOrListing','Transaction_completein_12months','Pedning_Transaction','Non_pending_Transaction','Closing_Company','Escrow','ClosingCompany_address','ClosingCompany_city','ClosingCompany_State','ClosingCompany_Zip','ClosingCompany_Contact','ClosingCompany_Cell_Phone','ClosingCompany_Email')"
                       name="name"
                         style="padding-bottom: 0; font-size: 16px; color: black; padding-left: 5px;" 
@@ -743,12 +744,13 @@ onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordO
                         style="font-size: 16px; text-align: right;"><b>Buyer
                           Name:</b></label>
                     </div>
+<!-- oninput="this.value = this.value.replace(/[^a-z,^A-Z,' ' ]/, '')" -->
+
                     <div class="col-md-8" style="padding-left: 4px;">
                       <input type="text" class="form-control" id="Property_Buyer_Name" name="Property_Buyer_Name" 
                       onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordOfCompany3','Property_Addres','Property_City','Property_State','Property_Zip','Property_Seller_Name','Property_Buyer_Name','Property_Final_Price','Property_Closing_Date','isShortSale','Property_Final_Price_Net','isSellingOrListing','Transaction_completein_12months','Pedning_Transaction','Non_pending_Transaction','Closing_Company','Escrow','ClosingCompany_address','ClosingCompany_city','ClosingCompany_State','ClosingCompany_Zip','ClosingCompany_Contact','ClosingCompany_Cell_Phone','ClosingCompany_Email')"
                         style="padding-bottom: 0; font-size: 16px; color: black; padding-left: 5px;"  
 
-oninput="this.value = this.value.replace(/[^a-z,^A-Z,' ' ]/, '')"
 
                         placeholder="Buyer Name" required>
                     </div>
@@ -1248,9 +1250,8 @@ onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordO
                     <div class="col-md-8" style="padding-left: 4px;">
                       <!-- <input type="text" onkeypress="return (event.charCode > 64 && 
               event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" -->
+              <!-- oninput="this.value = this.value.replace(/[^a-z,^A-Z,' ' ]/, '')" -->
                       <input type="text" 
-                      oninput="this.value = this.value.replace(/[^a-z,^A-Z,' ' ]/, '')"
-
               class="form-control"
                         style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px; height: 55px;"
                         onclick="triger_on_keypress('SalesButton2','Broker_CompanyName','Broker_address','Broker_City','Broker_State','Broker_Zip','Company_Cell_Phone','Broker_Company_Email','BrokerFirst_Name','Broker_Last_Name','Broker_Cell_Phone','Broker_Email')"
@@ -1264,9 +1265,9 @@ onclick="triger_on_keypress('SalesButton','BrokerRecordOfCompany','BrokerRecordO
                       <label for="Broker_Last_Name" class="col-form-label"
                         style="font-size: 16px; text-align: right;"><b>Broker Last Name:</b></label>
                     </div>
+                    <!-- oninput="this.value = this.value.replace(/[^a-z,^A-Z,' ' ]/, '')" -->
                     <div class="col-md-8" style="padding-left: 4px;">
-                      <input type="text"   oninput="this.value = this.value.replace(/[^a-z,^A-Z,' ' ]/, '')"
-class="form-control"
+                      <input type="text"  class="form-control"
                             onclick="triger_on_keypress('SalesButton2','Broker_CompanyName','Broker_address','Broker_City','Broker_State','Broker_Zip','Company_Cell_Phone','Broker_Company_Email','BrokerFirst_Name','Broker_Last_Name','Broker_Cell_Phone','Broker_Email')"
                         style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;height: 55px;"
                         id="Broker_Last_Name" name="Broker_Last_Name" placeholder="Broker Last name" required>
