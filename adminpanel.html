@@ -437,6 +437,10 @@
                               Agent Number of Transactions 12 Months
                             </th>
                             <th class="conformation_cell">
+                              How Many Pending Transactions Do You Currently
+                              Have
+                            </th>
+                            <th class="conformation_cell">
                               Agent Non-Pending Listings
                             </th>
                             <th class="conformation_cell">
@@ -644,370 +648,433 @@
                 .split("-")
                 .join("/")}</td>
 
-                      <td>${
-                        element.ApplicationDetails &&
-                        element.ApplicationDetails.isCreated
-                          ? getTime(element.ApplicationDetails.isCreated)
-                          : ""
-                      }</td>
-                                                  <td>${
-                                                    element.ApplicationDetails
-                                                      .isCompleted.date
-                                                      ? element.ApplicationDetails.isCompleted.date
-                                                          .slice(0, 10)
-                                                          .split("-")
-                                                          .join("/")
-                                                      : "Not Completed"
+                                  <td>${
+                                    element.ApplicationDetails &&
+                                    element.ApplicationDetails.isCreated
+                                      ? getTime(
+                                          element.ApplicationDetails.isCreated
+                                        )
+                                      : ""
+                                  }</td>
+                                                              <td>${
+                                                                element
+                                                                  .ApplicationDetails
+                                                                  .isCompleted
+                                                                  .date
+                                                                  ? element.ApplicationDetails.isCompleted.date
+                                                                      .slice(
+                                                                        0,
+                                                                        10
+                                                                      )
+                                                                      .split(
+                                                                        "-"
+                                                                      )
+                                                                      .join("/")
+                                                                  : "Not Completed"
+                                                              }</td>
+
+                                                              <td>${
+                                                                element
+                                                                  .ApplicationDetails
+                                                                  .isCompleted
+                                                                  .date
+                                                                  ? getTime(
+                                                                      element
+                                                                        .ApplicationDetails
+                                                                        .isCompleted
+                                                                        .date
+                                                                    )
+                                                                  : "Not Completed"
+                                                              }</td>
+
+
+
+
+                                                                <td>${
+                                                                  element.client &&
+                                                                  element.client
+                                                                    .firstName
+                                                                }</td>
+
+
+                                                                <td>${
+                                                                  element.client &&
+                                                                  element.client
+                                                                    .lastName
+                                                                }</td>
+                                                        <td>${
+                                                          element.client &&
+                                                          element.client.email
+                                                            ? element.client
+                                                                .email
+                                                            : ""
+                                                        }</td>
+                                                        <td style="min-width: 115px !important;">${
+                                                          element.client &&
+                                                          element.client.phone
+                                                            ? element.client
+                                                                .phone
+                                                            : ""
+                                                        }</td>
+                                                        <td>${
+                                                          element.client &&
+                                                          element.client
+                                                            .HomeAddress
+                                                            ? element.client
+                                                                .HomeAddress
+                                                            : ""
+                                                        }</td>
+
+                                                          <td>${
+                                                            element.client &&
+                                                            element.client.city
+                                                              ? element.client
+                                                                  .city
+                                                              : ""
+                                                          }</td>
+                                                          <td>${
+                                                            element.client &&
+                                                            element.client.state
+                                                              ? element.client
+                                                                  .state
+                                                              : ""
+                                                          }</td>
+                                                  <td  style="min-width: 115px !important;">${
+                                                    element.client &&
+                                                    element.client.zipcode
+                                                      ? element.client.zipcode
+                                                      : ""
                                                   }</td>
 
+
+                    <td>${
+                      element.PropertyDetails && element.PropertyDetails.address
+                        ? element.PropertyDetails.address
+                        : ""
+                    }</td>
                                                   <td>${
-                                                    element.ApplicationDetails
-                                                      .isCompleted.date
-                                                      ? getTime(
-                                                          element
-                                                            .ApplicationDetails
-                                                            .isCompleted.date
+                                                    element.PropertyDetails &&
+                                                    element.PropertyDetails.city
+                                                      ? element.PropertyDetails
+                                                          .city
+                                                      : ""
+                                                  }</td>
+                                                  <td>${
+                                                    element.PropertyDetails &&
+                                                    element.PropertyDetails
+                                                      .state
+                                                      ? element.PropertyDetails
+                                                          .state
+                                                      : ""
+                                                  }</td>
+                                                  <td  style="min-width: 115px !important;">${
+                                                    element.PropertyDetails &&
+                                                    element.PropertyDetails
+                                                      .zipcode
+                                                      ? element.PropertyDetails
+                                                          .zipcode
+                                                      : ""
+                                                  }</td>
+                                                  <td>${
+                                                    element.PropertyDetails &&
+                                                    element.PropertyDetails
+                                                      .sellerName
+                                                      ? element.PropertyDetails
+                                                          .sellerName
+                                                      : ""
+                                                  }</td>
+                                                  <td>${
+                                                    element.PropertyDetails &&
+                                                    element.PropertyDetails
+                                                      .buyerName
+                                                      ? element.PropertyDetails
+                                                          .buyerName
+                                                      : ""
+                                                  }</td>
+
+                                                    <td>${
+                                                      element.PropertyDetails &&
+                                                      element.PropertyDetails
+                                                        .finalSalesPrice
+                                                        ? element
+                                                            .PropertyDetails
+                                                            .finalSalesPrice
+                                                        : ""
+                                                    }</td>
+                                                  <td style="min-width: 98px !important;">${
+                                                    element.PropertyDetails &&
+                                                    element.PropertyDetails
+                                                      .ClosingDate
+                                                      ? element.PropertyDetails.ClosingDate.slice(
+                                                          0,
+                                                          10
                                                         )
-                                                      : "Not Completed"
+                                                      : ""
+                                                  }</td>
+                                                  <td>${
+                                                    element.PropertyDetails &&
+                                                    element.PropertyDetails
+                                                      .isShortSale == true
+                                                      ? "Yes"
+                                                      : "NO"
+                                                  }</td>
+
+                    <td>${
+                      element.BankingDetails && element.BankingDetails.bankName
+                        ? element.BankingDetails.bankName
+                        : ""
+                    }</td>
+
+
+                    <td>${
+                      element.BankingDetails
+                        ? element.BankingDetails.isAddressSame == true
+                          ? element.client.HomeAddress
+                          : element.BankingDetails.statementAddress
+                        : ""
+                    }</td>
+                   <td>${
+                     element.BankingDetails
+                       ? element.BankingDetails.isAddressSame == true
+                         ? element.client.city
+                         : element.BankingDetails.city
+                       : ""
+                   }</td>
+                                                  <td>${
+                                                    element.BankingDetails
+                                                      ? element.BankingDetails
+                                                          .isAddressSame == true
+                                                        ? element.client.state
+                                                        : element.BankingDetails
+                                                            .state
+                                                      : ""
+                                                  }</td>
+                                                  <td>${
+                                                    element.BankingDetails
+                                                      ? element.BankingDetails
+                                                          .isAddressSame == true
+                                                        ? element.client.zipcode
+                                                        : element.BankingDetails
+                                                            .zipCode
+                                                      : ""
+                                                  }</td>
+
+                     <td>${
+                       element.BankingDetails &&
+                       element.BankingDetails.accountType
+                         ? element.BankingDetails.accountType
+                         : ""
+                     }</td>
+                                                  <td>${
+                                                    element.BankingDetails &&
+                                                    element.BankingDetails
+                                                      .routing
+                                                      ? element.BankingDetails
+                                                          .routing
+                                                      : ""
+                                                  }</td>
+                                                  <td>${
+                                                    element.BankingDetails &&
+                                                    element.BankingDetails
+                                                      .accountNumber
+                                                      ? element.BankingDetails
+                                                          .accountNumber
+                                                      : ""
+                                                  }</td>
+
+                                                  <td>${
+                                                    element.BankingDetails &&
+                                                    element.BankingDetails
+                                                      .isAddressSame == true
+                                                      ? "Yes"
+                                                      : "No"
                                                   }</td>
 
 
-
-
-                                                    <td>${
-                                                      element.client &&
-                                                      element.client.firstName
-                                                    }</td>
-
-
-                                                    <td>${
-                                                      element.client &&
-                                                      element.client.lastName
-                                                    }</td>
-                                            <td>${
-                                              element.client &&
-                                              element.client.email
-                                                ? element.client.email
-                                                : ""
-                                            }</td>
-                                            <td style="min-width: 115px !important;">${
-                                              element.client &&
-                                              element.client.phone
-                                                ? element.client.phone
-                                                : ""
-                                            }</td>
-                                            <td>${
-                                              element.client &&
-                                              element.client.HomeAddress
-                                                ? element.client.HomeAddress
-                                                : ""
-                                            }</td>
-
-                                              <td>${
-                                                element.client &&
-                                                element.client.city
-                                                  ? element.client.city
-                                                  : ""
-                                              }</td>
-                                              <td>${
-                                                element.client &&
-                                                element.client.state
-                                                  ? element.client.state
-                                                  : ""
-                                              }</td>
-                                      <td  style="min-width: 115px !important;">${
-                                        element.client && element.client.zipcode
-                                          ? element.client.zipcode
-                                          : ""
-                                      }</td>
-
-
-        <td>${
-          element.PropertyDetails && element.PropertyDetails.address
-            ? element.PropertyDetails.address
-            : ""
-        }</td>
-                                      <td>${
-                                        element.PropertyDetails &&
-                                        element.PropertyDetails.city
-                                          ? element.PropertyDetails.city
-                                          : ""
-                                      }</td>
-                                      <td>${
-                                        element.PropertyDetails &&
-                                        element.PropertyDetails.state
-                                          ? element.PropertyDetails.state
-                                          : ""
-                                      }</td>
-                                      <td  style="min-width: 115px !important;">${
-                                        element.PropertyDetails &&
-                                        element.PropertyDetails.zipcode
-                                          ? element.PropertyDetails.zipcode
-                                          : ""
-                                      }</td>
-                                      <td>${
-                                        element.PropertyDetails &&
-                                        element.PropertyDetails.sellerName
-                                          ? element.PropertyDetails.sellerName
-                                          : ""
-                                      }</td>
-                                      <td>${
-                                        element.PropertyDetails &&
-                                        element.PropertyDetails.buyerName
-                                          ? element.PropertyDetails.buyerName
-                                          : ""
-                                      }</td>
-
-                                        <td>${
-                                          element.PropertyDetails &&
-                                          element.PropertyDetails
-                                            .finalSalesPrice
-                                            ? element.PropertyDetails
-                                                .finalSalesPrice
-                                            : ""
-                                        }</td>
-                                      <td style="min-width: 98px !important;">${
-                                        element.PropertyDetails &&
-                                        element.PropertyDetails.ClosingDate
-                                          ? element.PropertyDetails.ClosingDate.slice(
-                                              0,
-                                              10
-                                            )
-                                          : ""
-                                      }</td>
-                                      <td>${
-                                        element.PropertyDetails &&
-                                        element.PropertyDetails.isShortSale ==
-                                          true
-                                          ? "Yes"
-                                          : "NO"
-                                      }</td>
-
-        <td>${
-          element.BankingDetails && element.BankingDetails.bankName
-            ? element.BankingDetails.bankName
-            : ""
-        }</td>
-
-
-        <td>${
-          element.BankingDetails
-            ? element.BankingDetails.isAddressSame == true
-              ? element.client.HomeAddress
-              : element.BankingDetails.statementAddress
-            : ""
-        }</td>
-       <td>${
-         element.BankingDetails
-           ? element.BankingDetails.isAddressSame == true
-             ? element.client.city
-             : element.BankingDetails.city
-           : ""
-       }</td>
-                                      <td>${
-                                        element.BankingDetails
-                                          ? element.BankingDetails
-                                              .isAddressSame == true
-                                            ? element.client.state
-                                            : element.BankingDetails.state
-                                          : ""
-                                      }</td>
-                                      <td>${
-                                        element.BankingDetails
-                                          ? element.BankingDetails
-                                              .isAddressSame == true
-                                            ? element.client.zipcode
-                                            : element.BankingDetails.zipCode
-                                          : ""
-                                      }</td>
-
-         <td>${
-           element.BankingDetails && element.BankingDetails.accountType
-             ? element.BankingDetails.accountType
-             : ""
-         }</td>
-                                      <td>${
-                                        element.BankingDetails &&
-                                        element.BankingDetails.routing
-                                          ? element.BankingDetails.routing
-                                          : ""
-                                      }</td>
-                                      <td>${
-                                        element.BankingDetails &&
-                                        element.BankingDetails.accountNumber
-                                          ? element.BankingDetails.accountNumber
-                                          : ""
-                                      }</td>
-
-                                      <td>${
-                                        element.BankingDetails &&
-                                        element.BankingDetails.isAddressSame ==
-                                          true
-                                          ? "Yes"
-                                          : "No"
-                                      }</td>
-
-
-                                       <td>${
-                                         element.BankingDetails
-                                           ? element.BankingDetails
-                                               .isAddressSame == true
-                                             ? element.client.HomeAddress
-                                             : element.BankingDetails
-                                                 .statementAddress
-                                           : ""
-                                       }</td>
-                                       <td>${
-                                         element.BankingDetails
-                                           ? element.BankingDetails
-                                               .isAddressSame == true
-                                             ? element.client.city
-                                             : element.BankingDetails.city
-                                           : ""
-                                       }</td>
-                                       <td>${
-                                         element.BankingDetails
-                                           ? element.BankingDetails
-                                               .isAddressSame == true
-                                             ? element.client.state
-                                             : element.BankingDetails.state
-                                           : ""
-                                       }</td>
-                                       <td>${
-                                         element.BankingDetails
-                                           ? element.BankingDetails
-                                               .isAddressSame == true
-                                             ? element.client.zipcode
-                                             : element.BankingDetails.zipCode
-                                           : ""
-                                       }</td>
+                                                   <td>${
+                                                     element.BankingDetails
+                                                       ? element.BankingDetails
+                                                           .isAddressSame ==
+                                                         true
+                                                         ? element.client
+                                                             .HomeAddress
+                                                         : element
+                                                             .BankingDetails
+                                                             .statementAddress
+                                                       : ""
+                                                   }</td>
+                                                   <td>${
+                                                     element.BankingDetails
+                                                       ? element.BankingDetails
+                                                           .isAddressSame ==
+                                                         true
+                                                         ? element.client.city
+                                                         : element
+                                                             .BankingDetails
+                                                             .city
+                                                       : ""
+                                                   }</td>
+                                                   <td>${
+                                                     element.BankingDetails
+                                                       ? element.BankingDetails
+                                                           .isAddressSame ==
+                                                         true
+                                                         ? element.client.state
+                                                         : element
+                                                             .BankingDetails
+                                                             .state
+                                                       : ""
+                                                   }</td>
+                                                   <td>${
+                                                     element.BankingDetails
+                                                       ? element.BankingDetails
+                                                           .isAddressSame ==
+                                                         true
+                                                         ? element.client
+                                                             .zipcode
+                                                         : element
+                                                             .BankingDetails
+                                                             .zipCode
+                                                       : ""
+                                                   }</td>
 
 
 
-                 <td>${
-                   element.BrokerDetails && element.BrokerDetails.bFirstName
-                     ? element.BrokerDetails.bFirstName
-                     : ""
-                 }</td>
-                                      <td>${
-                                        element.BrokerDetails &&
-                                        element.BrokerDetails.bLastName
-                                          ? element.BrokerDetails.bLastName
-                                          : ""
-                                      }</td>
-       <td>${
-         element.BrokerDetails && element.BrokerDetails.bemail
-           ? element.BrokerDetails.bemail
-           : ""
-       }</td>
+                             <td>${
+                               element.BrokerDetails &&
+                               element.BrokerDetails.bFirstName
+                                 ? element.BrokerDetails.bFirstName
+                                 : ""
+                             }</td>
+                                                  <td>${
+                                                    element.BrokerDetails &&
+                                                    element.BrokerDetails
+                                                      .bLastName
+                                                      ? element.BrokerDetails
+                                                          .bLastName
+                                                      : ""
+                                                  }</td>
+                   <td>${
+                     element.BrokerDetails && element.BrokerDetails.bemail
+                       ? element.BrokerDetails.bemail
+                       : ""
+                   }</td>
 
-                                      <td  style="min-width: 115px !important;">${
-                                        element.BrokerDetails &&
-                                        element.BrokerDetails.bcellPhone
-                                          ? element.BrokerDetails.bcellPhone
-                                          : ""
-                                      }</td>
+                                                  <td  style="min-width: 115px !important;">${
+                                                    element.BrokerDetails &&
+                                                    element.BrokerDetails
+                                                      .bcellPhone
+                                                      ? element.BrokerDetails
+                                                          .bcellPhone
+                                                      : ""
+                                                  }</td>
 
-        <td  style="min-width: 115px !important;">${
-          element.BrokerDetails && element.BrokerDetails.borkerCompanyName
-            ? element.BrokerDetails.borkerCompanyName
-            : ""
-        }</td>
+                    <td  style="min-width: 115px !important;">${
+                      element.BrokerDetails &&
+                      element.BrokerDetails.borkerCompanyName
+                        ? element.BrokerDetails.borkerCompanyName
+                        : ""
+                    }</td>
 
-        <td>${
-          element.BrokerDetails && element.BrokerDetails.email
-            ? element.BrokerDetails.email
-            : ""
-        }</td>
+                    <td>${
+                      element.BrokerDetails && element.BrokerDetails.email
+                        ? element.BrokerDetails.email
+                        : ""
+                    }</td>
 
-        <td  style="min-width: 115px !important;">${
-          element.BrokerDetails && element.BrokerDetails.phone
-            ? element.BrokerDetails.phone
-            : ""
-        }</td>
+                    <td  style="min-width: 115px !important;">${
+                      element.BrokerDetails && element.BrokerDetails.phone
+                        ? element.BrokerDetails.phone
+                        : ""
+                    }</td>
 
-                                      <td>${
-                                        element.BrokerDetails &&
-                                        element.BrokerDetails.address
-                                          ? element.BrokerDetails.address
-                                          : ""
-                                      }</td>
-
-
-        <td>${
-          element.BrokerDetails && element.BrokerDetails.city
-            ? element.BrokerDetails.city
-            : ""
-        }</td>
-                                      <td>${
-                                        element.BrokerDetails &&
-                                        element.BrokerDetails.state
-                                          ? element.BrokerDetails.state
-                                          : ""
-                                      }</td>
-                                      <td  style="min-width: 115px !important;">${
-                                        element.BrokerDetails &&
-                                        element.BrokerDetails.zipcode
-                                          ? element.BrokerDetails.zipcode
-                                          : ""
-                                      }</td>
+                                                  <td>${
+                                                    element.BrokerDetails &&
+                                                    element.BrokerDetails
+                                                      .address
+                                                      ? element.BrokerDetails
+                                                          .address
+                                                      : ""
+                                                  }</td>
 
 
-<td  style="min-width: 115px !important;">${
-                element.ClosingCompanyDetails &&
-                element.ClosingCompanyDetails.closingCompanyName
-                  ? element.ClosingCompanyDetails.closingCompanyName
-                  : ""
-              }</td>
+                    <td>${
+                      element.BrokerDetails && element.BrokerDetails.city
+                        ? element.BrokerDetails.city
+                        : ""
+                    }</td>
+                                                  <td>${
+                                                    element.BrokerDetails &&
+                                                    element.BrokerDetails.state
+                                                      ? element.BrokerDetails
+                                                          .state
+                                                      : ""
+                                                  }</td>
+                                                  <td  style="min-width: 115px !important;">${
+                                                    element.BrokerDetails &&
+                                                    element.BrokerDetails
+                                                      .zipcode
+                                                      ? element.BrokerDetails
+                                                          .zipcode
+                                                      : ""
+                                                  }</td>
 
-              <td  style="min-width: 115px !important;">${
-                element.ClosingCompanyDetails &&
-                element.ClosingCompanyDetails.EscrowNumber
-                  ? element.ClosingCompanyDetails.EscrowNumber
-                  : ""
-              } escrow number</td>
-<td  style="min-width: 115px !important;">${
-                element.ClosingCompanyDetails &&
-                element.ClosingCompanyDetails.contactName
-                  ? element.ClosingCompanyDetails.contactName
-                  : ""
-              }</td>
-<td  style="min-width: 115px !important;">${
-                element.ClosingCompanyDetails &&
-                element.ClosingCompanyDetails.email
-                  ? element.ClosingCompanyDetails.email
-                  : ""
-              }</td>
-<td  style="min-width: 115px !important;">${
-                element.ClosingCompanyDetails &&
-                element.ClosingCompanyDetails.phone
-                  ? element.ClosingCompanyDetails.phone
-                  : ""
-              }</td>
-<td  style="min-width: 115px !important;">${
-                element.ClosingCompanyDetails &&
-                element.ClosingCompanyDetails.address
-                  ? element.ClosingCompanyDetails.address
-                  : ""
-              }</td>
-<td  style="min-width: 115px !important;">${
-                element.ClosingCompanyDetails &&
-                element.ClosingCompanyDetails.city
-                  ? element.ClosingCompanyDetails.city
-                  : ""
-              }</td>
-<td  style="min-width: 115px !important;">${
-                element.ClosingCompanyDetails &&
-                element.ClosingCompanyDetails.state
-                  ? element.ClosingCompanyDetails.state
-                  : ""
-              }</td>
-<td  style="min-width: 115px !important;">${
-                element.ClosingCompanyDetails &&
-                element.ClosingCompanyDetails.zipCode
-                  ? element.ClosingCompanyDetails.zipCode
-                  : ""
-              }</td>
+
+            <td  style="min-width: 115px !important;">${
+              element.ClosingCompanyDetails &&
+              element.ClosingCompanyDetails.closingCompanyName
+                ? element.ClosingCompanyDetails.closingCompanyName
+                : ""
+            }</td>
+
+                          <td  style="min-width: 115px !important;">${
+                            element.ClosingCompanyDetails &&
+                            element.ClosingCompanyDetails.EscrowNumber
+                              ? element.ClosingCompanyDetails.EscrowNumber
+                              : ""
+                          } escrow number</td>
+            <td  style="min-width: 115px !important;">${
+              element.ClosingCompanyDetails &&
+              element.ClosingCompanyDetails.contactName
+                ? element.ClosingCompanyDetails.contactName
+                : ""
+            }</td>
+            <td  style="min-width: 115px !important;">${
+              element.ClosingCompanyDetails &&
+              element.ClosingCompanyDetails.email
+                ? element.ClosingCompanyDetails.email
+                : ""
+            }</td>
+            <td  style="min-width: 115px !important;">${
+              element.ClosingCompanyDetails &&
+              element.ClosingCompanyDetails.phone
+                ? element.ClosingCompanyDetails.phone
+                : ""
+            }</td>
+            <td  style="min-width: 115px !important;">${
+              element.ClosingCompanyDetails &&
+              element.ClosingCompanyDetails.address
+                ? element.ClosingCompanyDetails.address
+                : ""
+            }</td>
+            <td  style="min-width: 115px !important;">${
+              element.ClosingCompanyDetails &&
+              element.ClosingCompanyDetails.city
+                ? element.ClosingCompanyDetails.city
+                : ""
+            }</td>
+            <td  style="min-width: 115px !important;">${
+              element.ClosingCompanyDetails &&
+              element.ClosingCompanyDetails.state
+                ? element.ClosingCompanyDetails.state
+                : ""
+            }</td>
+            <td  style="min-width: 115px !important;">${
+              element.ClosingCompanyDetails &&
+              element.ClosingCompanyDetails.zipCode
+                ? element.ClosingCompanyDetails.zipCode
+                : ""
+            }</td>
 
 
 
@@ -1032,11 +1099,12 @@
 
 
 
-                                      <td style="min-width: 380px !important;">
+                                                  <td style="min-width: 380px !important;">
 
-                  <a  target="_blank" href="http://143.198.155.212/images/${
-                    element.Documents && element.Documents.purchaseAgrement
-                  }" download >${
+                              <a  target="_blank" href="http://143.198.155.212/images/${
+                                element.Documents &&
+                                element.Documents.purchaseAgrement
+                              }" download >${
                 element.ApplicationDetails &&
                 element.ApplicationDetails.customAppId
               } Purchase Agreement ${
@@ -1054,28 +1122,30 @@
                 ]
               } </a>
 
-                                        </td>
+                                                    </td>
 
 
 
-                                     
 
-                                                <td style="min-width: 380px !important;">
 
-                 .${
-                   element.Documents &&
-                   element.Documents.purchaseAgrement.split(".")[
-                     element.Documents &&
-                       element.Documents.purchaseAgrement.split(".").length - 1
-                   ]
-                 }
+                                                            <td style="min-width: 380px !important;">
 
-                                        </td>
-                                      <td style="min-width: 380px !important;">
+                             .${
+                               element.Documents &&
+                               element.Documents.purchaseAgrement.split(".")[
+                                 element.Documents &&
+                                   element.Documents.purchaseAgrement.split(".")
+                                     .length - 1
+                               ]
+                             }
 
-                  <a  target="_blank" href="http://143.198.155.212/images/${
-                    element.Documents && element.Documents.brokerOfRecord
-                  }" download >${
+                                                    </td>
+                                                  <td style="min-width: 380px !important;">
+
+                              <a  target="_blank" href="http://143.198.155.212/images/${
+                                element.Documents &&
+                                element.Documents.brokerOfRecord
+                              }" download >${
                 element.ApplicationDetails &&
                 element.ApplicationDetails.customAppId
               } Broker of Record ${
@@ -1093,26 +1163,27 @@
                 ]
               } </a>
 
-                                        </td>
+                                                    </td>
 
 
 
-        <td style="min-width: 380px !important;">
-      .${
-        element.Documents &&
-        element.Documents.brokerOfRecord.split(".")[
-          element.Documents &&
-            element.Documents.brokerOfRecord.split(".").length - 1
-        ]
-      }
-                                        </td>
+                    <td style="min-width: 380px !important;">
+                  .${
+                    element.Documents &&
+                    element.Documents.brokerOfRecord.split(".")[
+                      element.Documents &&
+                        element.Documents.brokerOfRecord.split(".").length - 1
+                    ]
+                  }
+                                                    </td>
 
 
-                                      <td style="min-width: 380px !important;">
+                                                  <td style="min-width: 380px !important;">
 
-                  <a  target="_blank" href="http://143.198.155.212/images/${
-                    element.Documents && element.Documents.lmStatemntOrVoidCheck
-                  }" download >${
+                              <a  target="_blank" href="http://143.198.155.212/images/${
+                                element.Documents &&
+                                element.Documents.lmStatemntOrVoidCheck
+                              }" download >${
                 element.ApplicationDetails &&
                 element.ApplicationDetails.customAppId
               } Client Last Month's Bank Statement or Void Check ${
@@ -1131,29 +1202,32 @@
                 ]
               }</a>
 
-                                        </td>
+                                                    </td>
 
 
 
-        <td style="min-width: 380px !important;">
+                    <td style="min-width: 380px !important;">
 
-                .${
-                  element.Documents &&
-                  element.Documents.lmStatemntOrVoidCheck.split(".")[
-                    element.Documents &&
-                      element.Documents.lmStatemntOrVoidCheck.split(".")
-                        .length - 1
-                  ]
-                }
+                            .${
+                              element.Documents &&
+                              element.Documents.lmStatemntOrVoidCheck.split(
+                                "."
+                              )[
+                                element.Documents &&
+                                  element.Documents.lmStatemntOrVoidCheck.split(
+                                    "."
+                                  ).length - 1
+                              ]
+                            }
 
-                                        </td>
+                                                    </td>
 
 
-                                      <td style="min-width: 380px !important;">
+                                                  <td style="min-width: 380px !important;">
 
-                  <a  target="_blank" href="http://143.198.155.212/images/${
-                    element.Documents && element.Documents.dLicence
-                  }" download >${
+                              <a  target="_blank" href="http://143.198.155.212/images/${
+                                element.Documents && element.Documents.dLicence
+                              }" download >${
                 element.ApplicationDetails &&
                 element.ApplicationDetails.customAppId
               } Client Drivers License ${
@@ -1171,182 +1245,274 @@
                 ]
               }</a>
 
-                                        </td>
+                                                    </td>
 
 
 
 
-         <td style="min-width: 380px !important;">
-
-         .${
-           element.Documents &&
-           element.Documents.dLicence.split(".")[
-             element.Documents &&
-               element.Documents.dLicence.split(".").length - 1
-           ]
-         }
-
-                                        </td>
 
 
 
 
-                                      <td style="min-width: 380px !important;">
 
-                  <a  target="_blank" href="http://143.198.155.212/images/${
-                    element.Documents && element.Documents.pHistory
-                  }" download >${
-                element.ApplicationDetails &&
-                element.ApplicationDetails.customAppId
-              } Client Last 24 Months MLS Production History ${
-                element.client && element.client.firstName
-              } ${
-                element.client && element.client.lastName
-              } ${element.ApplicationDetails.isCreated
-                .slice(0, 10)
-                .split("-")
-                .join("/")}.${
-                element.Documents &&
-                element.Documents.pHistory &&
-                element.Documents.pHistory.split(".")[
+
+
+
+
+
+
+
+
+
+
+                                                    
+
+                     <td style="min-width: 380px !important;">
+
+                     .${
+                       element.Documents &&
+                       element.Documents.dLicence.split(".")[
+                         element.Documents &&
+                           element.Documents.dLicence.split(".").length - 1
+                       ]
+                     }
+
+                                                    </td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <td style="min-width: 380px !important;">
+
+
+
+      ${`${
+        element.Documents
+          ? element.Documents.pHistory
+            ? element.Documents.pHistory.length > 0
+              ? ` <a  target="_blank" href="http://143.198.155.212/images/${
                   element.Documents &&
-                    element.Documents.pHistory.split(".").length - 1
-                ]
-              }
-                   </a>
-
-                                        </td>
-
-
-
-        <td style="min-width: 380px !important;">
-
-                .${
+                  element.Documents.pHistory &&
+                  element.Documents.pHistory
+                }" download >${
+                  element.ApplicationDetails &&
+                  element.ApplicationDetails.customAppId
+                }  Client Last 24 Months MLS Production History ${
+                  element.client && element.client.firstName
+                } ${
+                  element.client && element.client.lastName
+                } ${element.ApplicationDetails.isCreated
+                  .slice(0, 10)
+                  .split("-")
+                  .join("/")}.${
                   element.Documents &&
                   element.Documents.pHistory &&
                   element.Documents.pHistory.split(".")[
                     element.Documents &&
                       element.Documents.pHistory.split(".").length - 1
                   ]
-                }
-               </td>
+                } </a>`
+              : ""
+            : ""
+          : ""
+      }`}
 
 
-                                      <td style="min-width: 380px !important;">
 
-                  <a  target="_blank" href="http://143.198.155.212/images/${
-                    element.Documents &&
-                    element.Documents.another &&
-                    element.Documents.another
-                  }" download >${
-                element.ApplicationDetails &&
-                element.ApplicationDetails.customAppId
-              } ATEYTWBH ${element.client && element.client.firstName} ${
-                element.client && element.client.lastName
-              } ${element.ApplicationDetails.isCreated
-                .slice(0, 10)
-                .split("-")
-                .join("/")}.${
-                element.Documents &&
-                element.Documents.another &&
-                element.Documents.another.split(".")[
+
+                                                    </td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <td style="min-width: 380px !important;">
+
+                            ${
+                              element.Documents
+                                ? element.Documents.pHistory
+                                  ? element.Documents.pHistory.length > 0
+                                    ? "." +
+                                      element.Documents.pHistory.split(".")[
+                                        element.Documents &&
+                                          element.Documents.pHistory.split(".")
+                                            .length - 1
+                                      ]
+                                    : ""
+                                  : ""
+                                : ""
+                            }
+                           </td>
+
+
+                                                  <td style="min-width: 380px !important;">
+
+
+
+      ${`${
+        element.Documents
+          ? element.Documents.another
+            ? element.Documents.another.length > 0
+              ? ` <a  target="_blank" href="http://143.198.155.212/images/${
                   element.Documents &&
-                    element.Documents.another.split(".").length - 1
-                ]
-              } </a>
-
-                                        </td>
-
-                                      <td style="min-width: 380px !important;">
-
-           
-               .${
-                 element.Documents &&
-                 element.Documents.another &&
-                 element.Documents.another.split(".")[
-                   element.Documents &&
-                     element.Documents.another.split(".").length - 1
-                 ]
-               }
-
-                                        </td>
-                                      <td style="min-width: 150px !important;">
-
-           
-               ${
-                 element.ApplicationDetails &&
-                 element.ApplicationDetails.isAgreeTerms &&
-                 element.ApplicationDetails.isAgreeTerms
-               }
+                  element.Documents.another &&
+                  element.Documents.another
+                }" download >${
+                  element.ApplicationDetails &&
+                  element.ApplicationDetails.customAppId
+                } ATEYTWBH ${element.client && element.client.firstName} ${
+                  element.client && element.client.lastName
+                } ${element.ApplicationDetails.isCreated
+                  .slice(0, 10)
+                  .split("-")
+                  .join("/")}.${
+                  element.Documents &&
+                  element.Documents.another &&
+                  element.Documents.another.split(".")[
+                    element.Documents &&
+                      element.Documents.another.split(".").length - 1
+                  ]
+                } </a>`
+              : ""
+            : ""
+          : ""
+      }`}
 
 
-                                        </td>
-
-                                      <td style="min-width: 150px !important;">
-
-           
-               ${
-                 element.isSalesConformation &&
-                 element.isSalesConformation.isBroker &&
-                 element.isSalesConformation.isBroker
-                   ? "Yes"
-                   : "No"
-               }
 
 
-                                        </td>
-                                      <td style="min-width: 150px !important;">
+                                                    </td>
 
-           
-               ${
-                 element.AgentDetails &&
-                 element.AgentDetails.isBroker &&
-                 element.isSalesConformation.isBroker
-                   ? "Yes"
-                   : "No"
-               }
+                                                  <td style="min-width: 380px !important;">
 
 
-                                        </td>
-                                
-                                      <td style="min-width: 150px !important;">
+                          ${
+                            element.Documents
+                              ? element.Documents.another
+                                ? element.Documents.another.length > 0
+                                  ? "." +
+                                    element.Documents.another.split(".")[
+                                      element.Documents &&
+                                        element.Documents.another.split(".")
+                                          .length - 1
+                                    ]
+                                  : ""
+                                : ""
+                              : ""
+                          }
 
-           
-               ${
-                 element.AgentDetails &&
-                 element.AgentDetails.totalTransactions &&
-                 element.AgentDetails.totalTransactions
-               }
-
-
-                                        </td>
-
-                                              <td style="min-width: 150px !important;">
-
-           
-               ${
-                 element.AgentDetails &&
-                 element.AgentDetails.nonPendingListing &&
-                 element.AgentDetails.nonPendingListing
-               }
+                                                    </td>
+                                                  <td style="min-width: 150px !important;">
 
 
-                                        </td>
-
-                                       
-                                              <td style="min-width: 150px !important;">
-
-           
-               ${
-                 element.isSalesConformation &&
-                 element.isSalesConformation.isTakenAdvance &&
-                 element.isSalesConformation.isTakenAdvance
-               }
+                           ${
+                             element.ApplicationDetails &&
+                             element.ApplicationDetails.isAgreeTerms &&
+                             element.ApplicationDetails.isAgreeTerms
+                           }
 
 
-                                        </td>
+                                                    </td>
 
-                                          </tr>`);
+                                                  <td style="min-width: 150px !important;">
+
+
+                           ${
+                             element.isSalesConformation &&
+                             element.isSalesConformation.isBroker &&
+                             element.isSalesConformation.isBroker
+                               ? "Yes"
+                               : "No"
+                           }
+
+
+                                                    </td>
+                                                  <td style="min-width: 150px !important;">
+
+
+                           ${
+                             element.AgentDetails &&
+                             element.AgentDetails.isBroker &&
+                             element.isSalesConformation.isBroker
+                               ? "Yes"
+                               : "No"
+                           }
+
+
+                                                    </td>
+
+                                                  <td style="min-width: 150px !important;">
+
+
+                           ${
+                             element.AgentDetails &&
+                             element.AgentDetails.totalTransactions &&
+                             element.AgentDetails.totalTransactions
+                           }
+
+
+                                                    </td>
+
+                                                          <td style="min-width: 150px !important;">
+
+
+                           ${
+                             element.AgentDetails &&
+                             element.AgentDetails.pendingTransactions &&
+                             element.AgentDetails.pendingTransactions
+                           }
+
+
+                                                    </td>
+
+                                                    </td>
+
+                                                          <td style="min-width: 150px !important;">
+
+
+                           ${
+                             element.AgentDetails &&
+                             element.AgentDetails.nonPendingListing &&
+                             element.AgentDetails.nonPendingListing
+                           }
+
+
+                                                    </td>
+
+
+                                                          <td style="min-width: 150px !important;">
+
+
+                           ${
+                             element.isSalesConformation &&
+                             element.isSalesConformation.isTakenAdvance &&
+                             element.isSalesConformation.isTakenAdvance
+                           }
+
+
+                                                    </td>
+
+                                                      </tr>`);
             });
           },
         });
